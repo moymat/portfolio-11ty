@@ -1,0 +1,19 @@
+$max-width-container: 60vw;
+
+$short_anim_duration: 0.2s;
+$medium_anim_duration: 0.35s;
+$long_anim_duration: 0.5s;
+
+$main_dark_color: #121416;
+$second_dark_color: #27292b;
+$main_light_color: #e5dada;
+$bright_color: #0094c6; //e71d36; //ec0b43;
+
+:export {
+	shortAnimDuration: $short_anim_duration;
+	mediumAnimDuration: $medium_anim_duration;
+	longAnimDuration: $long_anim_duration;
+	mainDarkColor: $main_dark_color;
+	mainLightColor: $main_light_color;
+	secondDarkColor: $second_dark_color;
+}

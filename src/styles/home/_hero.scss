@@ -1,0 +1,116 @@
+@import "../variables";
+
+#hero {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+
+	.menu-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+		max-width: $max-width-container;
+
+		.menu {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+
+			.menu-link {
+				display: inline-block;
+				position: relative;
+				font-size: 3.5em;
+				text-transform: uppercase;
+				width: 100%;
+				min-width: max-content;
+				height: 100%;
+				overflow: hidden;
+
+				.item-wrapper {
+					position: absolute;
+					font-weight: 900;
+					width: 100%;
+					overflow: hidden;
+					transition: left $long_anim_duration ease-in;
+
+					.menu-item {
+						display: inline-block;
+						position: relative;
+						top: 0;
+						padding: 1rem;
+						box-sizing: border-box;
+						text-decoration: none;
+						letter-spacing: 0.01em;
+						color: $main_light_color;
+						transition: left $long_anim_duration ease-in;
+					}
+
+					&.item-default {
+						position: relative;
+						.menu-item {
+							font-weight: 300;
+						}
+					}
+
+					&.item-hover {
+						top: 0;
+						left: -100%;
+						height: 100%;
+						background-color: $main_dark_color;
+						z-index: 400;
+
+						.menu-item {
+							left: 100%;
+						}
+					}
+				}
+
+				&:hover {
+					cursor: pointer;
+
+					.item-hover {
+						left: 0;
+
+						.menu-item {
+							left: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.illustrations {
+			flex: 1;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			min-height: 100%;
+
+			.slider {
+				position: absolute;
+				width: 100%;
+				top: 0;
+				transition: top $medium_anim_duration ease;
+
+				.icon-wrapper {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					.icon {
+						font-size: 20rem;
+						color: lightgray;
+					}
+				}
+			}
+		}
+	}
+}

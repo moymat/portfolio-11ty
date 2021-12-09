@@ -1,0 +1,12 @@
+<li
+	class="project-card"
+	id="{{ project.data.title }}-card"
+	onclick="window.location='{{ project.url }}'"
+>
+	<div class="img-container">
+		<img src="{{ project.data.image }}" alt="{{ project.data.title }}" />
+	</div>
+	<div class="title-container">
+		<h3>{{ project.data.title }}</h3>
+	</div>
+</li>

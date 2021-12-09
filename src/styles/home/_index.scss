@@ -1,0 +1,48 @@
+@import "../variables", "./contact", "./hero", "./profile", "./projects",
+	"./scrollbar";
+
+.colored {
+	font-weight: 900;
+	color: $bright_color;
+	pointer-events: none;
+}
+
+.btn {
+	padding: 1rem;
+	margin: 0.25rem 0;
+	font-size: 1.3rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $main_light_color;
+	background-color: $second_dark_color;
+	border: 0.2rem solid transparent;
+	transition: all $medium_anim_duration ease;
+
+	&:hover {
+		cursor: pointer;
+		background-color: $main_dark_color;
+	}
+
+	&:active {
+		color: $second_dark_color;
+		background-color: $main_light_color;
+		border-color: $second_dark_color;
+	}
+}
+
+section {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 6rem 0;
+	box-sizing: border-box;
+	height: 100vh;
+	width: 100%;
+	background-color: $main_light_color;
+	overflow: hidden;
+
+	& * {
+		color: $main_dark_color;
+	}
+}

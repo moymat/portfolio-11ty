@@ -1,0 +1,29 @@
+{
+	"name": "portfolio-11ty",
+	"version": "1.0.0",
+	"description": "Portfolio project with 11ty",
+	"main": "index.js",
+	"scripts": {
+		"start": "eleventy --serve",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/moymat/portfolio-11ty.git"
+	},
+	"author": "Michel Deckert",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/moymat/portfolio-11ty/issues"
+	},
+	"homepage": "https://github.com/moymat/portfolio-11ty#readme",
+	"devDependencies": {
+		"@11ty/eleventy": "^0.12.1"
+	},
+	"dependencies": {
+		"eleventy-plugin-sass": "^1.2.0",
+		"esbuild": "^0.14.2",
+		"esbuild-sass-plugin": "^1.8.0",
+		"tiny-glob": "^0.2.9"
+	}
+}

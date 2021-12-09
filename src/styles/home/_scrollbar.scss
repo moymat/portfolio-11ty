@@ -1,0 +1,52 @@
+@import "../variables";
+
+.scroll-container {
+	position: fixed;
+	top: 2rem;
+	left: 20%;
+	height: 0.3rem;
+	width: 60vw;
+	background-color: #81726a;
+	border-radius: 1rem;
+	z-index: 400;
+	transition: top $medium_anim_duration ease;
+
+	&.hidden {
+		top: -5rem;
+	}
+
+	.scroll-bar {
+		position: relative;
+		height: 100%;
+		left: 0;
+		width: 1rem;
+		min-width: 1rem;
+		background-color: $bright_color;
+		border-radius: 1rem;
+		z-index: 500;
+		transition: width $medium_anim_duration ease;
+	}
+
+	.scroll-icons {
+		display: flex;
+		justify-content: space-between;
+
+		.scroll-icon {
+			color: #81726a;
+			margin-top: 0.5rem;
+			min-width: max-content;
+			font-size: 1.5rem;
+			filter: brightness(0.7);
+			cursor: pointer;
+
+			&:hover,
+			&.active {
+				color: $bright_color;
+			}
+
+			&.active:hover {
+				filter: brightness(1);
+			}
+		}
+	}
+}
