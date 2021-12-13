@@ -24,6 +24,8 @@
 		"eleventy-plugin-sass": "^1.2.0",
 		"esbuild": "^0.14.2",
 		"esbuild-sass-plugin": "^1.8.0",
+		"markdown-it": "^12.3.0",
+		"markdown-it-attrs": "^4.1.0",
 		"tiny-glob": "^0.2.9"
 	}
 }

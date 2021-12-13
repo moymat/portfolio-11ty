@@ -47,8 +47,22 @@ layout: "page-layout.njk"
 				</a>
 			</div>
 		</div>
-		<h1>{{ title }}</h1>
-		{{ content | safe }}
+		<h1>
+			{{ title }}
+		</h1>
+			{% for tag in tags %}
+				{% if tag === "wip" %}
+				<h3 class="wip">
+					<span class="material-icons-sharp">
+						warning
+					</span>
+					Ce projet est en cours de conception et la version consultable en ligne n'est donc pas la version finale.
+				</h3>
+				{% endif %}
+			{% endfor %}
+		<div class="content">
+			{{ content | safe }}
+		</div>
 	</div>
 	<a class="nav-link" href="/projects">
 		<span class="icon icon-left material-icons-sharp"> chevron_left </span

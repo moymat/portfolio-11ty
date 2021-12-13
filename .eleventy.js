@@ -1,4 +1,6 @@
 const pluginSass = require("eleventy-plugin-sass");
+const markdownIt = require("markdown-it");
+const markdownItAttrs = require("markdown-it-attrs");
 
 module.exports = eleventyConfig => {
 	eleventyConfig.addWatchTarget("./src/js/");
@@ -6,6 +8,10 @@ module.exports = eleventyConfig => {
 		//outputDir: "public/styles",
 		remap: true,
 	});
+	eleventyConfig.setLibrary(
+		"md",
+		markdownIt({ html: true }).use(markdownItAttrs)
+	);
 	eleventyConfig.addPassthroughCopy("./src/assets");
 	eleventyConfig.setDataDeepMerge(true);
 
