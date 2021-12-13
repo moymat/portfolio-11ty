@@ -3,11 +3,10 @@ title: Home
 layout: base.njk
 ---
 
-<body>
-	{% include "home/hero.njk" %}
-	{% include "home/profile.njk" %}
-	{% include "home/projects.njk" %}
-	{% include "home/contact.njk" %}
-	{% include "home/scrollbar.njk" %}
-</body>
-<script src="/index.js"></script>
+<main class="landing-main">
+  {% include "home/hero.njk" %}
+  {% include "home/profile.njk" %}
+  {% include "home/projects.njk" %}
+  {% include "home/contact.njk" %}
+  {% include "home/scrollbar.njk" %}
+</main>

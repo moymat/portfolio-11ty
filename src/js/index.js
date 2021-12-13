@@ -7,20 +7,15 @@ import {
 
 const sections = document.querySelectorAll("section");
 
-// Scrollbar
 const scrollContainer = document.querySelector(".scroll-container");
 const scrollBar = document.querySelector(".scroll-bar");
 const scrollIcons = document.querySelectorAll(".scroll-icon");
 
-// Home page
 const menu = document.querySelector(".menu");
 const menuLinks = document.querySelectorAll(".menu-link");
-const illus = document.querySelector(".illustrations");
 const slider = document.querySelector(".slider");
-const iconWrapper = document.querySelectorAll(".icon-wrapper");
 const illusIcons = document.querySelectorAll(".icon");
 
-// Profile page
 const profileTitles = document.querySelectorAll(".profile-title");
 const profileTextWrappers = document.querySelectorAll(".text-wrapper");
 
@@ -30,7 +25,6 @@ let currentPage = 0;
 let scrollTimer = null;
 let isAutoScrolling = false;
 
-// Mobile
 let touchStart = 0;
 
 const onLinkEnter = e => {
@@ -230,26 +224,16 @@ const onResize = () => {
 	updateSectionsPositions(0.5);
 };
 
-// Website initialization
 const init = () => {
 	window.scrollTo(0, 0);
 	scrollPosition = 0;
 
-	// Home menu
-	// Links //
 	Array.from(menuLinks).forEach(el => {
 		el.addEventListener("mouseenter", onLinkEnter);
 	});
 	menu.addEventListener("mouseleave", onMenuLeave);
 	menu.addEventListener("click", onMenuClick);
 
-	// Slider //
-	illus.style.height = `${menu.offsetHeight}px`;
-	Array.from(iconWrapper).forEach(el => {
-		el.style.height = `${menu.offsetHeight}px`;
-	});
-
-	// Scroll behavior
 	document.addEventListener("wheel", onMouseWheel);
 	document.addEventListener("touchstart", onTouchStart);
 	document.addEventListener("touchmove", onTouchMove);

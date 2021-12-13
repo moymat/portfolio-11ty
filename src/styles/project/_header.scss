@@ -1,0 +1,49 @@
+@import "../variables";
+
+.main-layout {
+	background-color: $main_light_color;
+	padding-top: 5.5rem;
+	min-height: 100vh;
+
+	* {
+		color: $main_dark_color;
+	}
+
+	.project-container {
+		max-width: $main-width;
+		margin: auto;
+
+		.header {
+			position: relative;
+			height: max-content;
+			overflow: hidden;
+			max-height: 20rem;
+
+			img {
+				object-fit: cover;
+				width: 100%;
+				max-width: $main-width;
+				opacity: 0.2;
+			}
+
+			h1 {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				padding: 1rem;
+				font-size: 5rem;
+				font-weight: 900;
+				text-align: center;
+				color: $main_light_color;
+				text-transform: uppercase;
+				box-sizing: border-box;
+			}
+		}
+
+		.content-wrapper {
+			margin: 2rem 0;
+		}
+	}
+}

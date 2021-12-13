@@ -1,6 +1,13 @@
 @import "../variables", "./contact", "./hero", "./profile", "./projects",
 	"./scrollbar";
 
+.landing-main {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	max-height: 100vh;
+}
+
 .colored {
 	font-weight: 900;
 	color: $bright_color;

@@ -3,10 +3,14 @@ layout: "base.njk"
 ---
 
 <header>
-	<a href="/">
-		<span class="icon home-icon material-icons-sharp">code</span>
-	</a>
+	<div class="header-container">
+		<a class="navlink" href="/">
+			Deckert Michel
+			<span class="icon icon-left material-icons-sharp"> chevron_left </span>
+			<span class="icon icon-right material-icons-sharp"> chevron_right </span>
+		</a>
+	</div>
 </header>
-<main>
+<main class="main-layout">
 	{{ content | safe }}
 </main>

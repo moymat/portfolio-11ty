@@ -139,45 +139,4 @@
 			}
 		}
 	}
-	.nav-link {
-		position: relative;
-		display: flex;
-		align-self: flex-end;
-		margin-top: 1rem;
-		color: $main_light_color;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-size: 1rem;
-		font-weight: 700;
-		border-radius: 1rem;
-
-		.icon {
-			position: relative;
-			left: 0;
-			font-weight: 600;
-			color: $main_light_color;
-			transition: all $short_anim_duration ease;
-		}
-
-		&::after {
-			position: absolute;
-			content: "";
-			bottom: -0.5rem;
-			width: 0;
-			border-bottom: 0.2rem solid $bright_color;
-			transition: all $short_anim_duration ease;
-		}
-
-		&:hover {
-			&::after {
-				width: 90%;
-			}
-
-			.icon {
-				left: 0.2rem;
-				color: $bright_color;
-				transform: scale(1.1);
-			}
-		}
-	}
 }

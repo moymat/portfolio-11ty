@@ -2,5 +2,56 @@
 layout: "page-layout.njk"
 ---
 
-<h1>{{ title }}</h1>
-{{ content | safe }}
+<div class="project-container">
+	<div class="header">
+		<img src="{{ image }}" alt="{{ title }}" />
+	</div>
+	<div class="content-wrapper">
+		<div class="info-wrapper">
+			<div class="stack-wrapper">
+				<h2 class="stack-title">Stack</h2>
+				<ul class="stack">
+					{% for tech in stack %}
+					{% set stack = {
+						react: "React",
+						postgresql: "PostgreSQL",
+						redis: "Redis",
+						socketio: "Socket.io",
+						materialui: "Material UI",
+						express: "Express.js",
+						nextjs: "Next.js",
+						javascript: "JavaScript",
+						eleventy: "Eleventy",
+						sass: "Sass" } 
+					%}
+					<li class="tech-item">
+						{% if tech === "react" or tech === "express" %}
+						<i class="devicon-{{ tech }}-original colored"></i>
+						{% else %}
+						<i class="devicon-{{ tech }}-plain colored"></i>
+						{% endif %}
+						<span class="tech-name">{{ stack[tech] }}</span>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="links-wrapper">
+				<h2 class="links-title">Liens</h2>
+				<a class="link github"/>
+					<i class="devicon-github-original colored"></i>
+					Github
+				</a>
+				<a class="link live"/>
+					<span class="material-icons-sharp">language</span>
+					Site
+				</a>
+			</div>
+		</div>
+		<h1>{{ title }}</h1>
+		{{ content | safe }}
+	</div>
+	<a class="nav-link" href="/projects">
+		<span class="icon icon-left material-icons-sharp"> chevron_left </span
+		>Retour aux projets
+	</a>
+</div>
