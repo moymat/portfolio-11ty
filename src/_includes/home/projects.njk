@@ -3,8 +3,9 @@
 	<div class="projects-wrapper">
 		<h1>Mes projets</h1>
 		<ul class="cards-container">
-			{%- for project in collections.featured -%} {% include
-			"home/project-card.njk" %} {%- endfor %}
+			{%- for project in collections.featured -%}
+				{% include "home/project-card.njk" %}
+			{%- endfor %}
 		</ul>
 		<a class="nav-link" href="/projects"
 			>Voir tous mes projets

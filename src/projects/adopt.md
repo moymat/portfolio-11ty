@@ -2,11 +2,15 @@
 layout: "project/index.njk"
 title: Adopt
 image: "/assets/img/projects/adopt.png"
-stack: ["react", "postgresql", "express", "materialui"]
+stack: ["react", "postgresql", "express", "materialui", "heroku"]
 tags: ["featured", "wip"]
+links:
+  {
+    github: "https://github.com/moymat/adopt",
+    live: "https://adopt-flax.vercel.app/",
+  }
+description: Ce projet est un concept d'application web permettant de mettre plus facilement en relation les associations et refuges animaliers avec de potentiels adoptants.
 ---
-
-Le projet **Adopt** est un concept d'application web permettant de mettre plus facilement en relation les associations et refuges animaliers avec de potentiels adoptants.
 
 En l'état actuel, la base de données _PSQL_ hebergée sur _Heroku_, tout comme le serveur _Express.js_, ne contient que des associations et animaux fictifs. Il est possible des rechercher des animaux en fonction de leur localisation (ou de se géolocaliser), de leur sexe et de leur âge.
 
@@ -16,7 +20,7 @@ Le front, déployé sur _Vercel_, est développé sous _React_. Ce projet me per
 
 A l'avenir, le projet permettra:
 
-- Pour les assocations:
+- Pour les associations:
   - de s'inscrire et de se connecter
   - de créer, mettre à jour et supprimer des fiches d'animaux
   - de connecter leur compte facebook afin de centraliser leur communication sur l'application
@@ -25,6 +29,6 @@ A l'avenir, le projet permettra:
   - de s'inscrire et de se connecter
   - de mettre en favoris des animaux ou des recherches afin de les retrouver plus facilement
   - de partager des fiches sur les réseaux sociaux
-  - de s'inscrire à une recherche afin d'être rapidement informé des derniers ajouts
+  - de s'abonner à une recherche afin d'être rapidement informé des derniers ajouts
 
 Au niveau du projet, les fiches seront également plus complètes tout comme les filtres de recherche (par exemple, les associations pourront indiquer si l'animal accepte d'autres animaux ou non, s'il a besoin de sortir, etc...).

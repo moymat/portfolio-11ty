@@ -11,7 +11,7 @@ layout: "page-layout.njk"
 			<div class="stack-wrapper">
 				<h2 class="stack-title">Stack</h2>
 				<ul class="stack">
-					{% for tech in stack %}
+					{% for tech in stack | sort %}
 					{% set stack = {
 						react: "React",
 						postgresql: "PostgreSQL",
@@ -22,7 +22,9 @@ layout: "page-layout.njk"
 						nextjs: "Next.js",
 						javascript: "JavaScript",
 						eleventy: "Eleventy",
-						sass: "Sass" } 
+						sass: "Sass",
+						figma: "Figma",
+						heroku: "Heroku" } 
 					%}
 					<li class="tech-item">
 						{% if tech === "react" or tech === "express" %}
@@ -37,11 +39,11 @@ layout: "page-layout.njk"
 			</div>
 			<div class="links-wrapper">
 				<h2 class="links-title">Liens</h2>
-				<a class="link github"/>
+				<a class="link github" target="_blank" href="{{links.github}}"/>
 					<i class="devicon-github-original colored"></i>
 					Github
 				</a>
-				<a class="link live"/>
+				<a class="link live" target="_blank" href="{{links.live}}"/>
 					<span class="material-icons-sharp">language</span>
 					Site
 				</a>
@@ -50,22 +52,21 @@ layout: "page-layout.njk"
 		<h1>
 			{{ title }}
 		</h1>
-			{% for tag in tags %}
-				{% if tag === "wip" %}
+			{% if "wip" in tags %}
 				<h3 class="wip">
 					<span class="material-icons-sharp">
 						warning
 					</span>
 					Ce projet est en cours de conception et la version consultable en ligne n'est donc pas la version finale.
 				</h3>
-				{% endif %}
-			{% endfor %}
+			{% endif %}
 		<div class="content">
+			<p class="intro">{{description}}</p>
 			{{ content | safe }}
+			<a class="nav-link" href="/projects">
+				<span class="icon icon-left material-icons-sharp"> chevron_left </span
+				>Retour aux projets
+			</a>
 		</div>
 	</div>
-	<a class="nav-link" href="/projects">
-		<span class="icon icon-left material-icons-sharp"> chevron_left </span
-		>Retour aux projets
-	</a>
 </div>

@@ -10,7 +10,7 @@
 	}
 
 	.project-container {
-		max-width: $main-width;
+		max-width: $main_width;
 		margin: auto;
 
 		.header {
@@ -22,7 +22,7 @@
 			img {
 				object-fit: cover;
 				width: 100%;
-				max-width: $main-width;
+				max-width: $main_width;
 				opacity: 0.2;
 			}
 

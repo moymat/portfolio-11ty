@@ -9,12 +9,12 @@
 	}
 
 	.project-container {
-		max-width: $main-width;
+		//max-width: $main_width;
 		margin: auto;
 		padding-bottom: 2rem;
 
 		.header {
-			position: absolute;
+			position: fixed;
 			top: 3.5rem;
 			left: 0;
 			width: 100%;
@@ -32,7 +32,11 @@
 		}
 
 		.content-wrapper {
-			padding: 26.5rem 1rem 1rem;
+			position: absolute;
+			background-color: $main_light_color;
+			display: inline-block;
+			padding: 1rem calc((100vw - 1200px) / 2) 0rem;
+			margin-top: 25.5rem;
 
 			h1 {
 				display: flex;
@@ -62,11 +66,11 @@
 			.info-wrapper {
 				float: right;
 				margin: 0 0 2rem 2rem;
+				min-width: 14rem;
 
 				.stack-wrapper,
 				.links-wrapper {
 					padding: 1.2rem 0;
-					width: auto;
 					box-shadow: 1px 1px 4px rgba($second_dark_color, 0.4);
 					border-radius: 0.5rem;
 				}
@@ -124,16 +128,17 @@
 					.link {
 						display: flex;
 						align-items: center;
+						text-decoration: none;
 						padding: 0.5rem 1rem;
-						border-radius: 0.5rem;
-						max-width: 50%;
-						margin-left: 1.5rem;
+						border-radius: 1rem 0;
+						margin: 0 1.5rem;
 						text-transform: uppercase;
 						font-weight: 900;
-						transition: all $short_anim_duration ease;
+						transition: background-color $short_anim_duration ease,
+							border-radius $medium_anim_duration ease;
 
 						&.github {
-							background-color: $github_color;
+							background-color: rgba($github_color, 0.8);
 							color: $main_light_color !important;
 
 							i {
@@ -143,7 +148,7 @@
 
 						&.live {
 							margin-top: 0.5rem;
-							background-color: $bright-color;
+							background-color: rgba($bright_color, 0.8);
 							color: $main_light_color !important;
 
 							span {
@@ -160,24 +165,14 @@
 
 						&:hover {
 							cursor: pointer;
-							background-color: $main_light_color;
+							border-radius: 0 1rem 0 0;
 
 							&.github {
-								// box-shadow: 0 0 8px $main_light_color;
-								color: $github_color !important;
-
-								i {
-									color: $github_color;
-								}
+								background-color: $github_color;
 							}
 
 							&.live {
-								// box-shadow: 0 0 8px $bright-color;
-								color: $bright-color !important;
-
-								span {
-									color: $bright-color;
-								}
+								background-color: $bright_color;
 							}
 						}
 					}
@@ -185,29 +180,39 @@
 			}
 
 			.content {
-				a {
+				a,
+				a * {
 					color: $bright-color !important;
 				}
 
-				p:not(:last-child) {
+				p {
 					margin-bottom: 1rem;
+
+					&.intro {
+						font-weight: 800;
+					}
 				}
 
 				ul {
-					list-style: none;
+					list-style: disc;
 					margin-bottom: 1rem;
+					margin-left: 1.5rem;
 
 					li ul {
 						list-style: square;
 						margin-left: 2rem;
 					}
 				}
+
+				.nav-link {
+					margin: 2rem 0;
+					color: $main_dark_color !important;
+
+					.icon {
+						color: $main_dark_color !important;
+					}
+				}
 			}
 		}
-	}
-
-	a,
-	.icon {
-		color: $main_dark_color !important;
 	}
 }

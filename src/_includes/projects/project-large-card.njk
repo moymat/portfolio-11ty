@@ -1,0 +1,31 @@
+<li class="project-large-card">
+	<div class="left">
+		<h2>{{ project.data.title }}</h2>
+		<ul class="stack">
+			{% for tech in project.data.stack | sort %} {% set stack = { react:
+			"React", postgresql: "PostgreSQL", redis: "Redis", socketio: "Socket.io",
+			materialui: "Material UI", express: "Express.js", nextjs: "Next.js",
+			javascript: "JavaScript", eleventy: "Eleventy", sass: "Sass", figma:
+			"Figma", heroku: "Heroku" } %}
+			<li class="tech-item">
+				{% if tech === "react" or tech === "express" %}
+				<i class="stack-icon devicon-{{ tech }}-original"></i>
+				{% else %}
+				<i class="stack-icon devicon-{{ tech }}-plain"></i>
+				{% endif %}
+				<div class="tech-name-container">
+					<span class="tech-name">{{ stack[tech] }}</span>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+		<p>{{ project.data.description }}</p>
+		<a class="nav-link" href="{{ project.url }}">
+			Détails
+			<span class="icon icon-right material-icons-sharp"> chevron_right </span>
+		</a>
+	</div>
+	<div class="right">
+		<img src="{{ project.data.image }}" alt="{{ project.data.title }}" />
+	</div>
+</li>
