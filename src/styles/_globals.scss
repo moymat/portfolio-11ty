@@ -1,126 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "Roboto Mono", sans-serif;
-	color: $main_light_color;
-	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
 }
 
 body {
-	background-color: $main_dark_color;
-	//overflow: hidden;
-}
-
-header {
-	position: fixed;
-	top: 0;
-	padding: 0.5rem;
-	box-shadow: 0 0 1px 2px $second_dark_color;
-	background-color: $main_dark_color;
-	z-index: 100;
-	width: 100%;
-
-	.header-container {
-		display: flex;
-		margin: auto;
-		width: 100%;
-		max-width: $main_width;
-
-		.navlink {
-			display: flex;
-			align-content: center;
-			position: relative;
-			padding: 0.5rem 2.2rem 0.5rem 0;
-			text-decoration: none;
-			font-size: 1.2rem;
-			font-weight: 300;
-			transition: all 0.5s ease;
-
-			.icon {
-				position: absolute;
-				align-self: center;
-				font-size: 1.5rem;
-				top: 25%;
-				right: 0.7rem;
-				transition: all 0.5s ease;
-
-				&.icon-right {
-					right: 0;
-				}
-			}
-
-			&:hover {
-				padding-left: 2.2rem;
-				color: $bright-color;
-				font-weight: 500;
-
-				.icon {
-					font-weight: 900;
-
-					&.icon-right {
-						right: 0.7rem;
-					}
-
-					&.icon-left {
-						right: calc(100% - 2rem);
-					}
-				}
-			}
-		}
-	}
-}
-
-.nav-link {
-	position: relative;
-	display: flex;
-	align-self: flex-end;
-	max-width: max-content;
-	margin-top: 1rem;
-	color: $main_light_color;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 1rem;
-	font-weight: 700;
-	border-radius: 1rem;
-
-	.icon {
-		position: relative;
-		left: 0;
-		font-weight: 600;
-		color: $main_light_color;
-		transition: all $short_anim_duration ease;
-	}
-
-	&::after {
-		position: absolute;
-		content: "";
-		bottom: -0.5rem;
-		width: 0;
-		border-bottom: 0.2rem solid $bright_color;
-		transition: all $short_anim_duration ease;
-	}
-
-	&:hover {
-		cursor: pointer;
-
-		&::after {
-			width: 100%;
-		}
-
-		.icon {
-			color: $bright_color;
-			transform: scale(1.1);
-
-			&.icon-right {
-				left: 0.2rem;
-			}
-
-			&.icon-left {
-				left: -0.2rem;
-			}
-		}
-	}
+	height: 100vh;
+	background: url("../assets/img/noise.png"),
+		radial-gradient(
+			56.28% 57.59% at 68.37% 29.83%,
+			#5d5fef 0%,
+			#373289 43.75%,
+			#180d37 79.18%
+		),
+		#c4c4c4;
+	background-blend-mode: darken, normal, normal;
 }
