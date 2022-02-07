@@ -1,5 +1,4 @@
 ---
-layout: "project/index.njk"
 title: Portfolio
 image: "/assets/img/projects/portfolio.png"
 stack: ["javascript", "eleventy", "sass"]

@@ -1,7 +1,7 @@
 ---
-layout: "project/index.njk"
 title: Bristol BE
 image: "/assets/img/projects/bristol-be.png"
+illus: "/assets/img/illus/bristol-be.jpg"
 stack:
   [
     "react",

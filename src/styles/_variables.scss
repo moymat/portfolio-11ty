@@ -1,22 +1,4 @@
-$max_width_container: 60vw;
-$main_width: 1200px;
-
-$short_anim_duration: 0.2s;
-$medium_anim_duration: 0.35s;
-$long_anim_duration: 0.5s;
-
-$main_dark_color: #121416;
-$second_dark_color: #27292b;
-$main_light_color: #e5dada;
-$bright_color: #0094c6; //e71d36; //ec0b43;
-
-$github_color: #333;
-
-:export {
-	shortAnimDuration: $short_anim_duration;
-	mediumAnimDuration: $medium_anim_duration;
-	longAnimDuration: $long_anim_duration;
-	mainDarkColor: $main_dark_color;
-	mainLightColor: $main_light_color;
-	secondDarkColor: $second_dark_color;
-}
+$margin-x-container: 180px;
+$max-width-container: 1024px;
+$main_dark_blue: #180d37;
+$main_text_blue: #3a36ff;

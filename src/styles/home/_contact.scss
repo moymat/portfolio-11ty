@@ -1,0 +1,42 @@
+#contact {
+	& p {
+		font-weight: normal;
+		line-height: 1.5rem;
+		letter-spacing: 0.04em;
+		color: white;
+
+		& a {
+			position: relative;
+			color: white;
+			text-decoration: none;
+
+			&::after {
+				bottom: -0.2rem;
+				width: 100%;
+			}
+		}
+	}
+
+	& ul {
+		display: flex;
+		list-style: none;
+		margin-top: 3.5rem;
+
+		& li:not(:first-child) {
+			margin-left: 1.5rem;
+		}
+
+		& li {
+			position: relative;
+
+			& .page-link {
+				color: white;
+				text-decoration: none;
+
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

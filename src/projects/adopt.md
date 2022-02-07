@@ -1,7 +1,7 @@
 ---
-layout: "project/index.njk"
 title: Adopt
 image: "/assets/img/projects/adopt.png"
+illus: "/assets/img/illus/adopt.jpg"
 stack: ["react", "postgresql", "express", "materialui", "heroku"]
 tags: ["featured", "wip"]
 links:

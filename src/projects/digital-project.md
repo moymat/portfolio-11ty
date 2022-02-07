@@ -1,7 +1,7 @@
 ---
-layout: "project/index.njk"
 title: Digital Project
 image: "/assets/img/projects/digital-project.png"
+illus: "/assets/img/illus/digital-project.jpg"
 stack: ["nextjs", "figma"]
 tags: ["featured"]
 links:

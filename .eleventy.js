@@ -7,7 +7,7 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPlugin(pluginSass, {
 		//outputDir: "public/styles",
 		remap: true,
-		watch: ["**/*.scss"],
+		// watch: ["./src/**/*.scss"],
 	});
 	eleventyConfig.setLibrary(
 		"md",

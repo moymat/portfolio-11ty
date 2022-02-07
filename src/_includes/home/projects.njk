@@ -1,15 +1,11 @@
-
 <section id="projects">
-	<div class="projects-wrapper">
-		<h1>Mes projets</h1>
-		<ul class="cards-container">
-			{%- for project in collections.featured -%}
-				{% include "home/project-card.njk" %}
-			{%- endfor %}
-		</ul>
-		<a class="nav-link" href="/projects"
-			>Voir tous mes projets
-			<span class="icon icon-right material-icons-sharp"> chevron_right </span>
-		</a>
+	<div class="section-title">
+		<span class="section-number">01</span>
+		<h2 class="section-title-text stroke-text">Projets</h2>
 	</div>
+	<ul class="project-cards">
+		{%- for project in collections.featured %}
+			{%include "home/project-card.njk"%}
+		{%- endfor%}
+	</ul>
 </section>

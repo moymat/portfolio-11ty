@@ -1,20 +1,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "./variables";
 
 * {
 	margin: 0;
 	padding: 0;
 	font-family: "Poppins", sans-serif;
+	font-size: 18px;
+	scroll-behavior: smooth;
 }
 
 body {
-	height: 100vh;
-	background: url("../assets/img/noise.png"),
-		radial-gradient(
-			56.28% 57.59% at 68.37% 29.83%,
-			#5d5fef 0%,
-			#373289 43.75%,
-			#180d37 79.18%
-		),
-		#c4c4c4;
-	background-blend-mode: darken, normal, normal;
+	position: relative;
+	width: 100vw;
+	background-color: $main_dark_blue;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+.stroke-text {
+	color: transparent;
+	-webkit-text-stroke: 1px white;
+}
+
+main {
+	width: 100%;
+	max-width: $max-width-container;
+	margin: auto;
+}
+
+section {
+	width: 100%;
+	margin-bottom: 200px;
+
+	& > :not(.section-title) {
+		padding: 0 50px;
+	}
+
+	.section-title {
+		display: flex;
+		font-weight: 800;
+		letter-spacing: 0.04em;
+		margin-bottom: 3rem;
+
+		.section-number {
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 3rem;
+			font-size: 1.7rem;
+			line-height: 2.5rem;
+			color: $main_text_blue;
+		}
+
+		.section-title-text {
+			font-size: 3.7rem;
+			line-height: 5.5rem;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.page-link::after {
+	position: absolute;
+	content: "";
+	width: 4rem;
+	left: 0;
+	bottom: -0.75rem;
+	border-top: 3px solid $main_text_blue;
+	pointer-events: none;
+	transition: width 0.25s ease-in-out;
 }

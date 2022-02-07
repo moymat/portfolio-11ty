@@ -1,0 +1,64 @@
+#hero {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	height: 860px;
+	box-sizing: border-box;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 1440px;
+		height: 1024px;
+		top: -100px;
+		right: -500px;
+		background: url("../../assets/img/noise3.png"),
+			radial-gradient(
+				56.28% 59.59% at center center,
+				#5d5fef 0%,
+				#373289 43.75%,
+				$main_dark_blue 79.18%
+			),
+			$main_dark_blue;
+		background-blend-mode: darken, normal, normal;
+		z-index: -1;
+		transform: rotate(-25deg);
+	}
+
+	.hero-content {
+		margin-top: 320px;
+
+		.hero-title {
+			display: flex;
+			flex-direction: column;
+			color: #fff;
+
+			span {
+				letter-spacing: 0.04rem;
+				text-transform: uppercase;
+			}
+
+			.hero-name {
+				font-size: 1.225rem;
+				font-weight: 400;
+				height: 40px;
+				margin-bottom: 1rem;
+			}
+
+			.hero-role,
+			.hero-stack {
+				font-size: 4.45rem;
+				line-height: 124%;
+				font-weight: 800;
+			}
+		}
+
+		.hero-sub {
+			color: white;
+			font-weight: 400;
+			line-height: 1.5rem;
+			letter-spacing: 0.04rem;
+			margin-top: 1rem;
+		}
+	}
+}

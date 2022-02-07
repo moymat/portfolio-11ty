@@ -1,12 +1,13 @@
 <li
 	class="project-card"
 	id="{{ project.data.title }}-card"
-	onclick="window.location='{{ project.url }}'"
 >
-	<div class="img-container">
-		<img src="{{ project.data.image }}" alt="{{ project.data.title }}" />
+	<div class="project-illustration">
+		<img src="{{ project.data.illus }}" alt="{{ project.data.title }}" />
 	</div>
-	<div class="title-container">
+	<div class="project-content">
 		<h3>{{ project.data.title }}</h3>
+		<p class="project-description">Reprehenderit cupidatat culpa officia velit mollit dolore voluptate esse labore non.</p>
+		<a class="project-link page-link" href="#">en savoir plus</a>
 	</div>
 </li>
