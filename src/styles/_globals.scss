@@ -10,9 +10,9 @@
 }
 
 body {
+	background-color: $main_dark_blue;
 	position: relative;
 	width: 100vw;
-	background-color: $main_dark_blue;
 	box-sizing: border-box;
 	overflow-x: hidden;
 }
@@ -28,6 +28,51 @@ main {
 	margin: auto;
 }
 
+.background-gradient {
+	&::before {
+		content: "";
+		position: absolute;
+		width: 1440px;
+		height: 1024px;
+		top: -100px;
+		right: -500px;
+		background: url("../../assets/img/noise3.png"),
+			radial-gradient(
+				56.28% 59.59% at center center,
+				#5d5fef 0%,
+				#373289 43.75%,
+				$main_dark_blue 79.18%
+			),
+			$main_dark_blue;
+		background-blend-mode: darken, normal, normal;
+		z-index: -1;
+		transform: rotate(-25deg);
+	}
+}
+
+.section-title {
+	display: flex;
+	font-weight: 800;
+	letter-spacing: 0.04em;
+	margin-bottom: 3rem;
+
+	.section-number {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 3rem;
+		font-size: 1.7rem;
+		line-height: 2.5rem;
+		color: $main_text_blue;
+	}
+
+	.section-title-text {
+		font-size: 3.7rem;
+		line-height: 5.5rem;
+		text-transform: uppercase;
+	}
+}
+
 section {
 	width: 100%;
 	margin-bottom: 200px;
@@ -35,28 +80,22 @@ section {
 	& > :not(.section-title) {
 		padding: 0 50px;
 	}
+}
 
-	.section-title {
-		display: flex;
-		font-weight: 800;
-		letter-spacing: 0.04em;
-		margin-bottom: 3rem;
+@mixin page-link-small {
+	position: relative;
+	color: white;
+	text-decoration: none;
 
-		.section-number {
-			position: relative;
-			top: 0;
-			left: 0;
-			width: 3rem;
-			font-size: 1.7rem;
-			line-height: 2.5rem;
-			color: $main_text_blue;
-		}
-
-		.section-title-text {
-			font-size: 3.7rem;
-			line-height: 5.5rem;
-			text-transform: uppercase;
-		}
+	&::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		left: 0;
+		bottom: -0.1rem;
+		border-top: 3px solid $main_text_blue;
+		pointer-events: none;
+		transition: width 0.25s ease-in-out;
 	}
 }
 

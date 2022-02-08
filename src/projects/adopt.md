@@ -2,6 +2,8 @@
 title: Adopt
 image: "/assets/img/projects/adopt.png"
 illus: "/assets/img/illus/adopt.jpg"
+context: projet personnel
+year: 2021
 stack: ["react", "postgresql", "express", "materialui", "heroku"]
 tags: ["featured", "wip"]
 links:

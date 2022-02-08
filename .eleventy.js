@@ -21,6 +21,10 @@ module.exports = eleventyConfig => {
 		dir: {
 			input: "src",
 			output: "public",
+			//data: "_data",
 		},
+		/* data: {
+			techIcons: JSON.stringify(require("./src/projects/techIcons.json")),
+		}, */
 	};
 };

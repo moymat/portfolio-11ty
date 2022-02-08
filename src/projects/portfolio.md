@@ -1,6 +1,8 @@
 ---
 title: Portfolio
 image: "/assets/img/projects/portfolio.png"
+context: projet personnel
+year: 2021
 stack: ["javascript", "eleventy", "sass"]
 links:
   {

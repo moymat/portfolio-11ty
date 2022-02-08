@@ -2,6 +2,8 @@
 title: Bristol BE
 image: "/assets/img/projects/bristol-be.png"
 illus: "/assets/img/illus/bristol-be.jpg"
+context: projet d'étude
+year: 2021
 stack:
   [
     "react",

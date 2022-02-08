@@ -1,0 +1,74 @@
+{
+	"icons": {
+		"react": {
+			"name": "react.js",
+			"icon": "<i class='devicon-react-original colored'></i>",
+			"link": "https://reactjs.org/"
+		},
+		"postgresql": {
+			"name": "postgresql",
+			"icon": "<i class='devicon-postgresql-plain colored'></i>",
+			"link": "https://www.postgresql.org/"
+		},
+		"express": {
+			"name": "express.js",
+			"icon": "<i class='devicon-express-original colored'></i>",
+			"link": "https://expressjs.com/"
+		},
+		"materialui": {
+			"name": "material ui",
+			"icon": "<i class='devicon-materialui-plain colored'></i>",
+			"link": "https://mui.com/"
+		},
+		"heroku": {
+			"name": "heroku",
+			"icon": "<i class='devicon-heroku-original colored'></i>",
+			"link": "https://heroku.com/"
+		},
+		"redis": {
+			"name": "redis",
+			"icon": "<i class='devicon-redis-plain colored'></i>",
+			"link": "https://redis.io/"
+		},
+		"socketio": {
+			"name": "socket.io",
+			"icon": "<i class='devicon-socketio-original colored'></i>",
+			"link": "https://socket.io/"
+		},
+		"javascript": {
+			"name": "javascript",
+			"icon": "<i class='devicon-javascript-plain colored'></i>",
+			"link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+		},
+		"eleventy": {
+			"name": "eleventy",
+			"icon": "<i class='devicon-eleventy-plain colored'></i>",
+			"link": "https://www.11ty.dev/"
+		},
+		"sass": {
+			"name": "sass",
+			"icon": "<i class='devicon-sass-original colored'></i>",
+			"link": "https://sass-lang.com/"
+		},
+		"nextjs": {
+			"name": "next.js",
+			"icon": "<i class='devicon-nextjs-original colored'></i>",
+			"link": "https://nextjs.org/"
+		},
+		"figma": {
+			"name": "figma",
+			"icon": "<i class='devicon-figma-plain colored'></i>",
+			"link": "https://www.figma.com/"
+		},
+		"html": {
+			"name": "html",
+			"icon": "<i class='devicon-html5-plain colored'></i>",
+			"link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+		},
+		"css": {
+			"name": "css",
+			"icon": "<i class='devicon-css3-plain colored'></i>",
+			"link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+		}
+	}
+}
