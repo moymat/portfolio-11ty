@@ -5,33 +5,39 @@ layout: base.njk
 <main class="project background-gradient">
 	<div class="project-container">
     <h2>Projet</h2>
-    <a href="/" class="go-back">< retour</a>
+    <div class="project-info">
+      <div class="img-container">
+        <img src="{{image}}" atl="{{title}}" />
+      </div>
+      <div class="stack">
+        <h4 data-content="technologies" class="info-title glitchy-title">Technologies</h4>
+        <ul class="stack-list">
+        {% for tech in stack %}
+          <li class="stack-item">
+            <a data-name="{{metadata.icons[tech].name}}" href="{{metadata.icons[tech].link}}" target="_blank">
+              {{metadata.icons[tech].icon | safe}}
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="context">
+        <h4 class="info-title">Contexte</h4>
+        <p class="context-text">{{year}} - {{context}}</p>
+      </div>
+    </div>
+    <div class="go-back">    
+      <a data-content="< retour" href="/" class="glitchy-link">< retour</a>
+    </div>
     <h1 class="stroke-text project-title">{{title}}</h1>
+    {% if "wip" in tags %}
+      <p class="project-wip">
+        <span class="material-icons-outlined">report_problem</span>
+        en cours de développement</p>
+    {% endif %}
     <p class="project-description">{{description}}<p>
     <div class="project-content">{{content | safe}}</div>
   </div>
-	<div class="project-info">
-    <div class="img-container">
-      <img src="{{image}}" atl="{{title}}" />
-    </div>
-    <div class="stack">
-      <h4 class="info-title">Technologies</h4>
-      <ul class="stack-list">
-      {% for tech in stack %}
-        <li class="stack-item">
-          <a data-name="{{metadata.icons[tech].name}}" href="{{metadata.icons[tech].link}}" target="_blank">
-            {{metadata.icons[tech].icon | safe}}
-          </a>
-        </li>
-      {% endfor %}
-      </ul>
-    </div>
-    <div class="context">
-      <h4 class="info-title">Contexte</h4>
-      <p class="context-text">{{year}} - {{context}}</p>
-    </div>
-  </div>
-
 </main>
 <script defer src="/index.js"></script>
 <script defer src="/project.js"></script>

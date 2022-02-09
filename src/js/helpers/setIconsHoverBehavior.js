@@ -17,6 +17,7 @@ export default function (items, list, titleEl, title) {
 	function onListLeave() {
 		animateTitle(titleEl, title, true);
 		list.removeEventListener("mouseleave", onListLeave);
+		titleEl.classList.remove("hover");
 	}
 
 	function onListHover() {

@@ -5,14 +5,19 @@
 		letter-spacing: 0.04em;
 		color: white;
 
-		& a {
+		.page-link {
 			position: relative;
-			color: white;
-			text-decoration: none;
+			width: max-content;
 
 			&::after {
 				bottom: -0.2rem;
 				width: 100%;
+			}
+
+			a {
+				position: relative;
+				color: white;
+				text-decoration: none;
 			}
 		}
 	}
@@ -22,20 +27,16 @@
 		list-style: none;
 		margin-top: 3.5rem;
 
-		& li:not(:first-child) {
+		li:not(:first-child) {
 			margin-left: 1.5rem;
 		}
 
-		& li {
+		.page-link {
 			position: relative;
+			width: max-content;
 
-			& .page-link {
-				color: white;
-				text-decoration: none;
-
-				&::after {
-					width: 100%;
-				}
+			&::after {
+				width: 100%;
 			}
 		}
 	}

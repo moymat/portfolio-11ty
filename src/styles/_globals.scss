@@ -50,6 +50,61 @@ main {
 	}
 }
 
+.glitchy-link,
+.glitchy-title {
+	position: relative;
+	color: white;
+	text-decoration: none;
+	animation: link-sidestep 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite
+		paused;
+
+	&::before,
+	&::after {
+		position: absolute;
+		inset: 0;
+		width: max-content;
+		height: 100%;
+		visibility: hidden;
+		font-weight: 700;
+		z-index: -1;
+		animation: link-glitches 0.1s cubic-bezier(0.075, 0.82, 0.165, 1) infinite
+			paused;
+	}
+
+	&::before {
+		color: darkcyan;
+	}
+
+	&::after {
+		color: darkred;
+		animation-direction: reverse;
+	}
+}
+
+.glitchy-link:hover {
+	animation-play-state: running;
+
+	&::before,
+	&::after {
+		content: attr(data-content);
+		border: none;
+		visibility: visible;
+		animation-play-state: running;
+	}
+}
+
+.glitchy-title.hover {
+	animation-play-state: running;
+
+	&::before,
+	&::after {
+		content: attr(data-content);
+		border: none;
+		visibility: visible;
+		animation-play-state: running;
+	}
+}
+
 .section-title {
 	display: flex;
 	font-weight: 800;
@@ -108,4 +163,35 @@ section {
 	border-top: 3px solid $main_text_blue;
 	pointer-events: none;
 	transition: width 0.25s ease-in-out;
+}
+
+@keyframes link-glitches {
+	0% {
+		top: 0;
+		left: 0;
+	}
+	25% {
+		top: 0.25rem;
+		left: 0.25rem;
+	}
+	75% {
+		top: -0.25rem;
+		left: -0.25rem;
+	}
+	100% {
+		top: 0;
+		left: 0;
+	}
+}
+
+@keyframes link-sidestep {
+	96% {
+		left: 0;
+	}
+	99% {
+		left: 0.4rem;
+	}
+	100% {
+		left: 0;
+	}
 }

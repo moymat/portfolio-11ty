@@ -1,5 +1,6 @@
 async function switchLetters(titleEl, next, leave) {
 	titleEl.innerHTML = next;
+	titleEl.dataset.content = next;
 	const speed = leave ? 1 : 2;
 	return await new Promise(resolve =>
 		setTimeout(resolve, Math.round(Math.random() + speed) * 50)
@@ -8,6 +9,7 @@ async function switchLetters(titleEl, next, leave) {
 
 async function animateTitle(titleEl, next, leave = false) {
 	let current = titleEl.innerHTML;
+	titleEl.classList.add("hover");
 
 	const idx = new Set([...current.split("").keys()]);
 	let newText = new Array(current.length)

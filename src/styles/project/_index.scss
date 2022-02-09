@@ -6,11 +6,112 @@
 
 	.project-container {
 		position: relative;
-		width: 50%;
+		width: 100%;
+
+		.project-info {
+			float: right;
+			display: flex;
+			flex-direction: column;
+			max-width: 410px;
+			margin: 4rem 0 2rem 7%;
+
+			.img-container {
+				align-self: flex-end;
+				position: relative;
+				width: 100%;
+				aspect-ratio: 410/315;
+
+				img {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
+
+				&::before {
+					position: absolute;
+					top: 10%;
+					left: -10%;
+					content: "";
+					background-color: $main_text_blue;
+					width: 100%;
+					height: 100%;
+					z-index: -1;
+				}
+			}
+
+			.stack,
+			.context {
+				margin-top: 2rem;
+				margin-left: 5.5rem;
+
+				p,
+				li {
+					margin-top: 1rem;
+					font-weight: normal;
+					letter-spacing: 0.04rem;
+					text-transform: lowercase;
+				}
+			}
+
+			.info-title {
+				width: 100%;
+				font-style: italic;
+				font-weight: 800;
+				font-size: 1.6rem;
+				line-height: 2.3rem;
+				letter-spacing: 0.04rem;
+				text-transform: uppercase;
+				color: white;
+			}
+
+			.stack {
+				margin-top: 5rem;
+
+				.stack-list {
+					margin-top: 1rem;
+					display: inline-flex;
+					list-style: none;
+
+					.stack-item:not(:first-child) {
+						margin-left: 1rem;
+					}
+
+					.stack-item {
+						margin: 0;
+
+						a {
+							text-decoration: none;
+
+							i {
+								position: relative;
+								font-size: 1.5rem;
+								aspect-ratio: 1/1;
+
+								&:hover::after {
+									position: absolute;
+									content: "";
+									inset: 0;
+									background-color: var(--color-bg);
+									z-index: -1;
+									border-radius: 50%;
+									transform: scale(1.5);
+									box-shadow: 0 0 30px 0.2px var(--color-box);
+									//opacity: 0.4;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.context {
+				color: white;
+			}
+		}
 
 		.go-back {
 			position: absolute;
-			right: 110%;
+			left: -10%;
 			width: max-content;
 			font-size: 0.9rem;
 			line-height: 1.3rem;
@@ -49,7 +150,8 @@
 		}
 
 		.project-description,
-		.project-content {
+		.project-content,
+		.project-wip {
 			color: white;
 			font-weight: normal;
 			line-height: 1.5rem;
@@ -83,109 +185,22 @@
 			}
 		}
 
+		.project-wip {
+			display: flex;
+			font-weight: 800;
+			margin-bottom: 2rem;
+
+			span {
+				font-size: 1.2rem;
+				margin-right: 0.5rem;
+				align-self: center;
+				color: orange;
+			}
+		}
+
 		.project-description {
 			font-style: italic;
 			margin-bottom: 2rem;
-		}
-	}
-
-	.project-info {
-		display: flex;
-		flex-direction: column;
-		width: 50%;
-		padding-top: 4rem;
-
-		.img-container {
-			align-self: flex-end;
-			position: relative;
-			width: 410px;
-			height: 315px;
-
-			img {
-				height: 100%;
-				width: 100%;
-				object-fit: cover;
-			}
-
-			&::before {
-				position: absolute;
-				top: 10%;
-				left: -10%;
-				content: "";
-				background-color: $main_text_blue;
-				width: 100%;
-				height: 100%;
-				z-index: -1;
-			}
-		}
-
-		.stack,
-		.context {
-			margin-top: 2rem;
-			margin-left: 5.5rem;
-
-			p,
-			li {
-				margin-top: 1rem;
-				font-weight: normal;
-				letter-spacing: 0.04rem;
-				text-transform: lowercase;
-			}
-		}
-
-		.info-title {
-			width: 100%;
-			font-style: italic;
-			font-weight: 800;
-			font-size: 1.6rem;
-			line-height: 2.3rem;
-			letter-spacing: 0.04rem;
-			text-transform: uppercase;
-			color: white;
-		}
-
-		.stack {
-			margin-top: 5rem;
-
-			.stack-list {
-				margin-top: 1rem;
-				display: inline-flex;
-				list-style: none;
-
-				.stack-item:not(:first-child) {
-					margin-left: 1rem;
-				}
-
-				.stack-item {
-					margin: 0;
-
-					a {
-						text-decoration: none;
-
-						i {
-							position: relative;
-							font-size: 1.5rem;
-							aspect-ratio: 1/1;
-
-							&:hover::after {
-								position: absolute;
-								content: "";
-								inset: 0;
-								background-color: var(--color-bg);
-								z-index: -1;
-								border-radius: 50%;
-								transform: scale(1.5);
-								box-shadow: 0 0 30px 0.2px var(--color-box);
-								//opacity: 0.4;
-							}
-						}
-					}
-				}
-			}
-		}
-
-		.context {
-			color: white;
 		}
 	}
 }

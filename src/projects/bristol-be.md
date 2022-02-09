@@ -1,8 +1,8 @@
 ---
-title: Bristol BE
-image: "/assets/img/projects/bristol-be.png"
-illus: "/assets/img/illus/bristol-be.jpg"
-context: projet d'étude
+title: Bristol
+image: "/assets/img/projects/bristol.png"
+illus: "/assets/img/illus/bristol.jpg"
+context: projet de fin de formation
 year: 2021
 stack:
   [
@@ -23,7 +23,7 @@ links:
 description: Projet de fin de formation à l'école imaginé et créé de A à Z sur une période d'un mois en collaboration avec deux autres développeurs.
 ---
 
-Sur **Bristol BE**, mon rôle a été principalement celui de _Lead Dev Back_ et de _Git Master_, bien que j'ai a plusieurs reprise également participé à l'élaboration du front.
+Sur **Bristol**, mon rôle a été principalement celui de _Lead Dev Back_ et de _Git Master_, bien que j'ai a plusieurs reprise également participé à l'élaboration du front.
 
 Ce projet a pour objectif de permettre le partage, l'organisation et la création collaborative de fiches méthodologiques.
 

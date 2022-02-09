@@ -18,15 +18,10 @@
 		letter-spacing: 0.04rem;
 
 		li {
+			position: relative;
 			height: 40px;
 			pointer-events: all;
 			mix-blend-mode: difference;
-
-			a {
-				color: white;
-				position: relative;
-				text-decoration: none;
-			}
 		}
 	}
 }
