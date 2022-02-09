@@ -79,9 +79,21 @@ main {
 		color: darkred;
 		animation-direction: reverse;
 	}
+
+	&.hover {
+		animation-play-state: running;
+
+		&::before,
+		&::after {
+			content: attr(data-content);
+			border: none;
+			visibility: visible;
+			animation-play-state: running;
+		}
+	}
 }
 
-.glitchy-link:hover {
+/* .glitchy-link:hover {
 	animation-play-state: running;
 
 	&::before,
@@ -93,17 +105,7 @@ main {
 	}
 }
 
-.glitchy-title.hover {
-	animation-play-state: running;
-
-	&::before,
-	&::after {
-		content: attr(data-content);
-		border: none;
-		visibility: visible;
-		animation-play-state: running;
-	}
-}
+.glitchy-link */
 
 .section-title {
 	display: flex;

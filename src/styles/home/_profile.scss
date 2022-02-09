@@ -69,6 +69,10 @@
 				color: white;
 			}
 
+			li a {
+				line-height: 1.5rem;
+			}
+
 			li {
 				display: list-item;
 			}
@@ -80,8 +84,8 @@
 				line-height: 1rem;
 
 				&::after {
-					bottom: -0.4rem;
 					width: 100%;
+					bottom: -0.2rem;
 				}
 			}
 

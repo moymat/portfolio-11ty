@@ -1,13 +1,20 @@
-<li
-	class="project-card"
-	id="{{ project.data.title }}-card"
->
+<li class="project-card" id="{{ project.data.title }}-card">
 	<div class="project-illustration">
 		<img src="{{ project.data.illus }}" alt="{{ project.data.title }}" />
 	</div>
 	<div class="project-content">
 		<h3>{{ project.data.title }}</h3>
-		<p class="project-description">Reprehenderit cupidatat culpa officia velit mollit dolore voluptate esse labore non.</p>
-		<a class="project-link page-link" href="{{ project.url }}">en savoir plus</a>
+		<p class="project-description">
+			Reprehenderit cupidatat culpa officia velit mollit dolore voluptate esse
+			labore non.
+		</p>
+		<span class="page-link">
+			<a
+				class="glitchy-link project-link"
+				data-content="en savoir plus"
+				href="{{ project.url }}"
+				>en savoir plus</a
+			>
+		</span>
 	</div>
 </li>

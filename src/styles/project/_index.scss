@@ -159,12 +159,12 @@
 			p {
 				margin-bottom: 2rem;
 
-				a {
+				.page-link {
 					@include page-link-small;
 				}
 			}
 
-			ul {
+			ul:not(.project-links) {
 				margin-left: 1rem;
 
 				ul {
@@ -185,10 +185,33 @@
 			}
 		}
 
+		.project-content .project-links {
+			display: flex;
+			list-style: none;
+
+			.page-link {
+				position: relative;
+
+				&:not(:first-child) {
+					margin-left: 2rem;
+				}
+
+				&::after {
+					width: 100%;
+				}
+
+				a {
+					font-size: 0.9rem;
+					line-height: 1.3rem;
+					letter-spacing: 0.04rem;
+				}
+			}
+		}
+
 		.project-wip {
 			display: flex;
 			font-weight: 800;
-			margin-bottom: 2rem;
+			margin: 1rem 0 2rem;
 
 			span {
 				font-size: 1.2rem;

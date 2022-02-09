@@ -36,7 +36,31 @@ layout: base.njk
         en cours de développement</p>
     {% endif %}
     <p class="project-description">{{description}}<p>
-    <div class="project-content">{{content | safe}}</div>
+    <div class="project-content">
+      {{content | safe}}
+      <ul class="project-links">
+        <li class="page-link">
+          <a
+            class="glitchy-link"
+            data-content="visiter le site"
+            href="{{links.live}}"
+            target="_blank"
+            >visiter le site</a
+          >
+          <div></div>
+        </li>
+        <li class="page-link">
+          <a
+            class="glitchy-link"
+            data-content="voir le code"
+            href="{{links.github}}"
+            target="_blank"
+            >voir le code</a
+          >
+          <div></div>
+        </li>
+      </ul>
+    </div>
   </div>
 </main>
 <script defer src="/index.js"></script>
