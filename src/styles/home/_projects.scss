@@ -21,7 +21,7 @@
 					background-color: transparent;
 					opacity: 0;
 
-					.original-canvas,
+					.project-image,
 					.blue-canvas,
 					.red-canvas {
 						bottom: -10rem;
@@ -49,6 +49,10 @@
 				bottom: 1.5rem;
 			}
 
+			&:hover .project-illustration .project-image {
+				filter: grayscale(0.7);
+			}
+
 			&.hover {
 				.project-illustration {
 					filter: blur(0.25rem);
@@ -67,49 +71,50 @@
 				height: 100%;
 				transition: all 0.8s ease-in-out, opacity 1s ease-in-out;
 
-				canvas {
+				.project-image {
+					position: absolute;
+					width: 100%;
+					object-fit: cover;
+					left: 0;
+					bottom: 0;
+					filter: grayscale(1);
+					transition: bottom 0.5s ease-in-out 0.05s, filter 0.4s ease-in-out;
+				}
+
+				.blue-canvas,
+				.red-canvas {
 					position: absolute;
 					width: 100%;
 					height: 100%;
 					left: 0;
 					bottom: 0;
-					z-index: 1;
+					opacity: 0.5;
+					pointer-events: none;
+					z-index: -1;
 
-					&.blue-canvas,
-					&.red-canvas {
-						opacity: 0.5;
-						pointer-events: none;
-						z-index: 0;
-
-						&.hover {
-							animation: img-glitches 3s cubic-bezier(0.16, 0.84, 0.04, 1)
-								infinite;
-							visibility: visible;
-							animation-play-state: running;
-							left: auto;
-							bottom: auto;
-						}
+					&.hover {
+						animation: img-glitches 3s cubic-bezier(0.16, 0.84, 0.04, 1)
+							infinite;
+						visibility: visible;
+						animation-play-state: running;
+						left: auto;
+						bottom: auto;
 					}
+				}
 
-					&.original-canvas {
-						transition: bottom 0.5s ease-in-out 0.05s;
-					}
+				.red-canvas {
+					transition: bottom 0.45s ease-in-out 0.1s, left 0.45s ease-in-out 0.1s;
+				}
 
-					&.red-canvas {
-						transition: bottom 0.45s ease-in-out 0.1s,
-							left 0.45s ease-in-out 0.1s;
+				.blue-canvas {
+					transition: bottom 0.55s ease-in-out, left 0.45s ease-in-out 0.1s;
+					&.hover {
+						animation-direction: reverse;
 					}
+				}
 
-					&.blue-canvas {
-						transition: bottom 0.55s ease-in-out, left 0.45s ease-in-out 0.1s;
-						&.hover {
-							animation-direction: reverse;
-						}
-					}
-
-					&:hover {
-						transition: filter 0.2s ease-in-out;
-					}
+				&:hover {
+					transition: filter 0.2s ease-in-out;
 				}
 			}
 		}

@@ -8,7 +8,7 @@ const languagesList = document.querySelector(".languages-list");
 const languageItems = document.querySelectorAll(".language-item i");
 const projectContents = document.querySelectorAll(".project-content");
 const projectCards = document.querySelectorAll(".project-card");
-const canvases = document.querySelectorAll(".original-canvas");
+const projectImgs = document.querySelectorAll(".project-image");
 
 glitchyLinks.forEach(link => {
 	link.addEventListener("mouseover", animateLink);
@@ -36,7 +36,7 @@ projectContents.forEach(pc => {
 	});
 });
 
-canvases.forEach(initCanvases);
+projectImgs.forEach(initCanvases);
 
 const observer = new IntersectionObserver(
 	entries => {

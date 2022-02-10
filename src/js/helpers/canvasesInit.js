@@ -1,6 +1,29 @@
-export default function initCanvases(canvas) {
-	const ctx = canvas.getContext("2d");
-	ctx.canvas.setAttribute("width", ctx.canvas.offsetWidth);
+export default function initCanvases(image) {
+	const canvases = image.parentNode.querySelectorAll("canvas");
+
+	image.onload = () => {
+		canvases.forEach(canvas => {
+			const color = canvas.classList[0].replace("-canvas", "");
+
+			const ctx = canvas.getContext("2d");
+
+			const img = new Image();
+			img.src = image.src;
+			img.addEventListener("load", drawImage.bind(img, [ctx, color]));
+		});
+	};
+
+	image.parentNode.parentNode.addEventListener("mouseover", () => {
+		canvases.forEach(canvas => {
+			canvas.classList.add("hover");
+		});
+		image.parentNode.parentNode.addEventListener("mouseleave", () => {
+			canvases.forEach(canvas => {
+				canvas.classList.remove("hover");
+			});
+		});
+	});
+	/*ctx.canvas.setAttribute("width", ctx.canvas.offsetWidth);
 	ctx.canvas.setAttribute("height", ctx.canvas.offsetHeight);
 
 	const img = new Image();
@@ -12,7 +35,6 @@ export default function initCanvases(canvas) {
 		createCanvas("red", ctx),
 	];
 
-	const illus = canvas.parentNode;
 
 	illus.parentNode.addEventListener("mouseover", () => {
 		console.log("called");
@@ -26,7 +48,7 @@ export default function initCanvases(canvas) {
 		});
 	});
 
-	illus.append(blueCanvas, redCanvas);
+	illus.append(blueCanvas, redCanvas); */
 }
 
 function createCanvas(color, originalCtx) {

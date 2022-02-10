@@ -1,9 +1,8 @@
 <li class="project-card hidden" id="{{ project.data.title }}-card">
 	<div class="project-illustration">
-		<canvas
-			data-link="{{ project.data.illus }}"
-			class="original-canvas"
-		></canvas>
+		<image src="{{ project.data.illus }}" class="project-image"/>
+		<canvas width="320" height="475" class="blue-canvas"></canvas>
+		<canvas width="320" height="475" class="red-canvas"></canvas>
 	</div>
 	<div class="project-content">
 		<h3>{{ project.data.title }}</h3>
