@@ -25,47 +25,6 @@ export default function initCanvases(image) {
 			});
 		});
 	});
-	/*ctx.canvas.setAttribute("width", ctx.canvas.offsetWidth);
-	ctx.canvas.setAttribute("height", ctx.canvas.offsetHeight);
-
-	const img = new Image();
-	img.src = ctx.canvas.dataset.link;
-	img.addEventListener("load", drawImage.bind(img, [ctx]));
-
-	const [blueCanvas, redCanvas] = [
-		createCanvas("blue", ctx),
-		createCanvas("red", ctx),
-	];
-
-
-	illus.parentNode.addEventListener("mouseover", () => {
-		console.log("called");
-		blueCanvas.classList.add("hover");
-		redCanvas.classList.add("hover");
-
-		illus.parentNode.addEventListener("mouseleave", () => {
-			console.log("exited");
-			blueCanvas.classList.remove("hover");
-			redCanvas.classList.remove("hover");
-		});
-	});
-
-	illus.append(blueCanvas, redCanvas); */
-}
-
-function createCanvas(color, originalCtx) {
-	const canvas = document.createElement("canvas");
-	const ctx = canvas.getContext("2d");
-
-	canvas.classList.add(`${color}-canvas`);
-	canvas.setAttribute("width", originalCtx.canvas.offsetWidth);
-	canvas.setAttribute("height", originalCtx.canvas.offsetHeight);
-
-	const img = new Image();
-	img.src = originalCtx.canvas.dataset.link;
-	img.addEventListener("load", drawImage.bind(img, [ctx, color]));
-
-	return canvas;
 }
 
 function colorImage(ctx, color) {

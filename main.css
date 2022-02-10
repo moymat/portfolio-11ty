@@ -1,1 +1,41 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);*{margin:0;padding:0;font-family:Poppins,sans-serif}body{height:100vh;background:url(../assets/img/noise.png),radial-gradient(56.28% 57.59% at 68.37% 29.83%,#5d5fef 0,#373289 43.75%,#180d37 79.18%),#c4c4c4;background-blend-mode:darken,normal,normal}:export{shortAnimDuration:.2s;mediumAnimDuration:.35s;longAnimDuration:.5s;mainDarkColor:#121416;mainLightColor:#e5dada;secondDarkColor:#27292b}nav{position:fixed;width:100%}nav ul{position:absolute;top:5rem;right:11rem;width:-webkit-max-content;width:-moz-max-content;width:max-content;list-style:circle;line-height:1.5rem;color:#fff}
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Poppins, sans-serif;
+}
+body {
+	height: 100vh;
+	background: url(../assets/img/noise.webp),
+		radial-gradient(
+			56.28% 57.59% at 68.37% 29.83%,
+			#5d5fef 0,
+			#373289 43.75%,
+			#180d37 79.18%
+		),
+		#c4c4c4;
+	background-blend-mode: darken, normal, normal;
+}
+:export {
+	shortAnimDuration: 0.2s;
+	mediumAnimDuration: 0.35s;
+	longAnimDuration: 0.5s;
+	mainDarkColor: #121416;
+	mainLightColor: #e5dada;
+	secondDarkColor: #27292b;
+}
+nav {
+	position: fixed;
+	width: 100%;
+}
+nav ul {
+	position: absolute;
+	top: 5rem;
+	right: 11rem;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	list-style: circle;
+	line-height: 1.5rem;
+	color: #fff;
+}

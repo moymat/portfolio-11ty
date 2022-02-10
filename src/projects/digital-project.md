@@ -1,7 +1,7 @@
 ---
 title: Digital Project
-image: "/assets/img/projects/digital-project.png"
-illus: "/assets/img/illus/digital-project.jpg"
+image: "/assets/img/projects/digital-project.webp"
+illus: "/assets/img/illus/digital-project.webp"
 context: projet personnel
 year: 2021
 stack: ["nextjs", "figma"]

@@ -1,6 +1,6 @@
 ---
 title: Portfolio
-image: "/assets/img/projects/portfolio.png"
+image: "/assets/img/projects/portfolio.webp"
 context: projet personnel
 year: 2021
 stack: ["javascript", "eleventy", "sass"]

@@ -1,7 +1,7 @@
 ---
 title: Adopt
-image: "/assets/img/projects/adopt.png"
-illus: "/assets/img/illus/adopt.jpg"
+image: "/assets/img/projects/adopt.webp"
+illus: "/assets/img/illus/adopt.webp"
 context: projet personnel
 year: "2021/22"
 stack: ["react", "postgresql", "express", "materialui", "heroku"]

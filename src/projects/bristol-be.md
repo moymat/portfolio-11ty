@@ -1,7 +1,7 @@
 ---
 title: Bristol
-image: "/assets/img/projects/bristol.png"
-illus: "/assets/img/illus/bristol.jpg"
+image: "/assets/img/projects/bristol.webp"
+illus: "/assets/img/illus/bristol.webp"
 context: projet de fin de formation
 year: 2021
 stack:
