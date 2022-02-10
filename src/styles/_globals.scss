@@ -167,6 +167,14 @@ section {
 	transition: width 0.25s ease-in-out;
 }
 
+#scroll-interception {
+	position: fixed;
+	bottom: 10vh;
+	left: 0;
+	width: 100vw;
+	border-bottom: 4px solid red;
+}
+
 @keyframes link-glitches {
 	0% {
 		top: 0;

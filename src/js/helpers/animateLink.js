@@ -5,7 +5,7 @@ export default function animateLink(e, onLinkLeave) {
 	function onLinkLeave(link) {
 		clearTimeout(timeout);
 		link.classList.remove("hover");
-		//link.style.left = 0;
+		link.style.left = 0;
 		link.removeEventListener("mouseleave", onLinkLeave.bind(null, link));
 	}
 

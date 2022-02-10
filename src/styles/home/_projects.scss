@@ -1,22 +1,56 @@
 #projects {
 	.project-cards {
+		position: relative;
 		display: flex;
 		flex-direction: column;
-		color: white;
 		list-style: none;
+		color: white;
 
 		.project-card {
 			position: relative;
+			bottom: 0;
+			opacity: 1;
 			width: 400px;
 			max-width: 400px;
 			height: 475px;
+
+			&.hidden {
+				opacity: 0;
+
+				.project-illustration {
+					background-color: transparent;
+					opacity: 0;
+
+					.original-canvas,
+					.blue-canvas,
+					.red-canvas {
+						bottom: -10rem;
+					}
+
+					.blue-canvas {
+						left: 3rem;
+					}
+
+					.red-canvas {
+						left: -3rem;
+					}
+				}
+
+				.project-content {
+					bottom: -5rem;
+				}
+			}
 
 			&:nth-child(even) {
 				align-self: flex-end;
 			}
 
 			&:not(:first-child) {
-				top: -1.5rem;
+				bottom: 1.5rem;
+			}
+
+			&.hover .project-illustration {
+				filter: blur(0.25rem);
 			}
 
 			.project-illustration {
@@ -26,82 +60,134 @@
 				max-width: 320px;
 				max-height: 100%;
 				height: 100%;
-				overflow: hidden;
+				transition: all 0.8s ease-in-out, opacity 1s ease-in-out;
 
-				img {
-					width: 100%;
-					object-fit: scale-down;
-					filter: grayscale(1) opacity(0.5);
-					transition: transform 0.4s ease-in-out;
-				}
-
-				&::after {
+				canvas {
 					position: absolute;
-					content: "";
-					inset: 0;
-					background-color: transparent;
-					opacity: 0.6;
-					transition: background-color 0.4s ease-in-out;
-				}
-			}
+					width: 100%;
+					height: 100%;
+					bottom: 0;
+					left: 0;
+					z-index: 1;
 
-			.project-content {
-				position: absolute;
-				bottom: 20px;
+					&.blue-canvas,
+					&.red-canvas {
+						opacity: 0.5;
+						pointer-events: none;
+						z-index: 0;
 
-				h3 {
-					font-weight: 800;
-					font-size: 2rem;
-					line-height: 3rem;
-					letter-spacing: 0.04rem;
-					text-transform: uppercase;
-					margin-bottom: 0.75rem;
-				}
-
-				.project-description {
-					font-style: italic;
-					line-height: 1.5rem;
-					font-weight: normal;
-					text-transform: lowercase;
-					margin-bottom: 0.75rem;
-				}
-
-				.page-link {
-					position: relative;
-
-					&:hover::after {
-						position: absolute;
-						width: 100%;
+						&.hover {
+							animation: img-glitches 3s cubic-bezier(0.075, 0.82, 0.165, 1)
+								infinite;
+							visibility: visible;
+							animation-play-state: running;
+							inset: auto;
+						}
 					}
 
-					.project-link {
-						position: relative;
-						font-size: 0.9rem;
-						line-height: 1.35rem;
-						font-weight: normal;
-						letter-spacing: 0.04rem;
-						text-transform: lowercase;
-						color: #fff;
-						text-decoration: none;
-
-						/* &:hover::after {
-						width: 100%;
-					} */
-					}
-				}
-			}
-
-			&:hover {
-				.project-illustration {
-					& img {
-						transform: scale(1.1);
+					&.original-canvas {
+						transition: bottom 0.5s ease-in-out 0.05s;
 					}
 
-					&::after {
-						background-color: $main_text_blue;
+					&.red-canvas {
+						transition: bottom 0.45s ease-in-out 0.1s,
+							left 0.45s ease-in-out 0.1s;
+					}
+
+					&.blue-canvas {
+						transition: bottom 0.55s ease-in-out, left 0.45s ease-in-out 0.1s;
+						&.hover {
+							animation-direction: reverse;
+						}
+					}
+
+					&:hover {
+						transition: filter 0.2s ease-in-out;
 					}
 				}
 			}
 		}
+
+		.project-content {
+			position: absolute;
+			bottom: 20px;
+			z-index: 1;
+			transition: all 0.8s ease-in-out 0.2s;
+
+			h3 {
+				font-weight: 800;
+				font-size: 2rem;
+				line-height: 3rem;
+				letter-spacing: 0.04rem;
+				text-transform: uppercase;
+				margin-bottom: 0.75rem;
+			}
+
+			.project-description {
+				font-style: italic;
+				line-height: 1.5rem;
+				font-weight: normal;
+				text-transform: lowercase;
+				margin-bottom: 0.75rem;
+			}
+
+			.page-link {
+				position: relative;
+
+				&:hover::after {
+					position: absolute;
+					width: 100%;
+				}
+
+				.project-link {
+					position: relative;
+					font-size: 0.9rem;
+					line-height: 1.35rem;
+					font-weight: normal;
+					letter-spacing: 0.04rem;
+					text-transform: lowercase;
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+@keyframes img-glitches {
+	0% {
+		inset: 0;
+	}
+	12% {
+		top: 1rem;
+		left: 1rem;
+	}
+	25% {
+		opacity: 0.5;
+	}
+	38% {
+		top: -1rem;
+		left: -1rem;
+	}
+	50% {
+		top: 0;
+		left: 0;
+		opacity: 0;
+	}
+	62% {
+		bottom: 1rem;
+		right: 1rem;
+	}
+	75% {
+		opacity: 0.5;
+	}
+	88% {
+		bottom: -1rem;
+		right: -1rem;
+	}
+	100% {
+		bottom: 0;
+		right: 0;
+		opacity: 0;
 	}
 }
