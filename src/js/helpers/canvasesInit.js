@@ -9,7 +9,9 @@ export default function initCanvases(image) {
 
 			const img = new Image();
 			img.src = image.src;
-			img.addEventListener("load", drawImage.bind(img, [ctx, color]));
+			img.addEventListener("load", drawImage.bind(img, [ctx, color]), false);
+
+			drawImage.call(img, [ctx, color]);
 		});
 	};
 
