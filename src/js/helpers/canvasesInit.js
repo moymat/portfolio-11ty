@@ -1,8 +1,9 @@
 export default function initCanvases(image) {
 	const canvases = image.parentNode.querySelectorAll("canvas");
 
-	image.addEventListener("load", () => {
-		console.log(image, "loaded");
+	const isLoaded = image.complete && image.naturalHeight !== 0;
+
+	function onImageLoaded() {
 		canvases.forEach(canvas => {
 			const color = canvas.classList[0].replace("-canvas", "");
 
@@ -11,10 +12,10 @@ export default function initCanvases(image) {
 			const img = new Image();
 			img.src = image.src;
 			img.addEventListener("load", drawImage.bind(img, [ctx, color]), false);
-
-			//drawImage.call(img, [ctx, color]);
 		});
-	});
+	}
+
+	isLoaded ? onImageLoaded() : image.addEventListener("load", onImageLoaded);
 
 	image.parentNode.parentNode.addEventListener("mouseover", () => {
 		canvases.forEach(canvas => {
