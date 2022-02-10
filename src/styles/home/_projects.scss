@@ -92,6 +92,10 @@
 					opacity: 0.5;
 					pointer-events: none;
 					z-index: -1;
+					animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+					animation-duration: 3s;
+					animation-iteration-count: infinite;
+					animation-play-state: paused;
 
 					&.hover {
 						visibility: visible;
@@ -103,18 +107,17 @@
 
 				.red-canvas {
 					transition: bottom 0.45s ease-in-out 0.1s, left 0.45s ease-in-out 0.1s;
-
+					animation-delay: 0.25s;
 					&.hover {
-						animation: img-glitches-red 3s cubic-bezier(0.76, 0.14, 0.74, 0.56)
-							infinite;
+						animation-name: img-glitches-red;
 					}
 				}
 
 				.blue-canvas {
 					transition: bottom 0.55s ease-in-out, left 0.45s ease-in-out 0.1s;
+
 					&.hover {
-						animation: img-glitches-blue 3s cubic-bezier(0.76, 0.14, 0.74, 0.56)
-							infinite;
+						animation-name: img-glitches-blue;
 					}
 				}
 
