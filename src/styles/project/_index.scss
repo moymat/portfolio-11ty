@@ -12,18 +12,18 @@
 			float: right;
 			display: flex;
 			flex-direction: column;
-			max-width: 410px;
+			width: 410px;
 			margin: 4rem 0 2rem 7%;
 
 			.img-container {
-				align-self: flex-end;
 				position: relative;
-				width: 100%;
-				aspect-ratio: 410/315;
+				align-self: flex-end;
+				height: 315px;
 
 				img {
-					height: 100%;
-					width: 100%;
+					// position: absolute;
+					width: 410px;
+					height: 315px;
 					object-fit: cover;
 				}
 
