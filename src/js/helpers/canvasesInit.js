@@ -2,6 +2,7 @@ export default function initCanvases(image) {
 	const canvases = image.parentNode.querySelectorAll("canvas");
 
 	const isLoaded = image.complete && image.naturalHeight !== 0;
+	console.log(isLoaded);
 
 	function onImageLoaded() {
 		canvases.forEach(canvas => {
