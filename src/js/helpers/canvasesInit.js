@@ -1,7 +1,7 @@
 export default function initCanvases(image) {
 	const canvases = image.parentNode.querySelectorAll("canvas");
 
-	image.onload = () => {
+	image.addEventListener("load", () => {
 		canvases.forEach(canvas => {
 			const color = canvas.classList[0].replace("-canvas", "");
 
@@ -13,7 +13,7 @@ export default function initCanvases(image) {
 
 			drawImage.call(img, [ctx, color]);
 		});
-	};
+	});
 
 	image.parentNode.parentNode.addEventListener("mouseover", () => {
 		canvases.forEach(canvas => {
@@ -45,7 +45,6 @@ function colorImage(ctx, color) {
 }
 
 function drawImage([ctx, color]) {
-	console.log(ctx.canvas, this);
 	// get the scale
 	const scale = Math.max(
 		ctx.canvas.width / this.width,
