@@ -45,6 +45,7 @@ function colorImage(ctx, color) {
 }
 
 function drawImage([ctx, color]) {
+	console.log(ctx.canvas, this);
 	// get the scale
 	const scale = Math.max(
 		ctx.canvas.width / this.width,
