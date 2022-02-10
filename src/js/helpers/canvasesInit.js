@@ -2,6 +2,7 @@ export default function initCanvases(image) {
 	const canvases = image.parentNode.querySelectorAll("canvas");
 
 	image.addEventListener("load", () => {
+		console.log(image, "loaded");
 		canvases.forEach(canvas => {
 			const color = canvas.classList[0].replace("-canvas", "");
 
@@ -11,7 +12,7 @@ export default function initCanvases(image) {
 			img.src = image.src;
 			img.addEventListener("load", drawImage.bind(img, [ctx, color]), false);
 
-			drawImage.call(img, [ctx, color]);
+			//drawImage.call(img, [ctx, color]);
 		});
 	});
 
