@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const pluginSass = require("eleventy-plugin-sass");
+const embedYouTube = require("eleventy-plugin-youtube-embed");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const Image = require("@11ty/eleventy-img");
@@ -42,6 +43,10 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addWatchTarget("./src/js/");
 	eleventyConfig.addPlugin(pluginSass, {
 		remap: true,
+	});
+	eleventyConfig.addPlugin(embedYouTube, {
+		embedClass: "youtube-video",
+		lite: true,
 	});
 	eleventyConfig.setLibrary(
 		"md",

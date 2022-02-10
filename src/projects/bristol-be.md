@@ -18,8 +18,9 @@ tags: ["featured"]
 links:
   {
     github: "https://github.com/moymat/bristolbe",
-    live: "https://vercel.com/moymat/projet-13-bristol",
+    live: "https://bristolbe.vercel.app/",
   }
+excerpt: application web // créer, partager et organiser des fiches méthodologiques collaboratives
 description: Projet de fin de formation à l'école imaginé et créé de A à Z sur une période d'un mois en collaboration avec deux autres développeurs.
 ---
 
@@ -30,3 +31,7 @@ Ce projet a pour objectif de permettre le partage, l'organisation et la créatio
 Le back est développé sous _Express.js_ et la base de donnée est en _PSQL_. Le serveur utilise également _Redis_ pour stocker certaines informations temporaires tels les refresh token permettant l'identification des utilisateurs par exemple. _Socket.io_ a également été intégré afin de permettre aux collaborateurs d'être informés immédiatement des modifications des fiches. Enfin, l'envoie des emails de confirmation est faite avec _Nodemailer_.
 
 Le front quand à lui est développé sous _React_ et l'UI a été conçue avec _Material UI_. En ce qui concerne l'outil de traitement de texte, notre choix s'est porté sur _Quill_.
+
+La présentation en vidéo de **Bristol** par l'équipe pédagogique de <span class="page-link">[O'Clock](https://oclock.io/){target="\_blank" .glitchy-link data-content="O'Clock"}</span> (01:12:35):
+
+https://youtu.be/fVoNDfbKTsY?t=4357

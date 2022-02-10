@@ -11,6 +11,7 @@ links:
     github: "https://github.com/moymat/adopt",
     live: "https://adopt-flax.vercel.app/",
   }
+excerpt: application web // mettre en relation les associations et refuges animaliers avec de potentiels adoptants
 description: Ce projet est un concept d'application web permettant de mettre plus facilement en relation les associations et refuges animaliers avec de potentiels adoptants.
 ---
 

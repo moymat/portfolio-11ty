@@ -2,7 +2,8 @@
 	position: relative;
 	display: flex;
 	justify-content: flex-start;
-	height: 860px;
+	height: 800px;
+	max-height: calc(95vh - 200px);
 	box-sizing: border-box;
 
 	.hero-content {

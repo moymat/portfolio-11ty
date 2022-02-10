@@ -25,17 +25,17 @@
 					width: 410px;
 					height: 315px;
 					object-fit: cover;
+					filter: brightness(0.9);
 				}
 
 				&::before {
 					position: absolute;
-					top: 10%;
-					left: -10%;
+					top: 1rem;
+					left: -1rem;
 					content: "";
-					background-color: $main_text_blue;
+					background-color: rgba($main_text_blue, 0.6);
 					width: 100%;
 					height: 100%;
-					z-index: -1;
 				}
 			}
 
@@ -185,25 +185,44 @@
 			}
 		}
 
-		.project-content .project-links {
-			display: flex;
-			list-style: none;
+		.project-content {
+			.project-links {
+				display: flex;
+				list-style: none;
 
-			.page-link {
+				.page-link {
+					position: relative;
+
+					&:not(:first-child) {
+						margin-left: 2rem;
+					}
+
+					&::after {
+						width: 100%;
+					}
+
+					a {
+						font-size: 0.9rem;
+						line-height: 1.3rem;
+						letter-spacing: 0.04rem;
+					}
+				}
+			}
+
+			.youtube-video {
 				position: relative;
+				width: 600px !important;
+				margin: 0 auto 3.5rem;
 
-				&:not(:first-child) {
-					margin-left: 2rem;
-				}
-
-				&::after {
+				&::before {
+					position: absolute;
+					top: 1rem;
+					left: -1rem;
+					content: "";
+					background-color: rgba($main_text_blue, 0.6);
 					width: 100%;
-				}
-
-				a {
-					font-size: 0.9rem;
-					line-height: 1.3rem;
-					letter-spacing: 0.04rem;
+					height: 100%;
+					z-index: -1;
 				}
 			}
 		}

@@ -9,6 +9,7 @@ links:
     github: "https://github.com/moymat/portfolio-11ty",
     live: "http://localhost:8080/",
   }
+excerpt: site web // portfolio personnel
 description: Ce projet est tout simplement le site sur lequel vous vous trouvez actuellement.
 ---
 

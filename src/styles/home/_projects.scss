@@ -55,7 +55,7 @@
 
 			&.hover {
 				.project-illustration {
-					filter: blur(0.25rem);
+					filter: blur(0.35rem);
 				}
 				.project-content {
 					transform: scale(1.05);
@@ -94,8 +94,6 @@
 					z-index: -1;
 
 					&.hover {
-						animation: img-glitches 3s cubic-bezier(0.16, 0.84, 0.04, 1)
-							infinite;
 						visibility: visible;
 						animation-play-state: running;
 						left: auto;
@@ -105,12 +103,18 @@
 
 				.red-canvas {
 					transition: bottom 0.45s ease-in-out 0.1s, left 0.45s ease-in-out 0.1s;
+
+					&.hover {
+						animation: img-glitches-red 3s cubic-bezier(0.76, 0.14, 0.74, 0.56)
+							infinite;
+					}
 				}
 
 				.blue-canvas {
 					transition: bottom 0.55s ease-in-out, left 0.45s ease-in-out 0.1s;
 					&.hover {
-						animation-direction: reverse;
+						animation: img-glitches-blue 3s cubic-bezier(0.76, 0.14, 0.74, 0.56)
+							infinite;
 					}
 				}
 
@@ -167,41 +171,81 @@
 	}
 }
 
-@keyframes img-glitches {
+@keyframes img-glitches-red {
 	0% {
-		bottom: 0;
-		left: 0;
+		bottom: -0.2rem;
+		left: 0.1rem;
 	}
-	12% {
+	7% {
 		bottom: -0.8rem;
 		left: -0.8rem;
 	}
-	25% {
+	21% {
+		left: -0.4rem;
+		bottom: 0.2rem;
 		opacity: 0.5;
 	}
-	38% {
+	35% {
 		bottom: 0.8rem;
 		left: -0.8rem;
 	}
 	50% {
-		// bottom: 0;
-		// left: 0;
-		opacity: 0;
+		bottom: -0.2rem;
+		left: -0.2rem;
 	}
-	62% {
-		bottom: -0.8rem;
+	64% {
+		bottom: 0.6rem;
 		left: 0.8rem;
 	}
-	75% {
+	78% {
+		left: 1rem;
 		opacity: 0.5;
 	}
-	88% {
-		bottom: 0.8rem;
+	92% {
+		bottom: -1rem;
 		left: 0.8rem;
 	}
 	100% {
-		// bottom: 0;
-		// left: 0;
+		bottom: 0.2rem;
+		left: 0.4rem;
 		opacity: 0;
+	}
+}
+
+@keyframes img-glitches-blue {
+	0% {
+		bottom: 0.4rem;
+		left: -0.2rem;
+	}
+	7% {
+		bottom: 0.8rem;
+		left: 0.4rem;
+	}
+	21% {
+		bottom: -0.4rem;
+	}
+	35% {
+		bottom: -1rem;
+		left: 0.8rem;
+	}
+	50% {
+		bottom: -0.4rem;
+		left: -0.4rem;
+	}
+	64% {
+		bottom: -0.8rem;
+		left: -0.8rem;
+	}
+	78% {
+		left: -1rem;
+		opacity: 0.5;
+	}
+	92% {
+		bottom: 0.2rem;
+		left: -0.6rem;
+	}
+	100% {
+		bottom: -0.2rem;
+		left: 0.4rem;
 	}
 }
