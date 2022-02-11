@@ -1,4 +1,4 @@
-import { animateLink, setIconsHoverBehavior, initCanvases } from "./helpers";
+import { animateLink, setIconsHoverBehavior } from "./helpers";
 
 const dateFooter = document.querySelector("#date-footer");
 const navLinks = document.querySelectorAll("nav a");
@@ -8,7 +8,6 @@ const languagesList = document.querySelector(".languages-list");
 const languageItems = document.querySelectorAll(".language-item i");
 const projectContents = document.querySelectorAll(".project-content");
 const projectCards = document.querySelectorAll(".project-card");
-const projectImgs = document.querySelectorAll(".project-image");
 
 glitchyLinks.forEach(link => {
 	link.addEventListener("mouseover", animateLink);
@@ -35,8 +34,6 @@ projectContents.forEach(pc => {
 		pc.parentNode.classList.remove("hover");
 	});
 });
-
-projectImgs.forEach(initCanvases);
 
 const observer = new IntersectionObserver(
 	entries => {

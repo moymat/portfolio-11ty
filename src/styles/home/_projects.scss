@@ -13,31 +13,17 @@
 			width: 400px;
 			max-width: 400px;
 			height: 475px;
+			transition: opacity 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 			&.hidden {
 				opacity: 0;
 
-				.project-illustration {
-					background-color: transparent;
-					opacity: 0;
-
-					.project-image,
-					.blue-canvas,
-					.red-canvas {
-						bottom: -10rem;
-					}
-
-					.blue-canvas {
-						left: 3rem;
-					}
-
-					.red-canvas {
-						left: -3rem;
-					}
+				.project-content {
+					bottom: -4rem;
 				}
 
-				.project-content {
-					bottom: -5rem;
+				.project-illustration .project-image {
+					bottom: -8rem;
 				}
 			}
 
@@ -49,19 +35,6 @@
 				bottom: 2rem;
 			}
 
-			&:hover .project-illustration .project-image {
-				filter: grayscale(0.7);
-			}
-
-			&.hover {
-				.project-illustration {
-					filter: blur(0.35rem);
-				}
-				.project-content {
-					transform: scale(1.05);
-				}
-			}
-
 			.project-illustration {
 				position: relative;
 				right: -5rem;
@@ -69,60 +42,15 @@
 				max-width: 320px;
 				max-height: 100%;
 				height: 100%;
-				transition: all 0.8s ease-in-out, opacity 1s ease-in-out;
+				filter: grayscale(1);
 
 				.project-image {
 					position: absolute;
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
-					left: 0;
 					bottom: 0;
-					filter: grayscale(1);
-					transition: bottom 0.5s ease-in-out 0.05s, filter 0.4s ease-in-out;
-				}
-
-				.blue-canvas,
-				.red-canvas {
-					position: absolute;
-					width: 100%;
-					height: 100%;
-					left: 0;
-					bottom: 0;
-					opacity: 0.5;
-					pointer-events: none;
-					z-index: -1;
-					animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-					animation-duration: 3s;
-					animation-iteration-count: infinite;
-					animation-play-state: paused;
-
-					&.hover {
-						visibility: visible;
-						animation-play-state: running;
-						left: auto;
-						bottom: auto;
-					}
-				}
-
-				.red-canvas {
-					transition: bottom 0.45s ease-in-out 0.1s, left 0.45s ease-in-out 0.1s;
-					animation-delay: 0.25s;
-					&.hover {
-						animation-name: img-glitches-red;
-					}
-				}
-
-				.blue-canvas {
-					transition: bottom 0.55s ease-in-out, left 0.45s ease-in-out 0.1s;
-
-					&.hover {
-						animation-name: img-glitches-blue;
-					}
-				}
-
-				&:hover {
-					transition: filter 0.2s ease-in-out;
+					transition: bottom 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.2s;
 				}
 			}
 		}
@@ -131,8 +59,7 @@
 			position: absolute;
 			bottom: 20px;
 			z-index: 1;
-			transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53),
-				bottom 0.8s ease-in-out 0.2s;
+			transition: bottom 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.2s;
 
 			h3 {
 				font-weight: 800;
@@ -171,84 +98,5 @@
 				}
 			}
 		}
-	}
-}
-
-@keyframes img-glitches-red {
-	0% {
-		bottom: -0.2rem;
-		left: 0.1rem;
-	}
-	7% {
-		bottom: -0.8rem;
-		left: -0.8rem;
-	}
-	21% {
-		left: -0.4rem;
-		bottom: 0.2rem;
-		opacity: 0.5;
-	}
-	35% {
-		bottom: 0.8rem;
-		left: -0.8rem;
-	}
-	50% {
-		bottom: -0.2rem;
-		left: -0.2rem;
-	}
-	64% {
-		bottom: 0.6rem;
-		left: 0.8rem;
-	}
-	78% {
-		left: 1rem;
-		opacity: 0.5;
-	}
-	92% {
-		bottom: -1rem;
-		left: 0.8rem;
-	}
-	100% {
-		bottom: 0.2rem;
-		left: 0.4rem;
-		opacity: 0;
-	}
-}
-
-@keyframes img-glitches-blue {
-	0% {
-		bottom: 0.4rem;
-		left: -0.2rem;
-	}
-	7% {
-		bottom: 0.8rem;
-		left: 0.4rem;
-	}
-	21% {
-		bottom: -0.4rem;
-	}
-	35% {
-		bottom: -1rem;
-		left: 0.8rem;
-	}
-	50% {
-		bottom: -0.4rem;
-		left: -0.4rem;
-	}
-	64% {
-		bottom: -0.8rem;
-		left: -0.8rem;
-	}
-	78% {
-		left: -1rem;
-		opacity: 0.5;
-	}
-	92% {
-		bottom: 0.2rem;
-		left: -0.6rem;
-	}
-	100% {
-		bottom: -0.2rem;
-		left: 0.4rem;
 	}
 }
