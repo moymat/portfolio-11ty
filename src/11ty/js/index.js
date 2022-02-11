@@ -9,6 +9,8 @@ const languageItems = document.querySelectorAll(".language-item i");
 const projectContents = document.querySelectorAll(".project-content");
 const projectCards = document.querySelectorAll(".project-card");
 
+console.log("hello");
+
 glitchyLinks.forEach(link => {
 	link.addEventListener("mouseover", animateLink);
 });

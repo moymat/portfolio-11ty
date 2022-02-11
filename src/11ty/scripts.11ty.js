@@ -15,10 +15,10 @@ module.exports = class {
 
 	async render() {
 		await esbuild.build({
-			entryPoints: await glob("./src/js/*.js"),
+			entryPoints: await glob("./src/11ty/js/*.js"),
 			bundle: true,
 			minify: isProduction,
-			outdir: "public",
+			outdir: "./src/vite",
 			sourcemap: !isProduction,
 			target: isProduction ? "es6" : "esnext",
 			//plugins: [sassPlugin()],

@@ -20,11 +20,11 @@ const Image = require("@11ty/eleventy-img");
 		return arr;
 	};
 
-	const imgFiles = getImgs("./assets/img");
+	const imgFiles = getImgs("./src/11ty/assets/img");
 
 	await Promise.all(
 		imgFiles.map(async url => {
-			const outputDir = "public/" + url.replace(/([^\/]+)\/?$/, "");
+			const outputDir = url.replace(/([^\/]+)\/?$/, "").replace("11ty", "vite");
 			return await Image(url, {
 				formats: ["webp"],
 				filenameFormat: (_, src, width, format) => {
@@ -40,7 +40,7 @@ const Image = require("@11ty/eleventy-img");
 })();
 
 module.exports = eleventyConfig => {
-	eleventyConfig.addWatchTarget("./src/js/");
+	eleventyConfig.addWatchTarget("./src/11ty/js/");
 	eleventyConfig.addPlugin(pluginSass, {
 		remap: true,
 	});
@@ -52,14 +52,14 @@ module.exports = eleventyConfig => {
 		"md",
 		markdownIt({ html: true }).use(markdownItAttrs)
 	);
-	eleventyConfig.addPassthroughCopy("./src/assets");
+	eleventyConfig.addPassthroughCopy("./src/11ty/assets");
 	eleventyConfig.setDataDeepMerge(true);
 
 	return {
 		templateFormats: ["njk", "md", "11ty.js"],
 		dir: {
-			input: "src",
-			output: "public",
+			input: "./src/11ty",
+			output: "./src/vite",
 		},
 	};
 };

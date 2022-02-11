@@ -27,7 +27,7 @@ layout: base.njk
       </div>
     </div>
     <div class="go-back">    
-      <a data-content="< retour" href="/" class="glitchy-link">< retour</a>
+      <a data-content="< retour" href="/" class="glitchy-link">&lt; retour</a>
     </div>
     <h1 class="stroke-text project-title">{{title}}</h1>
     {% if "wip" in tags %}
@@ -35,7 +35,7 @@ layout: base.njk
         <span class="material-icons-outlined">report_problem</span>
         en cours de développement</p>
     {% endif %}
-    <p class="project-description">{{description}}<p>
+    <p class="project-description">{{description}}</p>
     <div class="project-content">
       {{content | safe}}
       <ul class="project-links">
