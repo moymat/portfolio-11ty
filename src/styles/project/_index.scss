@@ -158,10 +158,6 @@
 
 			p {
 				margin-bottom: 2rem;
-
-				.page-link {
-					@include page-link-small;
-				}
 			}
 
 			ul:not(.project-links) {
@@ -191,20 +187,12 @@
 				list-style: none;
 
 				.page-link {
-					position: relative;
-
 					&:not(:first-child) {
-						margin-left: 2rem;
-					}
-
-					&::after {
-						width: 100%;
+						margin-left: 1.5rem;
 					}
 
 					a {
 						font-size: 0.9rem;
-						line-height: 1.3rem;
-						letter-spacing: 0.04rem;
 					}
 				}
 			}

@@ -78,16 +78,6 @@
 		}
 
 		.formation-container {
-			.page-link {
-				position: relative;
-				line-height: 1rem;
-
-				&::after {
-					width: 100%;
-					bottom: -0.2rem;
-				}
-			}
-
 			.profile-date {
 				justify-content: flex-end;
 				width: 75px;

@@ -4,22 +4,6 @@
 		line-height: 1.5rem;
 		letter-spacing: 0.04em;
 		color: white;
-
-		.page-link {
-			position: relative;
-			width: max-content;
-
-			&::after {
-				bottom: -0.2rem;
-				width: 100%;
-			}
-
-			a {
-				position: relative;
-				color: white;
-				text-decoration: none;
-			}
-		}
 	}
 
 	& ul {
@@ -29,15 +13,6 @@
 
 		li:not(:first-child) {
 			margin-left: 1.5rem;
-		}
-
-		.page-link {
-			position: relative;
-			width: max-content;
-
-			&::after {
-				width: 100%;
-			}
 		}
 	}
 }

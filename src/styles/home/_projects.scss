@@ -77,26 +77,6 @@
 				text-transform: lowercase;
 				margin-bottom: 0.75rem;
 			}
-
-			.page-link {
-				position: relative;
-
-				&:hover::after {
-					position: absolute;
-					width: 100%;
-				}
-
-				.project-link {
-					position: relative;
-					font-size: 0.9rem;
-					line-height: 1.35rem;
-					font-weight: normal;
-					letter-spacing: 0.04rem;
-					text-transform: lowercase;
-					color: #fff;
-					text-decoration: none;
-				}
-			}
 		}
 	}
 }
