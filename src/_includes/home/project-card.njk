@@ -1,17 +1,23 @@
 <li class="project-card hidden" id="{{ project.data.title }}-card">
+	{% if "wip" in project.data.tags %}
+		<img class="project-wip" src="/assets/img/wip.svg" alt="work in progress"/>
+	{% endif %}
+	<div class="project-date-container">
+		<p class="project-date">{{ project.data.year }}</p>
+	</div>
 	<div class="project-illustration">
-		<image src="{{ project.data.illus }}" alt="{{ project.data.title | lower }} illustration" class="project-image"/>
+		<img src="{{ project.data.illus }}" srcset="{{ project.data.illus }} 2x" alt="{{ project.data.title | lower }} illustration" class="project-image"/>
 	</div>
 	<div class="project-content">
-		<h3>{{ project.data.title }}</h3>
+		<h3 class="project-title">{{ project.data.title }}</h3>
 		<p class="project-description">
-			{{ project.data.excerpt }}
+			{{ project.data.excerpt | safe }}
 		</p>
-			<a
-				class="project-link page-link big-link"
-				data-content="en savoir plus"
-				href="{{ project.url }}"
-				>en savoir plus</a
-			>
+		<a
+			class="project-link page-btn"
+			data-content="en savoir plus"
+			href="{{ project.url }}"
+			>En savoir plus</a
+		>
 	</div>
 </li>

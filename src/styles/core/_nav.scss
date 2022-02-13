@@ -10,6 +10,9 @@
 	pointer-events: none;
 
 	.navbar-menu {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0.5rem;
 		position: absolute;
 		top: 4.8rem;
 		right: 0;
@@ -18,11 +21,41 @@
 		line-height: 1.5rem;
 		letter-spacing: 0.04rem;
 
-		li {
+		.navbar-menu-item {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
 			position: relative;
-			height: 40px;
 			pointer-events: all;
 			mix-blend-mode: difference;
+
+			a {
+				font-weight: 400;
+				font-size: 0.9rem;
+				transition: color 0s ease-in;
+			}
+
+			&::after {
+				content: "";
+				width: 0;
+				height: 0.05rem;
+				margin-left: 0.3rem;
+				background: $base_gradient;
+				transition: width 0.3s ease-in;
+			}
+
+			&:hover {
+				a {
+					background-image: $base_gradient;
+					background-clip: text;
+					color: transparent;
+					transition: color 0.2s ease-in;
+				}
+
+				&::after {
+					width: 1rem;
+				}
+			}
 		}
 	}
 }

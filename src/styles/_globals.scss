@@ -17,11 +17,6 @@ body {
 	overflow-x: hidden;
 }
 
-.stroke-text {
-	color: transparent;
-	-webkit-text-stroke: 1px rgba(white, 0.2);
-}
-
 main {
 	width: 100%;
 	margin: auto;
@@ -72,5 +67,40 @@ section {
 				width: 100%;
 			}
 		}
+	}
+}
+
+.page-btn {
+	position: relative;
+	display: inline-block;
+	font-weight: 400;
+	font-size: 0.9rem;
+	color: white;
+	padding: 0.8rem 1.7rem;
+	border-radius: 5px;
+	box-sizing: border-box;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: 5px;
+	}
+
+	&::before {
+		background-color: $main_text_blue;
+		z-index: -2;
+	}
+
+	&::after {
+		opacity: 0;
+		background-image: $base_gradient;
+		z-index: -1;
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	&:hover::after {
+		opacity: 1;
 	}
 }

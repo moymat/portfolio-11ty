@@ -20,11 +20,14 @@ const Image = require("@11ty/eleventy-img");
 		return arr;
 	};
 
-	const imgFiles = getImgs("./assets/img");
+	const imgFiles = getImgs("./src/assets/img").filter(
+		url => url.match(/([^\/|\.]+)\/?$/)[0] !== "svg"
+	);
 
 	await Promise.all(
 		imgFiles.map(async url => {
-			const outputDir = "public/" + url.replace(/([^\/]+)\/?$/, "");
+			const outputDir =
+				"public/" + url.replace(/([^\/]+)\/?$/, "").replace("./src/", "");
 			return await Image(url, {
 				formats: ["webp"],
 				filenameFormat: (_, src, width, format) => {
@@ -52,7 +55,7 @@ module.exports = eleventyConfig => {
 		"md",
 		markdownIt({ html: true }).use(markdownItAttrs)
 	);
-	eleventyConfig.addPassthroughCopy("./src/assets");
+	eleventyConfig.addPassthroughCopy("./src/assets/**/*.(svg|webp)");
 	eleventyConfig.setDataDeepMerge(true);
 
 	return {

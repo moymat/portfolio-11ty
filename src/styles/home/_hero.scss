@@ -121,12 +121,7 @@
 					left: 0;
 					right: 0;
 					bottom: 100%;
-					background: linear-gradient(
-						84.38deg,
-						#396ef5 0%,
-						#948df4 47.4%,
-						#e045af 100%
-					);
+					background: $base_gradient;
 					animation: 1.8s scroll-bar-anim cubic-bezier(0.165, 0.84, 0.44, 1)
 						infinite;
 				}
