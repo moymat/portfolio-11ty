@@ -2,73 +2,107 @@
 	"icons": {
 		"react": {
 			"name": "react.js",
-			"icon": "<i class='devicon-react-original colored'></i>",
+			"icon": "devicon-react-original",
 			"link": "https://reactjs.org/"
 		},
 		"postgresql": {
 			"name": "postgresql",
-			"icon": "<i class='devicon-postgresql-plain colored'></i>",
+			"icon": "devicon-postgresql-plain",
 			"link": "https://www.postgresql.org/"
 		},
 		"express": {
 			"name": "express.js",
-			"icon": "<i class='devicon-express-original colored'></i>",
+			"icon": "devicon-express-original",
 			"link": "https://expressjs.com/"
 		},
 		"materialui": {
 			"name": "material ui",
-			"icon": "<i class='devicon-materialui-plain colored'></i>",
+			"icon": "devicon-materialui-plain",
 			"link": "https://mui.com/"
 		},
 		"heroku": {
 			"name": "heroku",
-			"icon": "<i class='devicon-heroku-original colored'></i>",
+			"icon": "devicon-heroku-original",
 			"link": "https://heroku.com/"
 		},
 		"redis": {
 			"name": "redis",
-			"icon": "<i class='devicon-redis-plain colored'></i>",
+			"icon": "devicon-redis-plain",
 			"link": "https://redis.io/"
 		},
 		"socketio": {
 			"name": "socket.io",
-			"icon": "<i class='devicon-socketio-original colored'></i>",
+			"icon": "devicon-socketio-original",
 			"link": "https://socket.io/"
 		},
 		"javascript": {
 			"name": "javascript",
-			"icon": "<i class='devicon-javascript-plain colored'></i>",
+			"icon": "devicon-javascript-plain",
 			"link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
 		},
 		"eleventy": {
 			"name": "eleventy",
-			"icon": "<i class='devicon-eleventy-plain colored'></i>",
+			"icon": "devicon-eleventy-plain",
 			"link": "https://www.11ty.dev/"
 		},
 		"sass": {
 			"name": "sass",
-			"icon": "<i class='devicon-sass-original colored'></i>",
+			"icon": "devicon-sass-original",
 			"link": "https://sass-lang.com/"
 		},
 		"nextjs": {
 			"name": "next.js",
-			"icon": "<i class='devicon-nextjs-original colored'></i>",
+			"icon": "devicon-nextjs-original",
 			"link": "https://nextjs.org/"
 		},
 		"figma": {
 			"name": "figma",
-			"icon": "<i class='devicon-figma-plain colored'></i>",
+			"icon": "devicon-figma-plain",
 			"link": "https://www.figma.com/"
 		},
 		"html": {
 			"name": "html",
-			"icon": "<i class='devicon-html5-plain colored'></i>",
+			"icon": "devicon-html5-plain",
 			"link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
 		},
 		"css": {
 			"name": "css",
-			"icon": "<i class='devicon-css3-plain colored'></i>",
+			"icon": "devicon-css3-plain",
 			"link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
 		}
-	}
+	},
+	"education": [
+		{
+			"year": "2021",
+			"school": "Opquast",
+			"name": "Maîtrise de qualité en projet web",
+			"link": "https://directory.opquast.com/fr/certificat/VQ1YJE/"
+		},
+		{
+			"year": "2021",
+			"school": "O'Clock",
+			"name": "Fullstack JS, Data & API",
+			"link": "https://oclock.io/"
+		},
+		{
+			"year": "2020-21",
+			"school": "The Odin Project",
+			"name": "Fullstack JavaSacript",
+			"link": "https://theodinproject.com"
+		}
+	],
+	"languages": [
+		{
+			"name": "javascript"
+		},
+		{
+			"name": "html"
+		},
+		{
+			"name": "css"
+		},
+		{
+			"name": "postgresql"
+		}
+	]
 }

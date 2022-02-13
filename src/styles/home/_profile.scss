@@ -2,145 +2,128 @@
 	display: flex;
 	flex-direction: column;
 
-	.profile-content {
-		position: relative;
-		min-height: 430px;
-
-		.profile-description {
-			width: 70%;
-			font-weight: normal;
-			line-height: 1.5rem;
-			letter-spacing: 0.04em;
-			text-transform: lowercase;
-			color: #fff;
-		}
-
-		.profile-img {
-			position: relative;
-			width: 290px;
-			height: 290px;
-			position: absolute;
-			top: 0;
-			right: 8%;
-			z-index: -1;
-			border-top-left-radius: 5% 150%;
-			border-top-right-radius: 15% 130%;
-			border-bottom-right-radius: 130% 20%;
-			border-bottom-left-radius: 10% 180%;
-			overflow: hidden;
-
-			img {
-				object-fit: cover;
-				width: 100%;
-				height: 100%;
-				filter: grayscale(1) opacity(0.5);
-				transform: skew(-0.025rad, 0) rotate(90deg) scale(-1.1, 1.1);
-			}
+	.section-title {
+		.section-title-text {
+			font-size: 9rem;
 		}
 	}
 
-	.profile-container {
+	.profile-title {
+		font-family: "Poppins", sans-serif;
+		font-weight: 800;
+		font-size: 2rem;
+		line-height: 150%;
+		text-transform: uppercase;
+		color: white;
+		margin-bottom: 1.5rem;
+	}
+
+	.profile-content {
 		display: flex;
-		justify-content: space-around;
 
-		.profile-title {
-			font-style: italic;
-			font-size: 1.8rem;
-			line-height: 2.5rem;
-			letter-spacing: 0.04rem;
-			text-transform: uppercase;
-			color: white;
+		.profile-content-left,
+		.profile-content-right {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			flex: 1;
 		}
 
-		ul {
-			list-style: none;
-
-			li,
-			li a,
-			li span {
-				font-size: 0.9rem;
-				display: inline-flex;
-				align-items: center;
-				position: relative;
-				text-decoration: none;
-				line-height: 3rem;
-				letter-spacing: 0.04rem;
-				color: white;
+		.profile-content-left {
+			.profile-description {
+				line-height: 150%;
+				font-weight: 300;
+				color: #fff;
+				margin-bottom: 4rem;
 			}
 
-			li a {
-				line-height: 1.5rem;
-			}
+			.profile-formation {
+				.formation-list {
+					margin-bottom: 3rem;
 
-			li {
-				display: list-item;
-			}
-		}
+					.formation-item {
+						list-style: none;
 
-		.formation-container {
-			.profile-date {
-				justify-content: flex-end;
-				width: 75px;
-				margin-right: 1rem;
-				color: white;
-			}
-		}
+						&:not(:last-child) {
+							margin-bottom: 1.5rem;
+						}
 
-		.skills {
-			margin-left: 2rem;
+						.formation-title {
+							font-size: 0.9rem;
+							line-height: 150%;
+							font-weight: 500;
+							color: white;
 
-			ul {
-				display: flex;
+							.formation-date {
+								margin-right: 0.5rem;
+							}
 
-				li:not(:first-child) {
-					margin-left: 0.5rem;
-				}
-			}
+							.formation-school {
+								text-transform: uppercase;
+							}
+						}
+						.formation-name {
+							display: flex;
+							align-items: center;
 
-			.languages {
-				.languages-list {
-					display: inline-flex;
-					margin-top: 1rem;
-					list-style: none;
-					width: max-content;
-
-					.language-item:not(:first-child) {
-						margin-left: 1rem;
-					}
-
-					.language-item {
-						margin: 0;
-
-						i {
-							position: relative;
-							font-size: 1.5rem;
-							aspect-ratio: 1/1;
-
-							&:hover::after {
-								position: absolute;
+							&::before {
 								content: "";
-								inset: 0;
-								background-color: var(--color-bg);
-								z-index: -1;
-								border-radius: 50%;
-								transform: scale(1.5);
-								box-shadow: 0 0 30px 0.2px var(--color-box);
-								opacity: 0.7;
+								width: 1.9rem;
+								height: 0.05rem;
+								margin-right: 0.5rem;
+								background: $base_gradient;
+							}
+
+							.formation-link {
+								font-size: 0.9rem;
+								line-height: 150%;
+								color: rgba(white, 0.6);
+								font-weight: 300;
 							}
 						}
 					}
 				}
 			}
+		}
 
-			.other {
-				margin-top: 2rem;
+		.profile-content-right {
+			.profile-img {
+				position: relative;
+				top: -5rem;
+				display: flex;
+				justify-self: center;
+				align-items: center;
 
-				.other-list {
-					flex-direction: column;
+				img {
+					width: 67%;
+					aspect-ratio: 2/2.9;
+					object-fit: cover;
+					margin: auto;
+				}
+			}
 
-					.other-item {
-						margin: 0;
-						max-width: 380px;
+			.profile-languages {
+				margin-left: 17.5%;
+
+				.languages-list {
+					display: inline-flex;
+					list-style: none;
+
+					.language-item {
+						&:not(:first-child) {
+							margin-left: 1.5rem;
+						}
+
+						a {
+							font-size: 2rem;
+							opacity: 0.4;
+							transition: opacity 0.2s ease-in-out;
+
+							&:hover {
+								opacity: 1;
+								color: var(--color-box) !important;
+							}
+						}
 					}
 				}
 			}

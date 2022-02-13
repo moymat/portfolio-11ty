@@ -1,17 +1,8 @@
 import animateTitle from "./animateTitle";
 
 export default function (items, list, titleEl, title) {
-	function onIconHover(color) {
-		let colorBG = color.replace("rgb", "rgba");
-		colorBG = color.replace(")", ", 0.2)");
-		let colorBox = colorBG.replace("0.2", "0.7");
-
-		const newTitle = this.parentNode.dataset.name;
-
-		document.documentElement.style.setProperty("--color-bg", colorBG);
-		document.documentElement.style.setProperty("--color-box", colorBox);
-
-		animateTitle(titleEl, newTitle);
+	function onIconHover() {
+		animateTitle(titleEl, this.dataset.name);
 	}
 
 	function onListLeave() {
@@ -27,9 +18,14 @@ export default function (items, list, titleEl, title) {
 	list.addEventListener("mouseover", onListHover);
 
 	items.forEach(i => {
-		const color = window.getComputedStyle(i).color;
-		i.style.color = "white";
+		const color = window
+			.getComputedStyle(i)
+			.color.replace("rgb", "rgba")
+			.replace(")", ", 0.7)");
 
-		i.addEventListener("mouseover", onIconHover.bind(i, color));
+		i.style.color = "white";
+		i.style.setProperty("--color-box", color);
+
+		i.addEventListener("mouseover", onIconHover.bind(i));
 	});
 }

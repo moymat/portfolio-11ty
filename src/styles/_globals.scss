@@ -29,13 +29,13 @@ a {
 
 section {
 	width: 100%;
-	margin-bottom: 200px;
 
 	&:not(#hero) {
 		padding-top: 50px;
-		margin-top: -50px;
 		max-width: $max-width-container;
 		margin: 0 auto;
+		margin-top: -50px;
+		margin-bottom: 200px;
 	}
 
 	.section-title {

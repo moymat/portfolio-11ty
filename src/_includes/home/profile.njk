@@ -1,122 +1,64 @@
 <section id="profile">
 	<div class="section-title">
 		<span class="section-number">02</span>
-		<h2 class="section-title-text stroke-text">Qui suis-je ?</h2>
+		<svg viewbox="0 0 1100 170" class="section-title-svg">
+			<text x="0" y="145" class="section-title-text">Qui suis-je ?</text>
+		</svg>
 	</div>
 	<div class="profile-content">
-		<p class="profile-description">
-			Incididunt consectetur ut et eu. Ad et labore officia enim minim sunt
-			consequat commodo anim ex excepteur sit ex labore. Non labore eiusmod
-			reprehenderit nisi dolor reprehenderit ut laborum ipsum. Cillum anim
-			deserunt adipisicing veniam.
-			<br />
-			<br />
-			Eu pariatur anim eiusmod duis sit ut ea dolor id mollit excepteur commodo.
-			Dolor sunt cupidatat consectetur velit tempor cillum commodo reprehenderit
-			id cillum minim. Laboris ullamco mollit elit sint incididunt culpa veniam
-			exercitation aliqua culpa excepteur.
-			<br />
-			<br />
-			Labore ipsum eiusmod id ad deserunt pariatur nisi elit mollit anim
-			exercitation voluptate minim. Culpa non fugiat anim qui Lorem fugiat
-			aliquip excepteur est.
-		</p>
-		<div class="profile-img">
-			<img src="/assets/img/michel-deckert.webp" alt="Michel Deckert" />
-		</div>
-	</div>
-	<div class="profile-container">
-		<div class="formation-container">
-			<h4 class="profile-title">formations</h4>
-			<ul class="formation-list">
-				<li>
-					<span class="profile-date">2021</span
-					><span class="profile-school">Opquast : </span>
-					<span class="page-link">
-						<a
-							data-content="maitrise de qualité en projet web"
-							href="https://directory.opquast.com/fr/certificat/VQ1YJE/"
-							target="_blank"
-							>maitrise de qualité en projet web</a
-						></span
-					>
-				</li>
-				<li>
-					<span class="profile-date">2021</span
-					><span class="profile-school">O'Clock : </span>
-					<span class="page-link">
-						<a
-							data-content="fullstack JS, data & API"
-							href="https://oclock.io/formations/developpeur-data-api"
-							target="_blank"
-							>fullstack JS, data & API</a
-						></span
-					>
-				</li>
-				<li>
-					<span class="profile-date">2020-21</span
-					><span class="profile-school">The Odin Project : </span>
-					<span class="page-link">
-						<a
-							data-content="fullstack JavaScript"
-							href="https://www.theodinproject.com/"
-							target="_blank"
-						>
-							fullstack JavaScript</a
-						></span
-					>
-				</li>
-			</ul>
-		</div>
-		<div class="skills">
-			<div class="languages">
-				<h4 class="profile-title languages-title glitchy-title">Langages</h4>
-				<ul class="languages-list">
-					<li class="language-item">
-						<a
-							data-name="{{ metadata.icons['javascript'].name }}"
-							href="{{ metadata.icons['javascript'].link }}"
-							target="_blank"
-						>
-							{{ metadata.icons["javascript"].icon | safe }}
-						</a>
-					</li>
-					<li class="language-item">
-						<a
-							data-name="{{ metadata.icons['postgresql'].name }}"
-							href="{{ metadata.icons['postgresql'].link }}"
-							target="_blank"
-						>
-							{{ metadata.icons["postgresql"].icon | safe }}
-						</a>
-					</li>
-					<li class="language-item">
-						<a
-							data-name="{{ metadata.icons['html'].name }}"
-							href="{{ metadata.icons['html'].link }}"
-							target="_blank"
-						>
-							{{ metadata.icons["html"].icon | safe }}
-						</a>
-					</li>
-					<li class="language-item">
-						<a
-							data-name="{{ metadata.icons['css'].name }}"
-							href="{{ metadata.icons['css'].link }}"
-							target="_blank"
-						>
-							{{ metadata.icons["css"].icon | safe }}
-						</a>
-					</li>
+		<div class="profile-content-left">
+			<p class="profile-description">
+				Incididunt consectetur ut et eu. Ad et labore officia enim minim sunt
+				consequat commodo anim ex excepteur sit ex labore. Non labore eiusmod
+				reprehenderit nisi dolor reprehenderit ut laborum ipsum. Cillum anim
+				deserunt adipisicing veniam.
+				<br />
+				<br />
+				Eu pariatur anim eiusmod duis sit ut ea dolor id mollit excepteur
+				commodo. Dolor sunt cupidatat consectetur velit tempor cillum commodo
+				reprehenderit id cillum minim. Laboris ullamco mollit elit sint
+				incididunt culpa veniam exercitation aliqua culpa excepteur.
+			</p>
+			<div class="profile-formation">
+				<h4 class="profile-title">formations</h4>
+				<ul class="formation-list">
+					{%- for item in metadata.education %}
+						<li class="formation-item">
+							<div class="formation-title">
+								<span class="formation-date">{{ item.year }}</span
+								><span class="formation-school">{{ item.school }}</span>
+							</div>
+							<div class="formation-name">
+								<a class="formation-link"
+									data-content="maitrise de qualité en projet web"
+									href="{{ item.link }}"
+									target="_blank"
+									>{{ item.name }}</a
+								></div
+							>
+						</li>
+					{%- endfor %}
 				</ul>
+				<a href="" class="page-btn">Télécharger mon CV</a>
 			</div>
-			<div class="other">
-				<h4 class="profile-title">Autres</h4>
-				<ul class="other-list">
-					<li class="other-item">Je parle français & anglais</li>
-					<li class="other-item">
-						J'aime les jeux de sociétés & la littérature
-					</li>
+		</div>
+		<div class="profile-content-right">
+			<div class="profile-img">
+				<img src="/assets/img/michel-deckert.webp" alt="Michel Deckert" />
+			</div>
+			<div class="profile-languages">
+				<h4 class="profile-title languages-title">Langages</h4>
+				<ul class="languages-list">
+					{%- for language in metadata.languages %}
+						<li class="language-item">
+							<a
+								class="{{ metadata.icons[language.name].icon }} colored"
+								data-name="{{ metadata.icons[language.name].name }}"
+								href="{{ metadata.icons[language.name].link }}"
+								target="_blank"
+							></a>
+						</li>
+					{%- endfor %}
 				</ul>
 			</div>
 		</div>
