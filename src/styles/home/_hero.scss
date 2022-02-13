@@ -1,18 +1,25 @@
 #hero {
 	position: relative;
 	display: flex;
-	justify-content: flex-start;
-	height: 800px;
-	max-height: calc(95vh - 200px);
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+	min-height: 730px;
+	height: 100vh;
 	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 
-	.hero-content {
-		margin-top: 320px;
+	.hero-container {
+		width: 100%;
 
 		.hero-title {
+			max-width: $max-width-container;
+			margin: auto;
 			display: flex;
 			flex-direction: column;
 			color: #fff;
+			text-transform: uppercase;
 
 			span {
 				letter-spacing: 0.04rem;
@@ -21,13 +28,11 @@
 
 			.hero-name {
 				font-size: 1.225rem;
-				font-weight: 400;
-				height: 40px;
+				font-weight: 300;
 				margin-bottom: 1rem;
 			}
 
-			.hero-role,
-			.hero-stack {
+			.hero-role {
 				font-size: 4.45rem;
 				line-height: 124%;
 				font-weight: 800;
@@ -35,11 +40,119 @@
 		}
 
 		.hero-sub {
+			max-width: $max-width-container;
+			margin: auto;
 			color: white;
-			font-weight: 400;
+			font-weight: 300;
 			line-height: 1.5rem;
 			letter-spacing: 0.04rem;
 			margin-top: 1rem;
 		}
+
+		/* .hero-stack {
+			position: absolute;
+			width: 100vw;
+			font-size: 11vw;
+			bottom: -11vw;
+			left: calc(0px - (100vw - #{$max-width-container}) / 2);
+			font-family: "Poppins", sans-serif;
+			text-align: center;
+			text-transform: uppercase;
+
+			@media (max-width: #{$max-width-container}) {
+				left: 0;
+			}
+		} */
+	}
+
+	.section-title {
+		width: 100%;
+
+		.section-title-svg {
+			position: absolute;
+			left: 0;
+			top: -5vw;
+			max-height: 25rem;
+			width: 100%;
+			vertical-align: top;
+
+			.section-title-text {
+				font-family: "Poppins", sans-serif;
+				fill: none;
+				font-size: 6.8rem;
+				stroke: rgba(white, 0.2);
+				stroke-width: 1px;
+				text-transform: uppercase;
+				width: 100vw;
+			}
+		}
+	}
+
+	.scroll-container {
+		position: absolute;
+		width: 100%;
+		max-width: $max-width-container;
+		margin: 0 auto;
+		bottom: 3rem;
+		left: calc((100vw - #{$max-width-container}) / 2);
+
+		.scroll-cta {
+			display: flex;
+			flex-direction: column;
+			width: max-content;
+
+			.scroll-text {
+				font-weight: 300;
+				font-size: 0.775rem;
+				color: white;
+			}
+
+			.scroll-bar {
+				position: relative;
+				align-self: center;
+				margin-top: 0.7rem;
+				height: 1.9rem;
+				width: 1px;
+
+				&::after {
+					position: absolute;
+					content: "";
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 100%;
+					background: linear-gradient(
+						84.38deg,
+						#396ef5 0%,
+						#948df4 47.4%,
+						#e045af 100%
+					);
+					animation: 1.8s scroll-bar-anim cubic-bezier(0.165, 0.84, 0.44, 1)
+						infinite;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: #{$max-width-container}) {
+	.scroll-container {
+		left: 0 !important;
+	}
+}
+
+@keyframes scroll-bar-anim {
+	0% {
+		top: 0;
+		bottom: 100%;
+	}
+	50% {
+		top: 0;
+		bottom: 0;
+	}
+
+	100% {
+		top: 100%;
+		bottom: 0;
 	}
 }
