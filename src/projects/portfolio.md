@@ -1,7 +1,7 @@
 ---
 title: Portfolio
 image: "/assets/img/projects/portfolio.webp"
-context: projet personnel
+context: Projet personnel
 year: 2021
 stack: ["javascript", "eleventy", "sass"]
 links:
@@ -13,7 +13,7 @@ excerpt: site web // portfolio personnel
 description: Ce projet est tout simplement le site sur lequel vous vous trouvez actuellement.
 ---
 
-Démarré juste qprès la fin de ma formation chez [O'Clock](https://oclock.io/){target="\_blank"}, j'ai pris d'abord le temps de réfléchir à la stack que je voulais mettre en place afin qu'elle puisse être à la fois être suffisament légère tout en permettant que le site puisse être aisement mis à jour au fur avec de nouveaux projets.
+Démarré juste qprès la fin de ma formation chez [O'Clock](https://oclock.io/){target="\_blank" .content-link}, j'ai pris d'abord le temps de réfléchir à la stack que je voulais mettre en place afin qu'elle puisse être suffisament légère tout en permettant que le site puisse être aisement mis à jour au fur et à mesure avec de nouveaux projets.
 
 Etant initialement parti sur _Webpack_ et du templating avec _Pug_, j'ai finalement décidé de profiter de ce projet pour décrouvrir _Eleventy_, _EsBuild_ et _Nunjucks_.
 

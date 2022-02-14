@@ -1,18 +1,18 @@
 import animateTitle from "./animateTitle";
 
 export default function (items, list, titleEl, title) {
-	function onIconHover() {
-		animateTitle(titleEl, this.dataset.name);
+	async function onIconHover(list) {
+		await animateTitle(titleEl, this.dataset.name, list);
 	}
 
-	function onListLeave() {
-		animateTitle(titleEl, title, true);
+	async function onListLeave() {
+		await animateTitle(titleEl, title, this, true);
 		list.removeEventListener("mouseleave", onListLeave);
 		titleEl.classList.remove("hover");
 	}
 
 	function onListHover() {
-		list.addEventListener("mouseleave", onListLeave);
+		list.addEventListener("mouseleave", onListLeave.bind(list));
 	}
 
 	list.addEventListener("mouseover", onListHover);
@@ -26,6 +26,6 @@ export default function (items, list, titleEl, title) {
 		i.style.color = "white";
 		i.style.setProperty("--color-box", color);
 
-		i.addEventListener("mouseover", onIconHover.bind(i));
+		i.addEventListener("mouseover", onIconHover.bind(i, list));
 	});
 }

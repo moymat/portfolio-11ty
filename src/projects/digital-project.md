@@ -2,7 +2,7 @@
 title: Digital Project
 image: "/assets/img/projects/digital-project.webp"
 illus: "/assets/img/illus/digital-project.webp"
-context: projet personnel
+context: Projet personnel
 year: 2021
 stack: ["nextjs", "figma"]
 tags: ["featured"]
@@ -15,7 +15,7 @@ excerpt: site web // vitrine d'un cabinet fictif d'architectes basée sur une ma
 description: Projet personnel d'un cabinet fictif d'architectes.
 ---
 
-Basé sur une maquette _Figma_ mise à disposition gratuitement par <span class="page-link content-link">[Martin Jozwiak](http://marcinjozwiak.pl){target="\_blank" data-content="Martin Jozwiak"}</span>, ce projet m'a permis de découvrir _Next.js_ et par ce biais le SSR, le blur d'image et les modules _CSS_ notamment.
+Basé sur une maquette _Figma_ mise à disposition gratuitement par [Martin Jozwiak](http://marcinjozwiak.pl){target="\_blank" .content-link}, ce projet m'a permis de découvrir _Next.js_ et par ce biais le SSR, le blur d'image et les modules _CSS_ notamment.
 
 Ce site se décompose en cinq parties:
 

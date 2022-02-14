@@ -7,7 +7,7 @@ async function switchLetters(titleEl, next, leave) {
 	);
 }
 
-async function animateTitle(titleEl, next, leave = false) {
+async function animateTitle(titleEl, next, list, leave = false) {
 	let current = titleEl.innerHTML;
 	titleEl.classList.add("hover");
 
@@ -40,10 +40,15 @@ async function animateTitle(titleEl, next, leave = false) {
 				}
 			})
 			.join("");
+
 		await switchLetters(titleEl, current, leave);
 	}
 
 	await switchLetters(titleEl, next, leave);
+
+	/* if (!leave && !list.querySelector(":hover")) {
+		console.log("not hovered", titleEl.innerHTML);
+	} */
 }
 
 export default animateTitle;

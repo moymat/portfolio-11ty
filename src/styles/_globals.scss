@@ -31,41 +31,41 @@ section {
 	width: 100%;
 
 	&:not(#hero) {
-		padding-top: 50px;
+		padding-top: 2.8rem;
 		max-width: $max-width-container;
 		margin: 0 auto;
-		margin-top: -50px;
-		margin-bottom: 200px;
+		margin-top: -2.8rem;
+		margin-bottom: 11rem;
+	}
+}
+
+.section-title {
+	position: relative;
+	display: flex;
+	font-weight: 800;
+	letter-spacing: 0.04em;
+	margin-bottom: 3rem;
+
+	.section-number {
+		top: 0;
+		left: 0;
+		width: 3rem;
+		font-size: 1.7rem;
+		color: $main_text_blue;
 	}
 
-	.section-title {
-		position: relative;
-		display: flex;
-		font-weight: 800;
-		letter-spacing: 0.04em;
-		margin-bottom: 3rem;
+	.section-title-svg {
+		max-height: 25rem;
+		width: 100%;
+		vertical-align: top;
 
-		.section-number {
-			top: 0;
-			left: 0;
-			width: 3rem;
-			font-size: 1.7rem;
-			color: $main_text_blue;
-		}
-
-		.section-title-svg {
-			max-height: 25rem;
+		.section-title-text {
+			font-family: "Poppins", sans-serif;
+			fill: none;
+			stroke: rgba(white, 0.2);
+			stroke-width: 1px;
+			text-transform: uppercase;
 			width: 100%;
-			vertical-align: top;
-
-			.section-title-text {
-				font-family: "Poppins", sans-serif;
-				fill: none;
-				stroke: rgba(white, 0.2);
-				stroke-width: 1px;
-				text-transform: uppercase;
-				width: 100%;
-			}
 		}
 	}
 }
@@ -98,6 +98,43 @@ section {
 		background-image: $base_gradient;
 		z-index: -1;
 		transition: opacity 0.3s ease-in-out;
+	}
+
+	&:hover::after {
+		opacity: 1;
+	}
+}
+
+.page-link {
+	position: relative;
+	height: 1.7rem;
+
+	a {
+		display: block;
+		font-size: 0.9rem;
+		text-transform: lowercase;
+		height: 100%;
+	}
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 0;
+		height: 0.1rem;
+		width: 100%;
+		pointer-events: none;
+	}
+
+	&::before {
+		background-color: white;
+	}
+
+	&::after {
+		background: $base_gradient;
+		opacity: 0;
+		transition: opacity 0.2s ease-in-out;
 	}
 
 	&:hover::after {

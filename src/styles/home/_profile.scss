@@ -106,14 +106,14 @@
 				margin-left: 17.5%;
 
 				.languages-list {
-					display: inline-flex;
-					list-style: none;
+					display: grid;
+					grid-template-columns: repeat(auto-fit, 2rem);
+					gap: 1rem 1.5rem;
+					list-style-type: none;
+					width: max-content;
+					max-width: 75%;
 
 					.language-item {
-						&:not(:first-child) {
-							margin-left: 1.5rem;
-						}
-
 						a {
 							font-size: 2rem;
 							opacity: 0.4;

@@ -1,6 +1,6 @@
 #contact {
 	.section-title {
-		margin-bottom: 6rem;
+		margin-bottom: 4rem;
 
 		.section-title-text {
 			font-size: 7.65rem;
@@ -26,43 +26,6 @@
 
 		li:not(:first-child) {
 			margin-left: 1.5rem;
-		}
-
-		.contact-link {
-			position: relative;
-			height: 1.7rem;
-
-			a {
-				display: block;
-				font-size: 0.9rem;
-				text-transform: lowercase;
-				height: 100%;
-			}
-
-			&::before,
-			&::after {
-				position: absolute;
-				content: "";
-				bottom: 0;
-				left: 0;
-				height: 0.1rem;
-				width: 100%;
-				pointer-events: none;
-			}
-
-			&::before {
-				background-color: white;
-			}
-
-			&::after {
-				background: $base_gradient;
-				opacity: 0;
-				transition: opacity 0.2s ease-in-out;
-			}
-
-			&:hover::after {
-				opacity: 1;
-			}
 		}
 	}
 }

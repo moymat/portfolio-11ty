@@ -2,7 +2,7 @@
 title: Adopt
 image: "/assets/img/projects/adopt.webp"
 illus: "/assets/img/illus/adopt.webp"
-context: projet personnel
+context: Projet personnel
 year: "2021/22"
 stack: ["react", "postgresql", "express", "materialui", "heroku"]
 tags: ["featured", "wip"]
@@ -17,7 +17,7 @@ description: Ce projet est un concept d'application web permettant de mettre plu
 
 En l'état actuel, la base de données _PSQL_ hebergée sur _Heroku_ tout comme le serveur _Express.js_, ne contient que des associations et animaux fictifs. Il est possible des rechercher des animaux en fonction de leur localisation (ou de se géolocaliser), de leur sexe et de leur âge.
 
-Les informations de géolocalisation sont stockées directement dans la base de données et ont été récupérées sur l'<span class="page-link content-link">[API Découpage Administratif](https://geo.api.gouv.fr/decoupage-administratif/communes){target="\_blank" data-content="API Découpage Administratif"}</span>. Les API Google <span class="page-link content-link">[Places API](https://developers.google.com/maps/documentation/places/web-service/overview){target="\_blank" data-content="Places API"}</span> et <span class="page-link content-link">[Maps API](https://developers.google.com/maps/documentation/javascript/overview){target="\_blank" data-content="Maps API"}</span> sont également utilisées ponctuellement afin d'obtenir des coordonnées plus précises et de récupérer les informations de géolocalisation de l'utilisateur.
+Les informations de géolocalisation sont stockées directement dans la base de données et ont été récupérées sur l'[API Découpage Administratif](https://geo.api.gouv.fr/decoupage-administratif/communes){target="\_blank" .content-link}. Les API Google [Places API](https://developers.google.com/maps/documentation/places/web-service/overview){target="\_blank" .content-link} et [Maps API](https://developers.google.com/maps/documentation/javascript/overview){target="\_blank" .content-link} sont également utilisées ponctuellement afin d'obtenir des coordonnées plus précises et de récupérer les informations de géolocalisation de l'utilisateur.
 
 Le front, déployé sur _Vercel_, est développé sous _React_. Ce projet me permet également d'approfondir mes connaissances dans _Material UI_.
 

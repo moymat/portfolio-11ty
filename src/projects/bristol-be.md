@@ -2,7 +2,7 @@
 title: Bristol
 image: "/assets/img/projects/bristol.webp"
 illus: "/assets/img/illus/bristol.webp"
-context: projet de fin de formation
+context: Projet de fin de formation
 year: 2021
 stack:
   [
@@ -32,6 +32,6 @@ Le back est développé sous _Express.js_ et la base de donnée est en _PSQL_. L
 
 Le front quand à lui est développé sous _React_ et l'UI a été conçue avec _Material UI_. En ce qui concerne l'outil de traitement de texte, notre choix s'est porté sur _Quill_.
 
-La présentation en vidéo de **Bristol** par l'équipe pédagogique de <span class="page-link content-link">[O'Clock](https://oclock.io/){target="\_blank" data-content="O'Clock"}</span> (01:12:35):
+La présentation en vidéo de **Bristol** par l'équipe pédagogique de [O'Clock](https://oclock.io/){target="\_blank" .content-link} (01:12:35):
 
 https://youtu.be/fVoNDfbKTsY?t=4357
