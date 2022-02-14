@@ -29,3 +29,26 @@
 		}
 	}
 }
+
+@media screen and (max-width: #{$mobile-device}) {
+	#contact {
+		.section-title {
+			margin-bottom: 3rem;
+		}
+		& .contact-text {
+			width: 100%;
+			margin: 0 auto 3rem;
+		}
+
+		& .contact-list {
+			display: flex;
+			list-style: none;
+			width: max-content;
+			margin: 3.5rem auto 0;
+
+			li:not(:first-child) {
+				margin-left: 1.5rem;
+			}
+		}
+	}
+}

@@ -4,11 +4,40 @@ footer {
 	margin-bottom: 4.5rem;
 	opacity: 0.5;
 
-	& p,
-	& #date-footer {
+	.footer-up,
+	.footer-down {
+		display: inline-block;
+		text-align: center;
 		font-size: 0.9rem;
-		line-height: 2.3rem;
-		letter-spacing: 0.04rem;
 		color: white;
+	}
+
+	.footer-up {
+		margin-right: 0.2rem;
+
+		#date-footer {
+			font-size: 0.9rem;
+		}
+	}
+}
+
+@media screen and (max-width: #{$mobile-device}) {
+	footer {
+		margin-bottom: 3rem;
+		flex-direction: column;
+
+		.footer-up,
+		.footer-down {
+			display: inline-block;
+			font-size: 0.67rem;
+		}
+
+		.footer-up {
+			margin-bottom: 0.2rem;
+
+			#date-footer {
+				font-size: 0.67rem;
+			}
+		}
 	}
 }

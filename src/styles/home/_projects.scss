@@ -9,3 +9,9 @@
 		}
 	}
 }
+
+@media screen and (max-width: #{$mobile-device}) {
+	#projects .section-title {
+		margin-bottom: 3.34rem;
+	}
+}

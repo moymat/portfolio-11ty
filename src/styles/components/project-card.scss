@@ -122,3 +122,49 @@
 		}
 	}
 }
+
+@media screen and (max-width: #{$mobile-device}) {
+	.project-cards {
+		padding: 0;
+
+		.project-card {
+			height: 292px;
+
+			&:not(:last-child) {
+				margin-bottom: 3.34rem;
+			}
+
+			&:nth-child(even) {
+				margin-left: 0;
+			}
+
+			.project-wip {
+				top: 1rem;
+				left: -1.5rem;
+				width: 4.5rem;
+			}
+
+			.project-date-container {
+				display: none;
+			}
+
+			.project-illustration {
+				max-width: 196px;
+			}
+		}
+
+		.project-content {
+			left: 133px;
+			padding-right: 0;
+
+			.project-title {
+				font-size: 1.34rem;
+				margin-bottom: 0.75rem;
+			}
+
+			.project-description {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+}

@@ -141,3 +141,28 @@ section {
 		opacity: 1;
 	}
 }
+
+@media screen and (max-width: #{$mobile-device}) {
+	main,
+	footer,
+	nav {
+		padding: 0 1rem;
+		box-sizing: border-box;
+	}
+
+	.section-title {
+		.section-number {
+			font-size: 1.4rem;
+		}
+	}
+
+	section {
+		&:not(#hero) {
+			padding-top: 2.8rem;
+			max-width: $max-width-container;
+			margin: 0 auto;
+			margin-top: -2.8rem;
+			margin-bottom: 4.28rem;
+		}
+	}
+}

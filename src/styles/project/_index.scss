@@ -239,3 +239,111 @@
 		}
 	}
 }
+
+@media screen and (max-width: #{$mobile-device}) {
+	.project-container {
+		.project-header {
+			margin: 7rem 0 2.5rem;
+
+			.header-top {
+				.go-back-link {
+					font-size: 0.67rem;
+				}
+
+				.project-title {
+					font-size: 2.23rem;
+				}
+
+				.section-title {
+					position: absolute;
+					width: 100%;
+					top: calc(100% - 1.5rem);
+				}
+			}
+
+			.header-bottom {
+				width: 100%;
+
+				.project-wip {
+					width: 3rem;
+					top: -2rem;
+					right: 0.5rem;
+				}
+
+				.project-img {
+					margin-top: -1rem;
+					width: 100%;
+				}
+			}
+		}
+
+		.project-details {
+			display: flex;
+			flex-direction: column;
+			justify-content: initial;
+
+			.info-title {
+				font-size: 1.34rem;
+			}
+
+			.project-content {
+				width: 100%;
+				margin-bottom: 2rem;
+
+				.project-description {
+					font-weight: 800;
+				}
+			}
+
+			.project-info {
+				width: 100%;
+
+				.project-context {
+					margin-bottom: 2rem;
+				}
+			}
+		}
+
+		.separator {
+			margin: 3.7rem 0;
+			width: 100%;
+			height: 0.1rem;
+			background-color: rgba(white, 0.2);
+		}
+
+		.next-section {
+			margin-bottom: 5rem;
+
+			.section-title {
+				width: 100%;
+			}
+
+			.project-cards {
+				margin-top: 1.5rem;
+				width: 100%;
+
+				.project-card:nth-child(odd) {
+					margin-left: 0rem;
+				}
+			}
+		}
+
+		.project-contact {
+			margin-bottom: 4.5rem;
+
+			.section-title {
+				width: 100%;
+				margin-bottom: 2.5rem;
+			}
+
+			.contact-text {
+				width: 100%;
+				margin-bottom: 0;
+			}
+
+			.contact-list {
+				margin-top: 2rem;
+			}
+		}
+	}
+}

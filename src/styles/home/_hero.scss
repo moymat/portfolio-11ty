@@ -137,3 +137,34 @@
 		bottom: 0;
 	}
 }
+
+@media screen and (max-width: #{$mobile-device}) {
+	#hero {
+		max-height: 100vh;
+		margin-bottom: 0;
+
+		.hero-container {
+			margin-top: -25%;
+			.hero-title {
+				.hero-name {
+					font-size: 0.9rem;
+					line-height: 119%;
+					margin-bottom: 0;
+				}
+
+				.hero-role {
+					font-size: 2.23rem;
+				}
+			}
+			.hero-sub {
+				font-size: 0.9rem;
+				line-height: 119%;
+				margin-top: 0;
+			}
+		}
+
+		.scroll-container {
+			bottom: 8rem;
+		}
+	}
+}
