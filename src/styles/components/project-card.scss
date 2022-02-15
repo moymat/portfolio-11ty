@@ -100,7 +100,7 @@
 		position: absolute;
 		bottom: 50%;
 		left: 280px;
-		padding-right: 6.3rem;
+		width: 17rem;
 		z-index: 1;
 		transform: translateY(50%);
 		transition: bottom 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.2s;
@@ -123,16 +123,39 @@
 	}
 }
 
+@media screen and (max-width: #{$tablet-device}) {
+	.project-cards {
+		padding: 0 100px;
+
+		.project-card {
+			height: 375px;
+
+			&:not(:last-child) {
+				margin-bottom: 3.34rem;
+			}
+
+			&:nth-child(even) {
+				margin-left: 3.5rem;
+			}
+
+			.project-illustration {
+				max-width: 255px;
+			}
+		}
+
+		.project-content {
+			left: 200px;
+			width: 14rem;
+		}
+	}
+}
+
 @media screen and (max-width: #{$mobile-device}) {
 	.project-cards {
 		padding: 0;
 
 		.project-card {
 			height: 292px;
-
-			&:not(:last-child) {
-				margin-bottom: 3.34rem;
-			}
 
 			&:nth-child(even) {
 				margin-left: 0;
@@ -155,7 +178,7 @@
 
 		.project-content {
 			left: 133px;
-			padding-right: 0;
+			width: auto;
 
 			.project-title {
 				font-size: 1.34rem;

@@ -1,20 +1,69 @@
 <nav id="navbar">
 	<ul class="navbar-menu">
 		<li class="navbar-menu-item">
-			<a data-content="projets" data-section="projects" href="#projects"
-				>projets</a
-			>
+			<div class="navbar-item-wrapper">
+				<a class="nav-link" data-content="projets" data-section="projects"
+					>projets</a
+				>
+			</div>
 		</li>
 		<li class="navbar-menu-item">
-			<a data-content="qui suis-je ?" data-section="profile" href="#profile"
-				>qui suis-je ?</a
-			>
+			<div class="navbar-item-wrapper">
+				<a class="nav-link" data-content="qui suis-je ?" data-section="profile"
+					>qui suis-je ?</a
+				>
+			</div>
 		</li>
 		<li class="navbar-menu-item">
-			<a data-content="me contacter" data-section="contact" href="#contact"
-				>me contacter</a
-			>
+			<div class="navbar-item-wrapper">
+				<a class="nav-link" data-content="me contacter" data-section="contact"
+					>me contacter</a
+				>
+			</div>
 		</li>
 	</ul>
-	<div class="navbar-burger">burger</div>
+	<div class="navbar-burger">
+		<div class="navbar-burger-icon"></div>
+		<div class="navbar-burger-content">
+			<ul class="navbar-burger-menu">
+				<li class="navbar-menu-item">
+					<a class="nav-link" data-content="projets" data-section="projects"
+						>projets</a
+					>
+				</li>
+				<li class="navbar-menu-item">
+					<a
+						class="nav-link"
+						data-content="qui suis-je ?"
+						data-section="profile"
+						>qui suis-je ?</a
+					>
+				</li>
+				<li class="navbar-menu-item">
+					<a class="nav-link" data-content="me contacter" data-section="contact"
+						>me contacter</a
+					>
+				</li>
+			</ul>
+			<ul class="navbar-burger-contact">
+				<li class="page-link">
+					<a onclick="window.location.href = 'mailto:deckertmichel@gmail.com'"
+						>Email</a
+					>
+				</li>
+				<li class="page-link">
+					<a
+						onclick="window.location.href = 'https://www.linkedin.com/in/micheldeckert/'"
+						>LinkedIn</a
+					>
+				</li>
+				<li class="page-link">
+					<a onclick="window.location.href = 'https://github.com/moymat'"
+						>Github</a
+					>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>
+<script defer src="/navbar.js"></script>

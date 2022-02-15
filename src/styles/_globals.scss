@@ -76,7 +76,7 @@ section {
 	font-weight: 400;
 	font-size: 0.9rem;
 	color: white;
-	padding: 0.8rem 1.7rem;
+	padding: 0.72rem 1.6rem;
 	border-radius: 5px;
 	box-sizing: border-box;
 
@@ -142,14 +142,16 @@ section {
 	}
 }
 
-@media screen and (max-width: #{$mobile-device}) {
+@media screen and (max-width: #{$large-screen}) {
 	main,
 	footer,
 	nav {
 		padding: 0 1rem;
 		box-sizing: border-box;
 	}
+}
 
+@media screen and (max-width: #{$mobile-device}) {
 	.section-title {
 		.section-number {
 			font-size: 1.4rem;
@@ -163,6 +165,38 @@ section {
 			margin: 0 auto;
 			margin-top: -2.8rem;
 			margin-bottom: 4.28rem;
+		}
+	}
+
+	.page-btn {
+		font-size: 0.9rem;
+		color: white;
+		padding: 0.6rem 1.2rem;
+		border-radius: 5px;
+		box-sizing: border-box;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			border-radius: 5px;
+		}
+
+		&::before {
+			background-color: $main_text_blue;
+			z-index: -2;
+		}
+
+		&::after {
+			opacity: 0;
+			background-image: $base_gradient;
+			z-index: -1;
+			transition: opacity 0.3s ease-in-out;
+		}
+
+		&:hover::after {
+			opacity: 1;
 		}
 	}
 }
