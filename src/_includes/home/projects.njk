@@ -8,7 +8,7 @@
 		</svg>
 	</div>
 	<ul class="project-cards">
-		{%- for project in collections.featured %}
+		{%- for project in collections.projectsSorted %}
 			{%include "home/project-card.njk"%}
 		{%- endfor%}
 	</ul>

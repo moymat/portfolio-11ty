@@ -42,6 +42,8 @@ const Image = require("@11ty/eleventy-img");
 	);
 })();
 
+const projectOrder = ["Bristol", "Adopt", "Digital Project", "Portfolio"];
+
 module.exports = eleventyConfig => {
 	eleventyConfig.addWatchTarget("./src/js/");
 	eleventyConfig.addPlugin(pluginSass, {
@@ -56,6 +58,17 @@ module.exports = eleventyConfig => {
 		markdownIt({ html: true }).use(markdownItAttrs)
 	);
 	eleventyConfig.addPassthroughCopy("./src/assets/**/*.(svg|webp|pdf)");
+	eleventyConfig.addCollection("projectsSorted", collectionApi => {
+		return collectionApi
+			.getFilteredByTag("project")
+			.sort((a, b) =>
+				projectOrder.findIndex(v => b.data.title === v) -
+					projectOrder.findIndex(v => a.data.title === v) <
+				0
+					? 1
+					: -1
+			);
+	});
 	eleventyConfig.setDataDeepMerge(true);
 
 	return {
