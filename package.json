@@ -4,7 +4,7 @@
 	"description": "Portfolio project with 11ty",
 	"main": "index.js",
 	"scripts": {
-		"start": "eleventy --serve",
+		"start": "rm -rf public && eleventy --serve",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
