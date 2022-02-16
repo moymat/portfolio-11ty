@@ -79,29 +79,30 @@ section {
 	padding: 0.72rem 1.6rem;
 	border-radius: 5px;
 	box-sizing: border-box;
+	overflow: hidden;
 
-	&::before,
 	&::after {
 		content: "";
 		position: absolute;
 		inset: 0;
 		border-radius: 5px;
-	}
-
-	&::before {
-		background-color: $main_text_blue;
-		z-index: -2;
-	}
-
-	&::after {
-		opacity: 0;
-		background-image: $base_gradient;
+		top: 50%;
+		left: 0;
+		width: 200%;
+		height: 200%;
+		transform: translateY(-50%);
+		background-image: linear-gradient(
+			45deg,
+			#396ef5 50%,
+			#948df4 73.7%,
+			#e045af 100%
+		);
+		transition: left 0.3s;
 		z-index: -1;
-		transition: opacity 0.3s ease-in-out;
 	}
 
 	&:hover::after {
-		opacity: 1;
+		left: -100%;
 	}
 }
 

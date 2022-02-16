@@ -87,16 +87,24 @@
 		}
 
 		.profile-content-right {
-			.profile-img {
+			max-width: 50%;
+
+			.profile-img-container {
 				position: relative;
-				top: -5rem;
+				// top: -5rem;
 				display: flex;
 				justify-self: center;
 				align-items: center;
+				width: 65%;
+				overflow: hidden;
+				margin: 0 auto;
 
-				img {
-					width: 67%;
-					aspect-ratio: 2/2.9;
+				.profile-img {
+					position: absolute;
+					bottom: 50%;
+					right: 50%;
+					transform: translate(50%, 50%);
+					height: 100%;
 					object-fit: cover;
 					margin: auto;
 				}
@@ -131,7 +139,7 @@
 	}
 }
 
-@media screen and (max-width: #{$mobile-device}) {
+@media screen and (max-width: #{$tablet-device}) {
 	#profile {
 		.profile-title {
 			font-size: 1.34rem;
@@ -153,12 +161,8 @@
 					.formation-list {
 						margin-bottom: 1.45rem;
 
-						.formation-item {
-							list-style: none;
-
-							&:not(:last-child) {
-								margin-bottom: 1.45rem;
-							}
+						.formation-item:not(:last-child) {
+							margin-bottom: 1.45rem;
 						}
 					}
 				}
@@ -178,6 +182,18 @@
 							color: var(--color-box) !important;
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: #{$mobile-device}) {
+	#profile {
+		.profile-content {
+			.profile-content-right {
+				.profile-img {
+					display: none;
 				}
 			}
 		}

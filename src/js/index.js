@@ -6,6 +6,7 @@ const languagesList = document.querySelector(".languages-list");
 const languageItems = document.querySelectorAll(".language-item a");
 const projectContents = document.querySelectorAll(".project-content");
 const projectCards = document.querySelectorAll(".project-card");
+const projectImgContainer = document.querySelector(".profile-img-container");
 
 dateFooter.innerHTML = new Date(Date.now()).getFullYear();
 
@@ -30,5 +31,17 @@ const observer = new IntersectionObserver(
 		threshold: 0.15,
 	}
 );
+
+const setProfileImgHeight = () => {
+	const width = +window
+		.getComputedStyle(projectImgContainer)
+		.width.replace("px", "");
+	console.log(width);
+	projectImgContainer.style.top = `-${width * 0.25}px`;
+	projectImgContainer.style.height = `${width * 1.49}px`;
+};
+
+setProfileImgHeight();
+window.addEventListener("resize", setProfileImgHeight);
 
 projectCards.forEach(el => observer.observe(el));

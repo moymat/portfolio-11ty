@@ -78,6 +78,7 @@
 			width: 100%;
 			height: 100%;
 			background-color: $main_dark_blue;
+			flex-shrink: 0;
 
 			.project-image {
 				position: absolute;
@@ -97,13 +98,15 @@
 	}
 
 	.project-content {
-		position: absolute;
-		bottom: 50%;
-		left: 280px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
 		width: 17rem;
 		z-index: 1;
-		transform: translateY(50%);
+		margin-left: -6%;
 		transition: bottom 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.2s;
+		box-sizing: border-box;
 
 		.project-title {
 			font-weight: 800;
@@ -120,12 +123,25 @@
 			line-height: 150%;
 			margin-bottom: 1.5rem;
 		}
+
+		.project-link {
+			width: max-content;
+		}
+	}
+}
+
+@media screen and (max-width: #{$max-width-container}) {
+	.project-cards {
+		padding: 0 0 0 18%;
+		.project-card {
+			width: auto;
+		}
 	}
 }
 
 @media screen and (max-width: #{$tablet-device}) {
 	.project-cards {
-		padding: 0 100px;
+		padding-left: 9%;
 
 		.project-card {
 			height: 375px;
@@ -135,17 +151,17 @@
 			}
 
 			&:nth-child(even) {
-				margin-left: 3.5rem;
+				margin-left: auto;
+				align-self: flex-end;
 			}
 
 			.project-illustration {
-				max-width: 255px;
+				width: 255px;
 			}
 		}
 
 		.project-content {
-			left: 200px;
-			width: 14rem;
+			width: calc(100vw * 0.28);
 		}
 	}
 }
@@ -153,13 +169,11 @@
 @media screen and (max-width: #{$mobile-device}) {
 	.project-cards {
 		padding: 0;
+		width: 100%;
 
 		.project-card {
 			height: 292px;
-
-			&:nth-child(even) {
-				margin-left: 0;
-			}
+			width: 100%;
 
 			.project-wip {
 				top: 1rem;
@@ -177,7 +191,6 @@
 		}
 
 		.project-content {
-			left: 133px;
 			width: auto;
 
 			.project-title {
