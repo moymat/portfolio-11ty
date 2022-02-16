@@ -87,11 +87,8 @@
 		}
 
 		.profile-content-right {
-			max-width: 50%;
-
 			.profile-img-container {
 				position: relative;
-				// top: -5rem;
 				display: flex;
 				justify-self: center;
 				align-items: center;
@@ -192,7 +189,7 @@
 	#profile {
 		.profile-content {
 			.profile-content-right {
-				.profile-img {
+				.profile-img-container {
 					display: none;
 				}
 			}
