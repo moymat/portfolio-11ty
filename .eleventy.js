@@ -55,7 +55,7 @@ module.exports = eleventyConfig => {
 		"md",
 		markdownIt({ html: true }).use(markdownItAttrs)
 	);
-	eleventyConfig.addPassthroughCopy("./src/assets/**/*.(svg|webp)");
+	eleventyConfig.addPassthroughCopy("./src/assets/**/*.(svg|webp|pdf)");
 	eleventyConfig.setDataDeepMerge(true);
 
 	return {
