@@ -186,6 +186,10 @@
 				font-size: 12.2rem;
 			}
 		}
+
+		.project-cards {
+			margin-top: -1rem;
+		}
 	}
 
 	.project-contact {
@@ -286,6 +290,16 @@
 				.project-context {
 					margin-bottom: 2rem;
 				}
+			}
+		}
+
+		.separator {
+			margin: 3.5rem 0;
+		}
+
+		.next-section {
+			.project-cards {
+				margin-top: 2rem;
 			}
 		}
 	}
