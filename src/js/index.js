@@ -1,4 +1,4 @@
-import { setIconsHoverBehavior } from "./helpers";
+import setIconsHoverBehavior from "./helpers/setIconsHoverBehavior";
 
 const dateFooter = document.querySelector("#date-footer");
 const languagesTitle = document.querySelector(".languages-title");
@@ -36,7 +36,6 @@ const setProfileImgHeight = () => {
 	const width = +window
 		.getComputedStyle(projectImgContainer)
 		.width.replace("px", "");
-	console.log(width);
 	projectImgContainer.style.top = `-${width * 0.25}px`;
 	projectImgContainer.style.height = `${width * 1.49}px`;
 };

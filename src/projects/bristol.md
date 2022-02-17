@@ -20,8 +20,8 @@ links:
     github: "https://github.com/moymat/bristolbe",
     live: "https://bristolbe.vercel.app/",
   }
-excerpt: application web // créer, partager et organiser des fiches méthodologiques collaboratives
-description: Projet de fin de formation à l'école imaginé et créé de A à Z sur une période d'un mois en collaboration avec deux autres développeurs.
+excerpt: Application web <br> Créer, partager et organiser des fiches méthodologiques collaboratives
+description: Projet de fin de formation à l'école O'Clock imaginé et créé de A à Z sur une période d'un mois en collaboration avec deux autres développeurs.
 ---
 
 Sur **Bristol**, mon rôle a été principalement celui de _Lead Dev Back_ et de _Git Master_, bien que j'ai a plusieurs reprise également participé à l'élaboration du front.

@@ -87,22 +87,23 @@ section {
 		inset: 0;
 		border-radius: 5px;
 		top: 50%;
-		left: 0;
+		left: -100%;
 		width: 200%;
 		height: 200%;
 		transform: translateY(-50%);
 		background-image: linear-gradient(
-			45deg,
-			#396ef5 50%,
-			#948df4 73.7%,
-			#e045af 100%
+			60deg,
+			#e045af 0%,
+			#948df4 20%,
+			#396ef5 50%
 		);
-		transition: left 0.3s;
+		transition: all 0.3s ease-in;
 		z-index: -1;
 	}
 
 	&:hover::after {
-		left: -100%;
+		left: 0;
+		transition-timing-function: ease-out;
 	}
 }
 

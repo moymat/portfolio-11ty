@@ -11,7 +11,7 @@ links:
     github: "https://github.com/moymat/nextjs-archi",
     live: "https://digital-project.vercel.app/",
   }
-excerpt: site web // vitrine d'un cabinet fictif d'architectes basée sur une maquette figma de Martin Jozwiak
+excerpt: Site web <br> Vitrine d'un cabinet fictif d'architectes basée sur une maquette figma de Martin Jozwiak
 description: Projet personnel d'un cabinet fictif d'architectes.
 ---
 
@@ -20,8 +20,8 @@ Basé sur une maquette _Figma_ mise à disposition gratuitement par [Martin Jozw
 Ce site se décompose en cinq parties:
 
 - une Landing composée entre autre d'un slider personnalisé et d'un formulaire de contact
-- une page Gallerie regroupant l'ensemble des photos des projets fictifs
-- une section Projets regroupant l'ensemble des projets architecturaux du cabinet fictif sur plusieurs pages
+- une page Gallerie regroupant l'ensemble des photos des projets de cette agence fictive
+- une section Projets regroupant l'ensemble des projets architecturaux sur plusieurs pages
 - une page par Projet
 - une page Contact avec un formulaire et l'intégration d'une carte intéractive _Leaflet_.
 

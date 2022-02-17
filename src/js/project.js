@@ -1,4 +1,4 @@
-import { setIconsHoverBehavior } from "./helpers";
+import setIconsHoverBehavior from "./helpers/setIconsHoverBehavior";
 
 const stackList = document.querySelector(".stack-list");
 const stackTitle = document.querySelector(".project-stack .info-title");
