@@ -68,7 +68,7 @@ layout: base.njk
       </svg>
     </div>
     <ul class="project-cards">
-      {%- for project in collections.featured %}
+      {%- for project in collections.projectsSorted %}
         {% if project.data.title !== title %}
           {%include "home/project-card.njk"%}
         {% endif %}
