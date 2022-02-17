@@ -24,7 +24,7 @@ excerpt: Application web <br> Créer, partager et organiser des fiches méthodol
 description: Projet de fin de formation à l'école O'Clock imaginé et créé de A à Z sur une période d'un mois en collaboration avec deux autres développeurs.
 ---
 
-Sur **Bristol**, mon rôle a été principalement celui de _Lead Dev Back_ et de _Git Master_, bien que j'ai a plusieurs reprise également participé à l'élaboration du front.
+Sur **Bristol**, mon rôle a été principalement celui de _Lead Dev Back_ et de _Git Master_, bien que j'ai a plusieurs reprises également participé à l'élaboration du front.
 
 Ce projet a pour objectif de permettre le partage, l'organisation et la création collaborative de fiches méthodologiques.
 
@@ -32,6 +32,6 @@ Le back est développé sous _Express.js_ et la base de donnée est en _PSQL_. L
 
 Le front quand à lui est développé sous _React_ et l'UI a été conçue avec _Material UI_. En ce qui concerne l'outil de traitement de texte, notre choix s'est porté sur _Quill_.
 
-La présentation en vidéo de **Bristol** par l'équipe pédagogique de [O'Clock](https://oclock.io/){target="\_blank" .content-link} (01:12:35):
+Ci-dessous la présentation en vidéo du projet avec l'équipe pédagogique de [O'Clock](https://oclock.io/){target="\_blank" .content-link} (01:12:35):
 
 https://youtu.be/fVoNDfbKTsY?t=4357

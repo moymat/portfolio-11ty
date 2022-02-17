@@ -18,4 +18,4 @@ Démarré juste après la fin de ma formation chez [O'Clock](https://oclock.io/)
 
 Etant initialement parti sur _Webpack_ et du templating avec _Pug_, j'ai finalement décidé de profiter de cette opportunité pour découvrir _Eleventy_ et _Nunjucks_.
 
-Ce portfolio a été développé avec _JavaScript Vanilla_, _Sass_ a quant à lui été utilisé pour le style et la maquette a été réalisée sous _Figma_ par _belauga_ (merci !).
+Ce portfolio a été développé en _JavaScript Vanilla_, _Sass_ a quant à lui été utilisé pour le style et la maquette a été réalisée sous _Figma_ par _belauga_ (merci !).
