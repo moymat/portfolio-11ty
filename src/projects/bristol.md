@@ -24,7 +24,7 @@ excerpt: Application web <br> Créer, partager et organiser des fiches méthodol
 description: Projet de fin de formation à l'école O'Clock imaginé et créé de A à Z sur une période d'un mois en collaboration avec deux autres développeurs.
 ---
 
-Sur **Bristol**, mon rôle a été principalement celui de _Lead Dev Back_ et de _Git Master_, bien que j'ai a plusieurs reprises également participé à l'élaboration du front.
+Sur **Bristol**, mon rôle a été principalement celui de _Lead Dev Back_ et de _Git Master_, bien que j'ai à plusieurs reprises également participé à l'élaboration du front.
 
 Ce projet a pour objectif de permettre le partage, l'organisation et la création collaborative de fiches méthodologiques.
 
