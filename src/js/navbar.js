@@ -18,16 +18,16 @@ navLinks.forEach(link => {
 function toggleBurgerMenu() {
 	if (!navbarBurger.classList.contains("open")) {
 		burgerIcon.classList.add("first-step");
+		burgerIcon.style.backgroundColor = "transparent";
 		setTimeout(() => {
-			burgerIcon.style.backgroundColor = "transparent";
 			burgerIcon.classList.add("second-step");
-		}, 250);
+		}, 125);
 	} else {
 		burgerIcon.classList.remove("second-step");
 		setTimeout(() => {
 			burgerIcon.style.removeProperty("background-color");
 			burgerIcon.classList.remove("first-step");
-		}, 250);
+		}, 125);
 	}
 	navbarBurger.classList.toggle("open");
 }

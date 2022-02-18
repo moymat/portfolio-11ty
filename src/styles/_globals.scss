@@ -57,6 +57,7 @@ section {
 
 	.section-title-svg {
 		max-height: 25rem;
+		// height: 100%;
 		width: 100%;
 		vertical-align: top;
 
@@ -101,9 +102,6 @@ section {
 		height: 100%;
 		width: 200%;
 		right: 0;
-		// left: -25%;
-		// right: -25%;
-		// background-image: var(--gradient);
 		background-image: linear-gradient(
 			64.38deg,
 			#e045af 0%,
@@ -147,7 +145,7 @@ section {
 	}
 
 	&::before {
-		background-color: white;
+		background-color: $main_text_blue;
 	}
 
 	&::after {

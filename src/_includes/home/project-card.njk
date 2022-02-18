@@ -1,4 +1,8 @@
-<li class="project-card hidden" id="{{ project.data.title }}-card">
+<li
+	class="project-card hidden"
+	id="{{ project.data.title }}-card"
+	onclick="window.location.href='{{ project.url }}'"
+	>
 	{% if "wip" in project.data.tags %}
 		<img class="project-wip" src="/assets/img/wip.svg" alt="work in progress"/>
 	{% endif %}
@@ -13,11 +17,10 @@
 		<p class="project-description">
 			{{ project.data.excerpt | safe }}
 		</p>
-		<a
+		<div
 			class="project-link page-btn"
 			data-content="en savoir plus"
-			href="{{ project.url }}"
-			>En savoir plus</a
+			>En savoir plus</
 		>
 	</div>
 </li>

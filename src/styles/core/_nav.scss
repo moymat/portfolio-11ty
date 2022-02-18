@@ -99,7 +99,8 @@
 					width: 1.1rem;
 					background-color: #fff;
 					transform-origin: center;
-					transition: top 0.25s ease-in-out, transform 0.25s ease-in-out;
+					transition: top 0.125s cubic-bezier(0.47, 0, 0.745, 0.715),
+						transform 0.125s ease-in-out;
 				}
 
 				&::before {
@@ -122,7 +123,7 @@
 						transform: rotate(45deg);
 					}
 					&::after {
-						transform: rotate(315deg);
+						transform: rotate(-45deg);
 					}
 				}
 			}
@@ -138,7 +139,7 @@
 				height: 100vh;
 				background-color: $main_dark_blue;
 				z-index: -1;
-				transition: opacity 0.5s;
+				transition: opacity 0.25s cubic-bezier(0.785, 0.235, 0.25, 0.56);
 				pointer-events: none;
 
 				.navbar-burger-menu {
@@ -169,6 +170,7 @@
 				.navbar-burger-content {
 					opacity: 1;
 					pointer-events: all;
+					transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
 				}
 			}
 		}
