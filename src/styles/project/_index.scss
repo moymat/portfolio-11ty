@@ -10,7 +10,6 @@
 
 	.section-title {
 		width: 80%;
-		margin: 0;
 
 		.section-title-text {
 			color: white;
@@ -182,6 +181,8 @@
 		margin-bottom: 11rem;
 
 		.section-title {
+			margin: 0;
+
 			.section-title-text {
 				font-size: 12.2rem;
 			}
@@ -197,15 +198,15 @@
 		margin-bottom: 11rem;
 
 		.section-title {
-			margin: auto;
-			margin-bottom: 4rem;
+			margin-left: auto;
+			margin-right: auto;
 
 			.section-title-text {
 				font-size: 7.65rem;
 			}
 		}
 
-		& .contact-text {
+		.contact-text {
 			font-size: 0.9rem;
 			font-weight: 300;
 			line-height: 150%;
@@ -216,7 +217,7 @@
 			margin: 0 auto 3rem;
 		}
 
-		& .contact-list {
+		.contact-list {
 			display: flex;
 			list-style: none;
 			width: max-content;

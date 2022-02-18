@@ -1,6 +1,6 @@
 #contact {
 	.section-title {
-		margin-bottom: 4rem;
+		margin-bottom: 6rem;
 
 		.section-title-text {
 			font-size: 7.65rem;
@@ -33,18 +33,19 @@
 @media screen and (max-width: #{$mobile-device}) {
 	#contact {
 		.section-title {
-			margin-bottom: 3rem;
+			margin-bottom: 2rem;
 		}
+
 		& .contact-text {
 			width: 100%;
-			margin: 0 auto 3rem;
+			margin: 0 auto;
 		}
 
 		& .contact-list {
 			display: flex;
 			list-style: none;
 			width: max-content;
-			margin: 3.5rem auto 0;
+			margin: 2rem auto 6.5rem;
 
 			li:not(:first-child) {
 				margin-left: 1.5rem;

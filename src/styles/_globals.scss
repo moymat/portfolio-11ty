@@ -170,6 +170,8 @@ section {
 
 @media screen and (max-width: #{$mobile-device}) {
 	.section-title {
+		margin-bottom: 2rem;
+
 		.section-number {
 			font-size: 1.4rem;
 		}
@@ -181,7 +183,7 @@ section {
 			max-width: $max-width-container;
 			margin: 0 auto;
 			margin-top: -2.8rem;
-			margin-bottom: 4.28rem;
+			margin-bottom: 5.3rem;
 		}
 	}
 
