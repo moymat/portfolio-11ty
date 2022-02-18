@@ -45,10 +45,6 @@ async function animateTitle(titleEl, next, list, leave = false) {
 	}
 
 	await switchLetters(titleEl, next, leave);
-
-	/* if (!leave && !list.querySelector(":hover")) {
-		console.log("not hovered", titleEl.innerHTML);
-	} */
 }
 
 export default animateTitle;

@@ -1,9 +1,5 @@
 const navbarBurger = document.querySelector(".navbar-burger");
-const navbarBurgerContent = document.querySelector(".navbar-burger-content");
 const burgerIcon = document.querySelector(".navbar-burger-icon");
-const burgerMenuItems = document.querySelectorAll(
-	".navbar-burger-menu .navbar-menu-item a"
-);
 const navLinks = document.querySelectorAll(".nav-link");
 
 navLinks.forEach(link => {
