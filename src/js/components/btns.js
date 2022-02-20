@@ -1,5 +1,3 @@
-const btns = document.querySelectorAll(".page-btn");
-
 function onBtnLeave(e) {
 	e.target.removeEventListener("mousemove", moveGradient);
 	e.target.removeEventListener("mouseleave", onBtnLeave);
@@ -22,4 +20,7 @@ function onBtnHover(e) {
 	e.target.removeEventListener("mouseleave", onBtnLeave);
 }
 
-btns.forEach(btn => btn.addEventListener("mouseover", onBtnHover));
+export default function initBtns() {
+	const btns = document.querySelectorAll(".page-btn");
+	btns.forEach(btn => btn.addEventListener("mouseover", onBtnHover));
+}

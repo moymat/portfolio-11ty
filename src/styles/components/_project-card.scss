@@ -50,6 +50,9 @@
 				font-weight: 400;
 				color: rgba(white, 0.8);
 				height: max-content;
+				margin-bottom: 1rem;
+				width: 100%;
+				box-sizing: border-box;
 				transform: rotate(-90deg);
 				transition: padding 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 			}
@@ -58,7 +61,6 @@
 				position: relative;
 				height: 11.5rem;
 				width: 1px;
-				margin-top: 1rem;
 				background-color: rgba(white, 0.2);
 				transition: height 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
@@ -207,6 +209,7 @@
 		padding-left: 9%;
 
 		.project-card {
+			-webkit-tap-highlight-color: transparent;
 			height: 375px;
 
 			&:not(:last-child) {

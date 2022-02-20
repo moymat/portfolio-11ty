@@ -1,0 +1,41 @@
+@import "../variables";
+
+.overlay {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	inset: 0;
+	background-color: transparent;
+	transform-origin: center left;
+	pointer-events: none;
+	z-index: 10000;
+
+	.overlay-bar {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: calc(100vh / 8);
+		background-color: black;
+		transition: left 0.3s linear;
+		box-sizing: border-box;
+
+		@for $i from 0 through 7 {
+			&:nth-child(#{$i}) {
+				transition-delay: $i * 0.1s;
+				top: calc(#{$i} * 100vh / 8);
+			}
+		}
+	}
+
+	&.visible-right {
+		.overlay-bar {
+			left: 100%;
+		}
+	}
+
+	&.visible-left {
+		.overlay-bar {
+			left: -100%;
+		}
+	}
+}
