@@ -27,28 +27,25 @@ async function loadPage(url) {
 }
 
 function animatePages(oldPage, newPage, hash) {
-	newPage.classList.add("hidden", "hidden-right");
+	newPage.classList.add("hidden");
 	main.appendChild(newPage);
 
-	oldPage.classList.add("hidden", "hidden-left");
+	const direction = !newPage.classList.contains("project-container")
+		? "right"
+		: "left";
+
+	oldPage.classList.add("hidden", `hidden-${direction}`);
 
 	setTimeout(() => {
-		newPage.classList.remove("hidden", "hidden-right");
+		newPage.classList.remove("hidden");
 		main.removeChild(oldPage);
-		if (hash) {
-			document.querySelector(hash).scrollIntoView();
-		} else {
-			window.scroll(0, 0);
-		}
-	}, 1000);
-
-	window.dispatchEvent(pageChanged);
+		hash ? document.querySelector(hash).scrollIntoView() : window.scroll(0, 0);
+		window.dispatchEvent(pageChanged);
+	}, 750);
 }
 
 async function initNewPage(link) {
 	const isHashLink = link.startsWith("#");
-
-	let url = isHashLink ? window.location.origin : window.location.origin + link;
 
 	html.style.scrollBehavior = "auto";
 

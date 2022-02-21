@@ -7,6 +7,7 @@ export default function initHome() {
 	const languageItems = document.querySelectorAll(".language-item a");
 	const projectCards = document.querySelectorAll(".project-card");
 	const projectImgContainer = document.querySelector(".profile-img-container");
+	const hidden = document.querySelectorAll(".hidden");
 
 	initBtns();
 
@@ -31,13 +32,16 @@ export default function initHome() {
 	const observer = new IntersectionObserver(
 		entries => {
 			entries.forEach(entry => {
-				if (entry.isIntersecting) entry.target.classList.remove("hidden");
+				if (entry.isIntersecting || entry.boundingClientRect.top < 0)
+					entry.target.classList.remove("hidden");
 			});
 		},
 		{
-			threshold: 0.65,
+			threshold: 0.5,
 		}
 	);
 
-	projectCards.forEach(el => observer.observe(el));
+	setTimeout(() => {
+		hidden.forEach(el => observer.observe(el));
+	}, 50);
 }

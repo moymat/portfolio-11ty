@@ -4,12 +4,13 @@
 
 	.page-content {
 		transform: translateX(0);
-		transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+		transition: opacity 0.5s ease-in;
 		opacity: 1;
 
 		&.hidden {
 			opacity: 0;
-			transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+			transition: transform 1s cubic-bezier(0.68, 0.15, 0.265, 1),
+				opacity 0.5s ease-out;
 
 			&.hidden-right {
 				transform: translateX(150%);
