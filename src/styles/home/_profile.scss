@@ -35,9 +35,28 @@
 				font-weight: 300;
 				color: #fff;
 				margin-bottom: 4rem;
+				opacity: 1;
+				transform: translateY(0);
+				transition: transform 0.5s ease-out, opacity 1s ease-in-out;
+
+				&.hidden {
+					opacity: 0;
+					transform: translateY(2rem);
+				}
 			}
 
 			.profile-formation {
+				.profile-title {
+					opacity: 1;
+					transform: translateX(0);
+					transition: transform 0.5s ease-out, opacity 1s ease-in-out;
+
+					&.hidden {
+						opacity: 0;
+						transform: translateX(-2rem);
+					}
+				}
+
 				.formation-list {
 					margin-bottom: 3rem;
 
@@ -48,11 +67,19 @@
 							margin-bottom: 1.5rem;
 						}
 
+						.formation-title,
+						.formation-name {
+							opacity: 1;
+							transform: translateX(0);
+							transition: transform 0.5s ease-out, opacity 1s ease-in-out;
+						}
+
 						.formation-title {
 							font-size: 0.9rem;
 							line-height: 150%;
 							font-weight: 500;
 							color: white;
+							transition-delay: calc(var(--idx) * 0.2s);
 
 							.formation-date {
 								margin-right: 0.5rem;
@@ -65,6 +92,7 @@
 						.formation-name {
 							display: flex;
 							align-items: center;
+							transition-delay: calc(var(--idx) * 0.25s);
 
 							&::before {
 								content: "";
@@ -82,6 +110,33 @@
 							}
 						}
 					}
+
+					&.hidden .formation-item {
+						.formation-name,
+						.formation-title {
+							opacity: 0;
+						}
+
+						.formation-title {
+							transform: translateX(-2rem);
+						}
+
+						.formation-name {
+							transform: translateX(-4rem);
+						}
+					}
+				}
+
+				.page-btn {
+					transform: translateY(0);
+					opacity: 1;
+					transition: transform 0.5s ease-out, opacity 1s ease-in-out;
+					transition-delay: 0.25s;
+
+					&.hidden {
+						transform: translateY(2rem);
+						opacity: 0;
+					}
 				}
 			}
 		}
@@ -97,6 +152,14 @@
 				width: 65%;
 				overflow: hidden;
 				margin: 0 auto;
+				transform: translateX(0);
+				opacity: 1;
+				transition: transform 1s ease-out, opacity 2s ease-in-out;
+
+				&.hidden {
+					transform: translateX(2rem);
+					opacity: 0;
+				}
 
 				.profile-img {
 					position: absolute;
@@ -112,6 +175,17 @@
 			.profile-languages {
 				margin-left: 17.5%;
 
+				.languages-title {
+					opacity: 1;
+					transform: translateX(0);
+					transition: transform 0.5s ease-out, opacity 1s ease-in-out;
+
+					&.hidden {
+						opacity: 0;
+						transform: translateX(2rem);
+					}
+				}
+
 				.languages-list {
 					display: grid;
 					grid-template-columns: repeat(auto-fit, 2rem);
@@ -120,6 +194,16 @@
 					width: 75%;
 
 					.language-item {
+						opacity: 1;
+						transform: translateX(0);
+						transition: transform 0.5s ease-out, opacity 0.75s ease-in-out;
+						transition-delay: calc(var(--idx) * 0.2s);
+
+						&.hidden {
+							opacity: 0;
+							transform: translateX(1.5rem);
+						}
+
 						a {
 							font-size: 2rem;
 							opacity: 0.4;
