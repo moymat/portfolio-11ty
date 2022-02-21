@@ -5,7 +5,6 @@ export default function initHome() {
 	const languagesTitle = document.querySelector(".languages-title");
 	const languagesList = document.querySelector(".languages-list");
 	const languageItems = document.querySelectorAll(".language-item a");
-	const projectCards = document.querySelectorAll(".project-card");
 	const projectImgContainer = document.querySelector(".profile-img-container");
 	const hidden = document.querySelectorAll(".hidden");
 

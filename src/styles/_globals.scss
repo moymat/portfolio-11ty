@@ -46,6 +46,14 @@ section {
 	letter-spacing: 0.04em;
 	margin-bottom: 3rem;
 	user-select: none;
+	transform: translateX(0);
+	transition: transform 1s ease-out, opacity 1s ease-in-out;
+	opacity: 1;
+
+	&.hidden {
+		transform: translateX(-4rem);
+		opacity: 0;
+	}
 
 	.section-number {
 		top: 0;

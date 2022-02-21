@@ -82,11 +82,9 @@
 		margin: 0;
 		transform: translateY(0);
 		transition: transform 1.5s ease-out, opacity 1.5s ease-in-out;
-		opacity: 1;
 
 		&.hidden {
 			transform: translateY(6rem);
-			opacity: 0;
 		}
 
 		.section-title-svg {
