@@ -8,10 +8,6 @@ export default function initHome() {
 	const projectCards = document.querySelectorAll(".project-card");
 	const projectImgContainer = document.querySelector(".profile-img-container");
 
-	if (window.location.hash) {
-		document.querySelector(window.location.hash).scrollIntoView();
-	}
-
 	initBtns();
 
 	setIconsHoverBehavior(

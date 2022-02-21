@@ -1,4 +1,25 @@
 @import "../variables";
+.main-container {
+	overflow-x: hidden;
+
+	.page-content {
+		transform: translateX(0);
+		transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+		opacity: 1;
+
+		&.hidden {
+			opacity: 0;
+			transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+
+			&.hidden-right {
+				transform: translateX(150%);
+			}
+			&.hidden-left {
+				transform: translateX(-150%);
+			}
+		}
+	}
+}
 
 .overlay {
 	position: fixed;

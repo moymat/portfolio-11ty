@@ -2,7 +2,6 @@ import toggleBurgerMenu from "./navbar";
 import initProject from "../pages/project";
 import initHome from "../pages/home";
 
-const overlay = document.querySelector(".overlay");
 const main = document.querySelector(".main-container");
 const html = document.querySelector("html");
 const navbarBurger = document.querySelector(".navbar-burger");
@@ -27,26 +26,46 @@ async function loadPage(url) {
 	return text;
 }
 
+function animatePages(oldPage, newPage, hash) {
+	newPage.classList.add("hidden", "hidden-right");
+	main.appendChild(newPage);
+
+	oldPage.classList.add("hidden", "hidden-left");
+
+	setTimeout(() => {
+		newPage.classList.remove("hidden", "hidden-right");
+		main.removeChild(oldPage);
+		if (hash) {
+			document.querySelector(hash).scrollIntoView();
+		} else {
+			window.scroll(0, 0);
+		}
+	}, 1000);
+
+	window.dispatchEvent(pageChanged);
+}
+
 async function initNewPage(link) {
-	overlay.classList.remove(`visible-left`);
-	overlay.classList.remove(`visible-right`);
-	overlay.style.removeProperty("transition");
+	const isHashLink = link.startsWith("#");
+
+	let url = isHashLink ? window.location.origin : window.location.origin + link;
 
 	html.style.scrollBehavior = "auto";
 
-	const url = window.location.origin + link;
-	history.pushState(null, null, url);
+	history.pushState(null, null, window.location.origin + link);
 
-	const text = await loadPage(url);
+	const text = await loadPage(
+		isHashLink ? window.location.origin : window.location.origin + link
+	);
 	const wrapper = document.createElement("div");
 	wrapper.innerHTML = text;
 
-	setTimeout(() => {
-		main.innerHTML = "";
-		main.appendChild(wrapper.querySelector(".page-content"));
-		overlay.classList.add(`visible-${getDirection()}`);
-		window.dispatchEvent(pageChanged);
-	}, 1100);
+	const newPage = wrapper.querySelector(".page-content");
+	const oldPage = document.querySelector(".page-content");
+
+	isHashLink
+		? animatePages(oldPage, newPage, link)
+		: animatePages(oldPage, newPage);
 }
 
 function isHome() {
@@ -77,36 +96,29 @@ async function onNavLinkClick() {
 
 function initPage() {
 	const projectCards = document.querySelectorAll(".project-card");
-	const goBackLink = document.querySelector(".go-back-link");
+	const goBackLink = document.querySelectorAll(".go-back-link");
 
 	projectCards.forEach(card => {
 		card.addEventListener("click", initNewPage.bind(null, card.dataset.link));
 	});
 
-	goBackLink?.addEventListener("click", initNewPage.bind(null, "/"));
+	goBackLink?.forEach(link => {
+		link.addEventListener("click", initNewPage.bind(null, "/"));
+	});
 }
 
 async function onPopstate() {
 	const text = await loadPage(window.location.href);
 	const wrapper = document.createElement("div");
 
-	overlay.style.transition = "none";
-
 	wrapper.innerHTML = text;
 	main.innerHTML = "";
 	main.appendChild(wrapper.querySelector(".page-content"));
-	overlay.classList.add(`visible-${getDirection()}`);
 
 	window.dispatchEvent(pageChanged);
 }
 
 function onPageLoad() {
-	overlay.classList.add(`visible-${getDirection()}`);
-	isHome() ? initHome() : initProject();
-	initPage();
-}
-
-function onPageChanged() {
 	isHome() ? initHome() : initProject();
 	initPage();
 }
@@ -116,5 +128,5 @@ navLinks.forEach(link => {
 });
 
 window.addEventListener("load", onPageLoad);
-window.addEventListener("pagechanged", onPageChanged);
+window.addEventListener("pagechanged", onPageLoad);
 window.addEventListener("popstate", onPopstate);

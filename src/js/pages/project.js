@@ -7,8 +7,6 @@ export default function initProject() {
 	const items = document.querySelectorAll(".stack-item a");
 	const projectCards = document.querySelectorAll(".project-card");
 
-	window.scroll(0, 0);
-
 	initBtns();
 
 	setIconsHoverBehavior(items, stackList, stackTitle, "technologies");
