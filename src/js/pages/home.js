@@ -31,6 +31,7 @@ export default function initHome() {
 	const observer = new IntersectionObserver(
 		entries => {
 			entries.forEach(entry => {
+				entry.target.id === "navbar" && console.log(entry);
 				if (entry.isIntersecting || entry.boundingClientRect.top < 0)
 					entry.target.classList.remove("hidden");
 			});
