@@ -62,7 +62,9 @@
 	}
 }
 
-@media screen and (max-width: #{$tablet-device}), (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (max-width: #{$tablet-device}),
+only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait),
+only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
 	#navbar {
 		left: 0;
 		transform: none;
