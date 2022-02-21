@@ -1,5 +1,5 @@
 <section id="profile">
-	<div class="section-title">
+	<div class="section-title hidden">
 		<span class="section-number">02</span>
 		<svg preserveAspectRatio="xMinYMin" viewbox="0 0 1100 170" class="section-title-svg">
 			<text x="0" y="145" class="section-title-text">Qui suis-je ?</text>
@@ -7,22 +7,22 @@
 	</div>
 	<div class="profile-content">
 		<div class="profile-content-left">
-			<p class="profile-description">
+			<p class="profile-description hidden">
 				Développeur web autodidacte depuis fin 2020, j'ai intégré en septembre 2021 l'école O'Clock afin de parfaire mes connaissances et d'en acquérir de nouvelles. Je me suis spécialisé dans le langage JavaScript, que ce soit avec React côté front ou Node.js côté back.
 				<br />
 				<br />
 				Passionné par le développement et l'opportunité que cette pratique me donne de créer mais aussi de découvrir et d'apprendre de nouvelles manières de faire, je cherche constament à élargir mes compétences à travers d'autres frameworks et langages.
 			</p>
 			<div class="profile-formation">
-				<h4 class="profile-title">formations</h4>
-				<ul class="formation-list">
+				<h4 class="profile-title hidden">formations</h4>
+				<ul class="formation-list hidden">
 					{%- for item in metadata.education %}
 						<li class="formation-item">
-							<div class="formation-title">
+							<div class="formation-title" style="--idx: {{loop.index}}">
 								<span class="formation-date">{{ item.year }}</span
 								><span class="formation-school">{{ item.school }}</span>
 							</div>
-							<div class="formation-name">
+							<div class="formation-name" style="--idx: {{loop.index}}">
 								<a class="formation-link"
 									data-content="maitrise de qualité en projet web"
 									href="{{ item.link }}"
@@ -33,18 +33,18 @@
 						</li>
 					{%- endfor %}
 				</ul>
-				<a href="/assets/Deckert-Michel-CV.pdf" target="_blank" class="page-btn">Télécharger mon CV</a>
+				<a href="/assets/Deckert-Michel-CV.pdf" target="_blank" class="page-btn hidden">Télécharger mon CV</a>
 			</div>
 		</div>
 		<div class="profile-content-right">
-			<div class="profile-img-container">
+			<div class="profile-img-container hidden">
 				<img class="profile-img" src="/assets/img/michel-deckert.webp" alt="Michel Deckert" />
 			</div>
 			<div class="profile-languages">
-				<h4 class="profile-title languages-title">Langages</h4>
+				<h4 class="profile-title languages-title hidden">Langages</h4>
 				<ul class="languages-list">
 					{%- for language in metadata.languages %}
-						<li class="language-item">
+						<li class="language-item hidden" style="--idx: {{loop.index}}">
 							<a
 								class="{{ metadata.icons[language.name].icon }} colored"
 								data-name="{{ metadata.icons[language.name].name }}"

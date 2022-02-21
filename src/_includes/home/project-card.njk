@@ -1,7 +1,7 @@
 <li
 	class="project-card hidden"
 	id="{{ project.data.title }}-card"
-	onclick="window.location.href='{{ project.url }}'"
+	data-link="{{ project.url }}"
 	>
 	{% if "wip" in project.data.tags %}
 		<img class="project-wip" src="/assets/img/wip.svg" alt="work in progress"/>

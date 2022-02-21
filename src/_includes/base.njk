@@ -12,20 +12,20 @@
 		<!-- Google / Search Engine Tags -->
 		<meta itemprop="name" content="Michel Deckert - Développeur JavaScript">
 		<meta itemprop="description" content="Portfolio de Michel Deckert, développeur Node.js & React">
-		<meta itemprop="image" content="https://www.mdkrt.dev/assets/meta-image.png">
+		<meta itemprop="image" content="https://www.mdkrt.dev/assets/img/meta-image.png">
 
 		<!-- Facebook Meta Tags -->
 		<meta property="og:url" content="https://www.mdkrt.dev">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Michel Deckert - Développeur JavaScript">
 		<meta property="og:description" content="Portfolio de Michel Deckert, développeur Node.js & React">
-		<meta property="og:image" content="https://www.mdkrt.dev/assets/meta-image.png">
+		<meta property="og:image" content="https://www.mdkrt.dev/assets/img/meta-image.png">
 
 		<!-- Twitter Meta Tags -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="Michel Deckert - Développeur JavaScript">
 		<meta name="twitter:description" content="Portfolio de Michel Deckert, développeur Node.js & React">
-		<meta name="twitter:image" content="https://www.mdkrt.dev/assets/meta-image.png">
+		<meta name="twitter:image" content="https://www.mdkrt.dev/assets/img/meta-image.png">
 		
 		<meta
 			name="author"
@@ -38,13 +38,15 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-
-		<script defer src="/btn.js"></script>
 		<title>Deckert Michel - {{ title }}</title>
 	</head>
 	<body>
-		{% include "./navbar.njk" %}	
-		{{ content | safe }}
-		{% include "./footer.njk" %}	
+		{% include "./components/navbar.njk" %}
+		<main class="main-container">
+			{{ content | safe }}
+		</main>
+		{% include "./components/footer.njk" %}	
+		{# {% include "./components/overlay.njk" %} #}
 	</body>
+	<script defer src="/index.js"></script>
 </html>

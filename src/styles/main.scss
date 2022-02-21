@@ -1,2 +1,3 @@
-@import "./globals", "./variables", "./core/nav", "./core/footer",
-	"./home/index", "./project/index", "./components/project-card.scss";
+@import "./globals", "./variables", "./components/nav", "./components/footer",
+	"./home/index", "./project/index", "./components/project-card.scss",
+	"./components/overlay";

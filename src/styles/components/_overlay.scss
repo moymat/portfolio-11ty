@@ -1,0 +1,63 @@
+@import "../variables";
+.main-container {
+	overflow-x: hidden;
+
+	.page-content {
+		transform: translateX(0);
+		transition: opacity 0.5s ease-in;
+		opacity: 1;
+
+		&.hidden {
+			opacity: 0;
+			transition: transform 1s cubic-bezier(0.68, 0.15, 0.265, 1),
+				opacity 0.5s ease-out;
+
+			&.hidden-right {
+				transform: translateX(150%);
+			}
+			&.hidden-left {
+				transform: translateX(-150%);
+			}
+		}
+	}
+}
+
+.overlay {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	inset: 0;
+	background-color: transparent;
+	transform-origin: center left;
+	pointer-events: none;
+	z-index: 10000;
+
+	.overlay-bar {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: calc(100vh / 8);
+		background-color: black;
+		transition: left 0.3s linear;
+		box-sizing: border-box;
+
+		@for $i from 0 through 7 {
+			&:nth-child(#{$i}) {
+				transition-delay: $i * 0.1s;
+				top: calc(#{$i} * 100vh / 8);
+			}
+		}
+	}
+
+	&.visible-right {
+		.overlay-bar {
+			left: 100%;
+		}
+	}
+
+	&.visible-left {
+		.overlay-bar {
+			left: -100%;
+		}
+	}
+}
