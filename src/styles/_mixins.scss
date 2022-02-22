@@ -1,0 +1,29 @@
+@mixin slide {
+	opacity: 0;
+}
+
+@mixin slide-right($x: -2rem) {
+	@include slide;
+	transform: translateX($x);
+}
+
+@mixin slide-left($x: 2rem) {
+	transform: translateX($x);
+	@include slide;
+}
+
+@mixin slide-up($y: 2rem) {
+	transform: translateY($y);
+	@include slide;
+}
+
+@mixin slide-down($y: -2rem) {
+	transform: translateY($y);
+	@include slide;
+}
+
+@mixin default-pos($tt: 0.5s, $tf: ease-out, $ot: 0.75s, $of: ease-in-out) {
+	opacity: 1;
+	transform: translate(0);
+	transition: transform $tt $tf, opacity $ot $of;
+}
