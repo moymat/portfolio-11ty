@@ -23,7 +23,7 @@ export default function initProject() {
 	});
 
 	const descriptionObserver = new IntersectionObserver(entriesCb, {
-		rootMargin: "-80px 0px",
+		rootMargin: "-40px 0px",
 	});
 
 	setTimeout(() => {
