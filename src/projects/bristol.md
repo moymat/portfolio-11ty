@@ -28,7 +28,7 @@ Sur **Bristol**, mon rôle a été principalement celui de _Lead Dev Back_ et de
 
 Ce projet a pour objectif de permettre le partage, l'organisation et la création collaborative de fiches méthodologiques.
 
-Le back est développé sous _Express.js_ et la base de données est en _PSQL_. Le serveur utilise également _Redis_ pour stocker certaines informations temporaires tels les refresh token permettant l'identification des utilisateurs par exemple. _Socket.io_ a également été intégré afin de permettre aux collaborateurs d'être informés immédiatement des modifications des fiches. Enfin, l'envoi des emails de confirmation est faite avec _Nodemailer_.
+Le back est développé sous _Express.js_ et la base de données est en _PSQL_. Le serveur utilise également _Redis_ pour stocker certaines informations temporaires tels les refresh token permettant l'identification des utilisateurs par exemple. _Socket.io_ a également été intégré afin de permettre aux collaborateurs d'être informés immédiatement des modifications des fiches. Enfin, l'envoi des emails de confirmation est fait avec _Nodemailer_.
 
 Le front quand à lui est développé sous _React_ et l'UI a été conçue avec _Material UI_. En ce qui concerne l'outil de traitement de texte, notre choix s'est porté sur _Quill_.
 
