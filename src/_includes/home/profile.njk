@@ -42,9 +42,9 @@
 			</div>
 			<div class="profile-languages">
 				<h4 class="profile-title languages-title hidden">Langages</h4>
-				<ul class="languages-list">
+				<ul class="languages-list hidden">
 					{%- for language in metadata.languages %}
-						<li class="language-item hidden" style="--idx: {{loop.index}}">
+						<li class="language-item" style="--idx: {{loop.index}}">
 							<a
 								class="{{ metadata.icons[language.name].icon }} colored"
 								data-name="{{ metadata.icons[language.name].name }}"

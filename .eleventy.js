@@ -50,7 +50,7 @@ module.exports = eleventyConfig => {
 		remap: true,
 	});
 	eleventyConfig.addPlugin(embedYouTube, {
-		embedClass: "youtube-video",
+		embedClass: "youtube-video hidden",
 		lite: true,
 	});
 	eleventyConfig.setLibrary(

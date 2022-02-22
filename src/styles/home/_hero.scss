@@ -73,10 +73,10 @@
 
 	.section-title {
 		width: 100%;
-		@include default-pos(1.5s, ease-out, 1.5s, ease-in-out);
+		@include default-pos(1.25s, ease-out, 1.25s, ease-in-out);
 
 		&.hidden {
-			@include slide-up(6rem);
+			@include slide-up(5rem);
 		}
 
 		.section-title-svg {

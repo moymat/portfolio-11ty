@@ -32,12 +32,21 @@
 			width: 100%;
 			margin-bottom: 2.5rem;
 
+			.go-back-link,
+			.project-title {
+				@include default-pos;
+			}
+
 			.go-back-link {
 				font-weight: 300;
 				color: rgba(white, 0.5);
 				line-height: 120%;
 				margin-bottom: 0.5rem;
 				cursor: pointer;
+
+				&.hidden {
+					@include slide-left;
+				}
 			}
 
 			.project-title {
@@ -48,6 +57,11 @@
 				text-transform: uppercase;
 				text-align: center;
 				color: white;
+				transition-delay: 0.25s;
+
+				&.hidden {
+					@include slide-left(3rem);
+				}
 			}
 
 			.section-title {
@@ -69,10 +83,21 @@
 				position: absolute;
 				top: -1rem;
 				right: 0;
+				@include default-pos;
+
+				&.hidden {
+					opacity: 0;
+				}
 			}
 
 			.project-img {
 				width: 100%;
+				@include default-pos(1s, ease-out, 0.75s, ease-in-out);
+				// transition-delay: 0.15s;
+
+				&.hidden {
+					@include slide-left(4rem);
+				}
 			}
 		}
 	}
@@ -96,26 +121,44 @@
 			font-size: 0.9rem;
 			line-height: 150%;
 			color: white;
+			@include default-pos;
 
-			.project-description {
-				font-weight: 800;
-			}
+			.youtube-video {
+				@include default-pos;
+				transition-delay: 0.25s;
 
-			ul {
-				margin-left: 1.5rem;
-				margin-bottom: 1rem;
-
-				li {
-					margin-bottom: 0.3rem;
-
-					&::marker {
-						color: $main_text_blue;
-					}
+				&.hidden {
+					@include slide-right(-1.5rem);
 				}
 			}
 
-			p:not(:first-child) {
+			&.hidden {
+				@include slide-up(4rem);
+			}
+
+			.project-text p,
+			.project-text ul,
+			.project-description {
 				margin-bottom: 1rem;
+			}
+
+			.project-description,
+			.project-text strong {
+				font-weight: 500;
+			}
+
+			.project-text {
+				ul {
+					margin-left: 1.5rem;
+
+					li {
+						margin-bottom: 0.3rem;
+
+						&::marker {
+							color: $main_text_blue;
+						}
+					}
+				}
 			}
 		}
 
@@ -133,14 +176,46 @@
 			.project-context {
 				margin-bottom: 3.5rem;
 
+				.info-title,
+				.project-context-year,
+				.project-context-text {
+					@include default-pos;
+
+					&.hidden {
+						@include slide-left;
+					}
+				}
+
+				.project-context-year {
+					transition-delay: 0.1s;
+				}
+
+				.project-context-text {
+					transition-delay: 0.2s;
+				}
+
 				.project-links {
 					display: flex;
 					align-items: center;
 					margin-top: 1.5rem;
 					list-style: none;
 
+					.website-btn,
+					.page-link {
+						@include default-pos;
+
+						&.hidden {
+							@include slide-up(1rem);
+						}
+					}
+
+					.website-btn {
+						transition-delay: 0.25s;
+					}
+
 					.page-link {
 						margin-left: 1.5rem;
+						transition-delay: 0.5s;
 
 						&::before {
 							background-color: $main_text_blue;
@@ -150,6 +225,14 @@
 			}
 
 			.project-stack {
+				.info-title {
+					@include default-pos;
+
+					&.hidden {
+						@include slide-left;
+					}
+				}
+
 				.stack-list {
 					display: grid;
 					grid-template-columns: repeat(auto-fit, 2rem);
@@ -159,6 +242,9 @@
 					max-width: 75%;
 
 					.stack-item {
+						@include default-pos(0.5s, ease-out, 0.75s, ease-in-out);
+						transition-delay: calc(var(--idx) * 0.2s);
+
 						a {
 							font-size: 2rem;
 							opacity: 0.4;
@@ -168,6 +254,12 @@
 								opacity: 1;
 								color: var(--color-box) !important;
 							}
+						}
+					}
+
+					&.hidden {
+						.stack-item {
+							@include slide-left(1.5rem);
 						}
 					}
 				}

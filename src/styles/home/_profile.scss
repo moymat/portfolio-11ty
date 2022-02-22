@@ -175,10 +175,6 @@
 						@include default-pos(0.5s, ease-out, 0.75s, ease-in-out);
 						transition-delay: calc(var(--idx) * 0.2s);
 
-						&.hidden {
-							@include slide-left(1.5rem);
-						}
-
 						a {
 							font-size: 2rem;
 							opacity: 0.4;
@@ -188,6 +184,12 @@
 								opacity: 1;
 								color: var(--color-box) !important;
 							}
+						}
+					}
+
+					&.hidden {
+						.language-item {
+							@include slide-left(1.5rem);
 						}
 					}
 				}

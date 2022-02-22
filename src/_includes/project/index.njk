@@ -5,8 +5,8 @@ layout: base.njk
 <div class="project-container page-content">
 	<div class="project-header">
 		<div class="header-top">
-			<a class="go-back-link">&lt; retour à la home</a>
-			<h1 class="project-title">{{ title }}</h1>
+			<a class="go-back-link hidden">&lt; retour à la home</a>
+			<h1 class="project-title hidden">{{ title }}</h1>
 			<div class="section-title hidden">
 				<svg
 					preserveAspectRatio="xMinYMin"
@@ -17,7 +17,7 @@ layout: base.njk
 				</svg>
 			</div>
 		</div>
-		<div class="header-bottom">
+		<div class="header-bottom hidden">
 			{% if "wip" in tags %}
 			<img
 				class="project-wip"
@@ -25,38 +25,38 @@ layout: base.njk
 				alt="work in progress"
 			/>
 			{% endif %}
-			<img class="project-img" src="{{ image }}" atl="{{ title }}" />
+			<img class="project-img hidden" src="{{ image }}" atl="{{ title }}" />
 		</div>
 	</div>
 	<div class="project-details">
-		<div class="project-content">
+		<div class="project-content hidden">
 			<p class="project-description">{{ description }}</p>
-			<p>
+			<div class="project-text">
 				{{ content | safe }}
-			</p>
+			</div>
 		</div>
 
 		<div class="project-info">
 			<div class="project-context">
-				<h4 class="info-title">Contexte</h4>
-				<p class="project-context-year">{{ year }}</p>
-				<p class="project-context-text">{{ context }}</p>
+				<h4 class="info-title hidden">Contexte</h4>
+				<p class="project-context-year hidden">{{ year }}</p>
+				<p class="project-context-text hidden">{{ context }}</p>
 				<ul class="project-links">
-					<li>
+					<li class="website-btn hidden">
 						<a class="page-btn" href="{{ links.live }}" target="_blank"
 							>Visiter le site</a
 						>
 					</li>
-					<li class="page-link">
+					<li class="page-link hidden">
 						<a href="{{ links.github }}" target="_blank">Voir le code</a>
 					</li>
 				</ul>
 			</div>
 			<div class="project-stack">
-				<h4 data-content="technologies" class="info-title">Technologies</h4>
-				<ul class="stack-list">
+				<h4 data-content="technologies" class="info-title hidden">Technologies</h4>
+				<ul class="stack-list hidden">
 					{% for tech in stack %}
-					<li class="stack-item">
+					<li class="stack-item" style="--idx: {{loop.index}}">
 						<a
 							class="{{ metadata.icons[tech].icon }} colored"
 							data-name="{{ metadata.icons[tech].name }}"
