@@ -240,6 +240,24 @@
 		.project-card {
 			height: 292px;
 			width: 100%;
+			transition: none;
+
+			&.hidden {
+				opacity: 1;
+
+				.project-content {
+					.project-title,
+					.project-description,
+					.project-link {
+						bottom: 0;
+						opacity: 1;
+					}
+				}
+
+				.project-illustration .project-image {
+					bottom: 0;
+				}
+			}
 
 			.project-wip {
 				top: 1rem;

@@ -34,18 +34,42 @@
 
 			.go-back-link,
 			.project-title {
-				@include default-pos;
+				@include default-pos-all;
 			}
 
 			.go-back-link {
+				position: relative;
 				font-weight: 300;
 				color: rgba(white, 0.5);
+				mix-blend-mode: screen;
 				line-height: 120%;
 				margin-bottom: 0.5rem;
 				cursor: pointer;
 
+				&::before {
+					position: absolute;
+					content: attr(data-text);
+					color: rgba(white, 0.5);
+					top: 0;
+					bottom: 0;
+					left: 0;
+					width: 0;
+					background-image: $base_gradient;
+					background-clip: text;
+					text-overflow: clip;
+					white-space: nowrap;
+					overflow: hidden;
+					transition: width 0.1s ease-in, color 0.25s ease-in-out;
+				}
+
 				&.hidden {
-					@include slide-left;
+					@include slide-left-all;
+				}
+
+				&:hover::before {
+					width: 100%;
+					color: rgba(white, 0);
+					transition: width 0.2s ease-in, color 0.5s ease-in-out;
 				}
 			}
 
@@ -60,7 +84,7 @@
 				transition-delay: 0.25s;
 
 				&.hidden {
-					@include slide-left(3rem);
+					@include slide-left-all(3rem);
 				}
 			}
 
@@ -83,7 +107,9 @@
 				position: absolute;
 				top: -1rem;
 				right: 0;
-				@include default-pos;
+				z-index: 2;
+				opacity: 1;
+				transition: opacity 0.75s ease-in-out 0.5s;
 
 				&.hidden {
 					opacity: 0;
@@ -92,11 +118,10 @@
 
 			.project-img {
 				width: 100%;
-				@include default-pos(1s, ease-out, 0.75s, ease-in-out);
-				// transition-delay: 0.15s;
+				@include default-pos-all(1s, ease-out, 0.75s, ease-in-out);
 
 				&.hidden {
-					@include slide-left(4rem);
+					@include slide-left-all(4rem);
 				}
 			}
 		}
@@ -121,7 +146,7 @@
 			font-size: 0.9rem;
 			line-height: 150%;
 			color: white;
-			@include default-pos;
+			@include default-pos-all;
 
 			.youtube-video {
 				@include default-pos;
@@ -133,7 +158,7 @@
 			}
 
 			&.hidden {
-				@include slide-up(4rem);
+				@include slide-up-all(4rem);
 			}
 
 			.project-text p,

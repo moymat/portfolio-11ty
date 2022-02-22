@@ -5,9 +5,9 @@ layout: base.njk
 <div class="project-container page-content">
 	<div class="project-header">
 		<div class="header-top">
-			<a class="go-back-link hidden">&lt; retour à la home</a>
+			<a class="go-back-link hidden" data-text="< retour à la home">&lt; retour à la home</a>
 			<h1 class="project-title hidden">{{ title }}</h1>
-			<div class="section-title hidden">
+			<div class="section-title animated-title hidden">
 				<svg
 					preserveAspectRatio="xMinYMin"
 					viewbox="0 0 1100 210"
@@ -17,10 +17,10 @@ layout: base.njk
 				</svg>
 			</div>
 		</div>
-		<div class="header-bottom hidden">
+		<div class="header-bottom">
 			{% if "wip" in tags %}
 			<img
-				class="project-wip"
+				class="project-wip hidden"
 				src="/assets/img/wip.svg"
 				alt="work in progress"
 			/>

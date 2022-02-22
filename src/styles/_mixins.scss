@@ -1,28 +1,76 @@
 @mixin slide {
 	opacity: 0;
+	@media screen and (max-width: #{$mobile-device}) {
+		opacity: 1;
+	}
 }
 
 @mixin slide-right($x: -2rem) {
 	@include slide;
 	transform: translateX($x);
+	@media screen and (max-width: #{$mobile-device}) {
+		transform: translateX(0);
+	}
 }
 
 @mixin slide-left($x: 2rem) {
 	transform: translateX($x);
 	@include slide;
+	@media screen and (max-width: #{$mobile-device}) {
+		transform: translateX(0);
+	}
 }
 
 @mixin slide-up($y: 2rem) {
 	transform: translateY($y);
 	@include slide;
+	@media screen and (max-width: #{$mobile-device}) {
+		transform: translateX(0);
+	}
 }
 
 @mixin slide-down($y: -2rem) {
 	transform: translateY($y);
 	@include slide;
+	@media screen and (max-width: #{$mobile-device}) {
+		transform: translateX(0);
+	}
 }
 
 @mixin default-pos($tt: 0.5s, $tf: ease-out, $ot: 0.75s, $of: ease-in-out) {
+	opacity: 1;
+	transform: translate(0);
+	transition: transform $tt $tf, opacity $ot $of;
+	@media screen and (max-width: #{$mobile-device}) {
+		transition: none;
+	}
+}
+
+@mixin slide-all {
+	opacity: 0;
+}
+
+@mixin slide-right-all($x: -2rem) {
+	@include slide-all;
+	transform: translateX($x);
+}
+
+@mixin slide-left-all($x: 2rem) {
+	transform: translateX($x);
+	@include slide-all;
+}
+
+@mixin slide-up-all($y: 2rem) {
+	transform: translateY($y);
+	@include slide-all;
+}
+
+@mixin slide-down-all($y: -2rem) {
+	transform: translateY($y);
+	@include slide-all;
+}
+
+@mixin default-pos-all($tt: 0.5s, $tf: ease-out, $ot: 0.75s, $of: ease-in-out) {
 	opacity: 1;
 	transform: translate(0);
 	transition: transform $tt $tf, opacity $ot $of;
