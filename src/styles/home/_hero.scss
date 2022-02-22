@@ -84,6 +84,7 @@
 			left: 0;
 			top: -5vw;
 			max-height: 25rem;
+			height: auto;
 			width: 100%;
 			vertical-align: top;
 
@@ -91,10 +92,10 @@
 				font-family: "Poppins", sans-serif;
 				fill: none;
 				font-size: 6.8rem;
-				stroke: rgba(white, 0.2);
 				stroke-width: 1px;
 				text-transform: uppercase;
 				width: 100vw;
+				@include svg-stroke;
 			}
 		}
 	}

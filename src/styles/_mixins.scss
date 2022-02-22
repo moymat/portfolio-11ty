@@ -25,7 +25,7 @@
 	transform: translateY($y);
 	@include slide;
 	@media screen and (max-width: #{$mobile-device}) {
-		transform: translateX(0);
+		transform: translateY(0);
 	}
 }
 
@@ -33,7 +33,7 @@
 	transform: translateY($y);
 	@include slide;
 	@media screen and (max-width: #{$mobile-device}) {
-		transform: translateX(0);
+		transform: translateY(0);
 	}
 }
 
@@ -74,4 +74,11 @@
 	opacity: 1;
 	transform: translate(0);
 	transition: transform $tt $tf, opacity $ot $of;
+}
+
+@mixin svg-stroke {
+	stroke: rgba(white, 0.2);
+	@media screen and (max-width: #{$mobile-device}) {
+		stroke: rgba(white, 0.4);
+	}
 }

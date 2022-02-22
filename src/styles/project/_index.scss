@@ -377,6 +377,12 @@
 		.project-header {
 			margin: 8rem 0 4rem;
 
+			.header-top {
+				.go-back-link {
+					-webkit-tap-highlight-color: transparent;
+				}
+			}
+
 			.header-bottom {
 				width: 100%;
 
