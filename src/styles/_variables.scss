@@ -13,3 +13,29 @@ $mobile-device: 480px;
 $tablet-device: 769px;
 $small-screen: 1024px;
 $large-screen: 1200px;
+
+@mixin slide-right($x: -2rem) {
+	transform: translateX($x);
+	opacity: 0;
+}
+
+@mixin slide-left($x: 2rem) {
+	transform: translateX($x);
+	opacity: 0;
+}
+
+@mixin slide-up($y: 2rem) {
+	transform: translateY($y);
+	opacity: 0;
+}
+
+@mixin slide-down($y: -2rem) {
+	transform: translateY($y);
+	opacity: 0;
+}
+
+@mixin default-pos {
+	opacity: 1;
+	transform: translate(0);
+	transition: transform 0.5s ease-out, opacity 1s ease-in-out;
+}

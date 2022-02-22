@@ -35,25 +35,19 @@
 				font-weight: 300;
 				color: #fff;
 				margin-bottom: 4rem;
-				opacity: 1;
-				transform: translateY(0);
-				transition: transform 0.5s ease-out, opacity 1s ease-in-out;
+				@include default-pos;
 
 				&.hidden {
-					opacity: 0;
-					transform: translateY(2rem);
+					@include slide-up;
 				}
 			}
 
 			.profile-formation {
 				.profile-title {
-					opacity: 1;
-					transform: translateX(0);
-					transition: transform 0.5s ease-out, opacity 1s ease-in-out;
+					@include default-pos;
 
 					&.hidden {
-						opacity: 0;
-						transform: translateX(-2rem);
+						@include slide-right;
 					}
 				}
 
@@ -69,9 +63,7 @@
 
 						.formation-title,
 						.formation-name {
-							opacity: 1;
-							transform: translateX(0);
-							transition: transform 0.5s ease-out, opacity 1s ease-in-out;
+							@include default-pos;
 						}
 
 						.formation-title {
@@ -112,30 +104,22 @@
 					}
 
 					&.hidden .formation-item {
-						.formation-name,
 						.formation-title {
-							opacity: 0;
-						}
-
-						.formation-title {
-							transform: translateX(-2rem);
+							@include slide-right;
 						}
 
 						.formation-name {
-							transform: translateX(-4rem);
+							@include slide-right(-4rem);
 						}
 					}
 				}
 
 				.page-btn {
-					transform: translateY(0);
-					opacity: 1;
-					transition: transform 0.5s ease-out, opacity 1s ease-in-out;
+					@include default-pos;
 					transition-delay: 0.25s;
 
 					&.hidden {
-						transform: translateY(2rem);
-						opacity: 0;
+						@include slide-up;
 					}
 				}
 			}
@@ -152,13 +136,11 @@
 				width: 65%;
 				overflow: hidden;
 				margin: 0 auto;
-				transform: translateX(0);
-				opacity: 1;
+				@include default-pos;
 				transition: transform 1s ease-out, opacity 2s ease-in-out;
 
 				&.hidden {
-					transform: translateX(2rem);
-					opacity: 0;
+					@include slide-left;
 				}
 
 				.profile-img {
@@ -176,13 +158,10 @@
 				margin-left: 17.5%;
 
 				.languages-title {
-					opacity: 1;
-					transform: translateX(0);
-					transition: transform 0.5s ease-out, opacity 1s ease-in-out;
+					@include default-pos;
 
 					&.hidden {
-						opacity: 0;
-						transform: translateX(2rem);
+						@include slide-left;
 					}
 				}
 
@@ -194,14 +173,12 @@
 					width: 75%;
 
 					.language-item {
-						opacity: 1;
-						transform: translateX(0);
+						@include default-pos;
 						transition: transform 0.5s ease-out, opacity 0.75s ease-in-out;
 						transition-delay: calc(var(--idx) * 0.2s);
 
 						&.hidden {
-							opacity: 0;
-							transform: translateX(1.5rem);
+							@include slide-left(1.5rem);
 						}
 
 						a {

@@ -26,13 +26,10 @@
 			.hero-role {
 				letter-spacing: 0.04rem;
 				text-transform: uppercase;
-				transform: translateX(0);
-				transition: transform 0.5s ease-out, opacity 1s ease-in-out;
-				opacity: 1;
+				@include default-pos;
 
 				&.hidden {
-					transform: translateX(-2rem);
-					opacity: 0;
+					@include slide-right;
 				}
 			}
 
@@ -65,26 +62,22 @@
 			line-height: 1.5rem;
 			letter-spacing: 0.04rem;
 			margin-top: 1rem;
-			transform: translateX(0);
-			transition: transform 0.5s ease-out, opacity 1s ease-in-out;
+			@include default-pos;
 			transition-delay: 0.75s;
-			opacity: 1;
 
 			&.hidden {
-				transform: translateX(-2rem);
-				opacity: 0;
+				@include slide-right;
 			}
 		}
 	}
 
 	.section-title {
 		width: 100%;
-		margin: 0;
-		transform: translateY(0);
+		@include default-pos;
 		transition: transform 1.5s ease-out, opacity 1.5s ease-in-out;
 
 		&.hidden {
-			transform: translateY(6rem);
+			@include slide-up(6rem);
 		}
 
 		.section-title-svg {
