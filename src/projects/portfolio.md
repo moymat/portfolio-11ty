@@ -20,4 +20,4 @@ Etant initialement parti sur _Webpack_ et du templating avec _Pug_, j'ai finalem
 
 Dans un second temps, le site a été transformé en une SPA (Single Page Application) permettant ainsi des transitions de pages animées et fluides.
 
-Ce portfolio a été développé en _JavaScript Vanilla_, _Sass_ a quant à lui été utilisé pour le style et la maquette a été réalisée sous _Figma_.
+Ce portfolio a été développé en _JavaScript Vanilla_, _Sass_ a quant à lui été utilisé pour le style et la maquette a été réalisée sous _Figma_ par [@belauga](https://www.instagram.com/belauga/?hl=fr){target="\_blank" .content-link}.

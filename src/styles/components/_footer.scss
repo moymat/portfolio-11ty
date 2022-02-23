@@ -3,11 +3,24 @@ footer {
 	justify-content: center;
 	margin-bottom: 4.5rem;
 	opacity: 0.5;
-	font-size: 0.9rem;
-	color: white;
 
-	#date-footer {
-		margin-right: 0.3rem;
+	.footer-up,
+	.footer-down {
+		display: inline-block;
+		text-align: center;
+		font-size: 0.9rem;
+		color: white;
+	}
+
+	.footer-up {
+		margin-right: 0.2rem;
+
+		#date-footer {
+			font-size: 0.9rem;
+		}
+	}
+
+	.footer-down a {
 		font-size: 0.9rem;
 	}
 }
@@ -15,9 +28,23 @@ footer {
 @media screen and (max-width: #{$mobile-device}) {
 	footer {
 		margin-bottom: 3rem;
-		font-size: 0.67rem;
+		flex-direction: column;
 
-		#date-footer {
+		.footer-up,
+		.footer-down {
+			display: inline-block;
+			font-size: 0.67rem;
+		}
+
+		.footer-up {
+			margin-bottom: 0.2rem;
+
+			#date-footer {
+				font-size: 0.67rem;
+			}
+		}
+
+		.footer-down a {
 			font-size: 0.67rem;
 		}
 	}
