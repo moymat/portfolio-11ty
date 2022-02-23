@@ -65,7 +65,7 @@ section {
 		width: 3rem;
 		font-size: 1.7rem;
 		color: $main_text_blue;
-		transform: translate(0, 0);
+		transform: translate(0, -10%);
 		opacity: 1;
 		transition: transform 1s ease-out, opacity 1s ease-in-out;
 	}
