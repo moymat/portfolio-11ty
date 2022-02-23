@@ -44,7 +44,9 @@ function animatePages(oldPage, newPage, hash) {
 	}, 750);
 }
 
-async function initNewPage(link) {
+async function initNewPage(l) {
+	const link = l.replace(/\/$/, "");
+
 	const isHashLink = link.startsWith("#");
 
 	html.style.scrollBehavior = "auto";
