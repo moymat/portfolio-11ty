@@ -58,7 +58,7 @@ module.exports = eleventyConfig => {
 		markdownIt({ html: true }).use(markdownItAttrs)
 	);
 	eleventyConfig.addPassthroughCopy("./src/assets/**/*.(svg|webp|pdf)");
-	eleventyConfig.addPassthroughCopy("./src/assets/meta-image.png");
+	eleventyConfig.addPassthroughCopy("./src/assets/img/meta-image.png");
 	eleventyConfig.addCollection("projectsSorted", collectionApi => {
 		return collectionApi
 			.getFilteredByTag("project")
