@@ -1,6 +1,5 @@
 const esbuild = require("esbuild");
 const glob = require("tiny-glob");
-//const { sassPlugin } = require("esbuild-sass-plugin");
 const { NODE_ENV = "production" } = process.env;
 
 const isProduction = NODE_ENV === "production";
@@ -21,7 +20,6 @@ module.exports = class {
 			outdir: "public",
 			sourcemap: !isProduction,
 			target: isProduction ? "es6" : "esnext",
-			//plugins: [sassPlugin()],
 		});
 	}
 };

@@ -10,6 +10,11 @@
 			"icon": "devicon-postgresql-plain",
 			"link": "https://www.postgresql.org/"
 		},
+		"docker": {
+			"name": "docker",
+			"icon": "devicon-docker-plain",
+			"link": "https://www.docker.com/"
+		},
 		"express": {
 			"name": "express.js",
 			"icon": "devicon-express-original",

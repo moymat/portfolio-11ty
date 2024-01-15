@@ -71,10 +71,6 @@ function isHome() {
 	return window.location.pathname === "/";
 }
 
-function getDirection() {
-	return isHome() ? "right" : "left";
-}
-
 async function onNavLinkClick() {
 	html.style.scrollBehavior =
 		window.location.pathname === "/" ? "smooth" : "auto";

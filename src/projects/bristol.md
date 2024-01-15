@@ -8,21 +8,32 @@ stack:
   [
     "react",
     "postgresql",
-    "redis",
     "socketio",
     "materialui",
     "express",
-    "heroku",
+    "docker"
   ]
 tags: ["featured"]
 links:
   {
     github: "https://github.com/moymat/bristolbe",
-    live: "https://bristolbe.vercel.app/",
+    live: "https://bristolbe-nine.vercel.app/",
   }
 excerpt: Application web <br> Créer, partager et organiser des fiches méthodologiques collaboratives
 description: Projet de fin de formation à l'école O'Clock imaginé et créé de A à Z sur une période d'un mois en collaboration avec deux autres développeurs.
 ---
+
+---
+
+<br/>
+
+**UPDATE 15/01/2024**
+
+Suite à la fin de l'offre gratuite de _Heroku_, la projet a été modifié. La base de données est désormais herbergée sur _Supabase_, le cache n'est plus géré par _Redis_ mais par [_node-cache_](https://www.npmjs.com/package/node-cache){target="\_blank" .content-link} et le backend est déployé sur _Fly.io_ via un _Dockerfile_. Enfin, l'envoi des emails ne se fait plus par [_nodemailer_](https://nodemailer.com/){target="\_blank" .content-link} mais [_Brevo_](https://www.brevo.com/fr/){target="\_blank" .content-link}.
+
+---
+
+</br>
 
 Sur **Bristol**, mon rôle a été principalement celui de _Lead Dev Back_ et de _Git Master_, bien que j'ai à plusieurs reprises également participé à l'élaboration du front.
 
