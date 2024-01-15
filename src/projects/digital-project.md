@@ -15,7 +15,7 @@ excerpt: Site web <br> Vitrine d'un cabinet fictif d'architectes basée sur une 
 description: Projet personnel d'un cabinet fictif d'architectes.
 ---
 
-Basé sur une maquette _Figma_ mise à disposition gratuitement par [Martin Jozwiak](http://marcinjozwiak.pl){target="\_blank" .content-link}, ce projet m'a permis de découvrir _Next.js_ et par ce biais le SSR, le blur d'image et les modules _CSS_ notamment.
+Basé sur une maquette _Figma_ mise à disposition gratuitement par [Martin Jozwiak](http://marcinjozwiak.pl){target="_blank" .content-link}, ce projet m'a permis de découvrir _Next.js_ et par ce biais le SSR, le blur d'image et les modules _CSS_ notamment.
 
 Ce site se décompose en cinq parties:
 
