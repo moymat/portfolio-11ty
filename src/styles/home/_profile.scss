@@ -81,6 +81,7 @@
 								text-transform: uppercase;
 							}
 						}
+
 						.formation-name {
 							display: flex;
 							align-items: center;
@@ -89,7 +90,7 @@
 							&::before {
 								content: "";
 								width: 1.9rem;
-								height: 0.05rem;
+								height: 0.06rem;
 								margin-right: 0.5rem;
 								background: $base_gradient;
 							}

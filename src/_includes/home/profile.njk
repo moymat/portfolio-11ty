@@ -8,11 +8,31 @@
 	<div class="profile-content">
 		<div class="profile-content-left">
 			<p class="profile-description hidden">
-				Développeur web autodidacte depuis fin 2020, j'ai intégré en septembre 2021 l'école O'Clock afin de parfaire mes connaissances et d'en acquérir de nouvelles. Je me suis spécialisé dans le langage JavaScript, que ce soit avec React côté front ou Node.js côté back.
+				Développeur fullstack à <a class="content-link" href="https://galadrim.fr/" target="_blank">Galadrim</a> depuis mars 2023, autodidacte depuis fin 2020, j'ai obtenu le Titre Professionnel Développeur Web et Web Mobile en février 2022 suite à une formation dans l'école O'Clock.
 				<br />
 				<br />
-				Passionné par le développement et l'opportunité que cette pratique me donne de créer mais aussi de découvrir et d'apprendre de nouvelles manières de faire, je cherche constamment à élargir mes compétences à travers d'autres frameworks et langages.
+				Travaillant principalement avec l'environnement Node.js/Javascript, je cherche continuellement a développer mes compétences dans ce domaine tout en expérimentant avec d'autres langages et technologies. 
+				<br />
+				<br />
+				Passionné par le développement et l'opportunité que cette pratique me donne de créer mais aussi de découvrir et d'apprendre de nouvelles manières de faire.
 			</p>
+			<div class="profile-formation">
+				<h4 class="profile-title hidden">expériences</h4>
+				<ul class="formation-list hidden">
+					{%- for item in metadata.experiences %}
+						<li class="formation-item">
+							<div class="formation-title" style="--idx: {{loop.index}}">
+							<span class="formation-date">{{ item.start }} - {{ item.end }}</span>
+							</div>
+							<div class="formation-name" style="--idx: {{loop.index}}">
+								<a class="formation-link" href="{{ item.link }}" target="_blank" >
+								{{ item.employer }} - {{ item.title }}
+								</a>
+							</div>
+						</li>
+					{%- endfor %}
+				</ul>
+			</div>
 			<div class="profile-formation">
 				<h4 class="profile-title hidden">formations</h4>
 				<ul class="formation-list hidden">
@@ -23,13 +43,8 @@
 								><span class="formation-school">{{ item.school }}</span>
 							</div>
 							<div class="formation-name" style="--idx: {{loop.index}}">
-								<a class="formation-link"
-									data-content="maitrise de qualité en projet web"
-									href="{{ item.link }}"
-									target="_blank"
-									>{{ item.name }}</a
-								></div
-							>
+								<a class="formation-link" href="{{ item.link }}" target="_blank">{{ item.name }}</a >
+							</div >
 						</li>
 					{%- endfor %}
 				</ul>
@@ -41,7 +56,7 @@
 				<img class="profile-img" src="/assets/img/michel-deckert.webp" alt="Michel Deckert" />
 			</div>
 			<div class="profile-languages">
-				<h4 class="profile-title languages-title hidden">Langages</h4>
+				<h4 class="profile-title languages-title hidden">Langages & outils</h4>
 				<ul class="languages-list hidden">
 					{%- for language in metadata.languages %}
 						<li class="language-item" style="--idx: {{loop.index}}">

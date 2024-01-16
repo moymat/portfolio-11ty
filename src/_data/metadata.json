@@ -1,9 +1,29 @@
 {
 	"icons": {
+		"neovim": {
+			"name": "neovim",
+			"icon": "devicon-vim-plain",
+			"link": "https://neovim.io/"
+		},
+		"linux": {
+			"name": "linux (kubuntu)",
+			"icon": "devicon-linux-plain",
+			"link": "https://kubuntu.org/"
+		},
+		"nestjs": {
+			"name": "nestjs",
+			"icon": "devicon-nestjs-plain",
+			"link": "https://nestjs.com/"
+		},
 		"react": {
 			"name": "react.js",
 			"icon": "devicon-react-original",
 			"link": "https://reactjs.org/"
+		},
+		"mysql": {
+			"name": "mysql",
+			"icon": "devicon-mysql-plain",
+			"link": "https://www.mysql.com/fr/"
 		},
 		"postgresql": {
 			"name": "postgresql",
@@ -39,6 +59,11 @@
 			"name": "socket.io",
 			"icon": "devicon-socketio-original",
 			"link": "https://socket.io/"
+		},
+		"typescript": {
+			"name": "typescript",
+			"icon": "devicon-typescript-plain",
+			"link": "https://www.typescriptlang.org/"
 		},
 		"javascript": {
 			"name": "javascript",
@@ -76,6 +101,15 @@
 			"link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
 		}
 	},
+	"experiences": [
+		{
+			"start": "Mars 2022",
+			"end": "Aujourd'hui",
+			"employer": "Galadrim",
+			"title": "Développeur fullstack",
+			"link": "https://galadrim.fr/"
+		}
+	],
 	"education": [
 		{
 			"year": "2021",
@@ -98,7 +132,7 @@
 	],
 	"languages": [
 		{
-			"name": "javascript"
+			"name": "typescript"
 		},
 		{
 			"name": "html"
@@ -108,6 +142,24 @@
 		},
 		{
 			"name": "postgresql"
+		},
+		{
+			"name": "mysql"
+		},
+		{
+			"name": "react"
+		},
+		{
+			"name": "nextjs"
+		},
+		{
+			"name": "nestjs"
+		},
+		{
+			"name": "linux"
+		},
+		{
+			"name": "neovim"
 		}
 	]
 }
