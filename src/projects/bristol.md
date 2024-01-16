@@ -29,7 +29,7 @@ description: Projet de fin de formation à l'école O'Clock imaginé et créé d
 
 **UPDATE 15/01/2024**
 
-Suite à la fin de l'offre gratuite de _Heroku_, la projet a été modifié. La base de données est désormais herbergée sur _Supabase_, le cache n'est plus géré par _Redis_ mais par [_node-cache_](https://www.npmjs.com/package/node-cache){target="_blank" .content-link} et le backend est déployé sur _Fly.io_ via un _Dockerfile_. Enfin, l'envoi des emails ne se fait plus par [_nodemailer_](https://nodemailer.com/){target="_blank" .content-link} mais [_Brevo_](https://www.brevo.com/fr/){target="_blank" .content-link}.
+Suite à la fin de l'offre gratuite de _Heroku_, le projet a été modifié. La base de données est désormais hebergée sur _Supabase_, le cache n'est plus géré par _Redis_ mais par [_node-cache_](https://www.npmjs.com/package/node-cache){target="_blank" .content-link} et le backend est déployé sur _Fly.io_ via un _Dockerfile_. Enfin, l'envoi des emails ne se fait plus par [_nodemailer_](https://nodemailer.com/){target="_blank" .content-link} mais [_Brevo_](https://www.brevo.com/fr/){target="_blank" .content-link}.
 
 ---
 
