@@ -1,34 +1,34 @@
 {
-	"name": "portfolio-11ty",
-	"version": "1.0.0",
-	"description": "Portfolio project with 11ty",
-	"main": "index.js",
-	"scripts": {
-		"start": "rm -rf public && eleventy --serve",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/moymat/portfolio-11ty.git"
-	},
-	"author": "Michel Deckert",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/moymat/portfolio-11ty/issues"
-	},
-	"homepage": "https://github.com/moymat/portfolio-11ty#readme",
-	"devDependencies": {
-		"@11ty/eleventy": "^2.0.1",
-		"@11ty/eleventy-img": "^3.1.8",
-		"eleventy-plugin-youtube-embed": "^1.10.2"
-	},
-	"dependencies": {
-		"@grimlink/eleventy-plugin-sass": "^1.0.3",
-		"canvas-image-cover": "^2.0.2",
-		"esbuild": "^0.19.11",
-		"markdown-it": "^14.0.0",
-		"markdown-it-attrs": "^4.1.6",
-		"sass": "^1.69.7",
-		"tiny-glob": "^0.2.9"
-	}
+  "name": "portfolio-11ty",
+  "version": "1.0.0",
+  "description": "Portfolio project with 11ty",
+  "main": "index.js",
+  "scripts": {
+    "start": "rm -rf public && eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moymat/portfolio-11ty.git"
+  },
+  "author": "Michel Deckert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moymat/portfolio-11ty/issues"
+  },
+  "homepage": "https://github.com/moymat/portfolio-11ty#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.8",
+    "eleventy-plugin-youtube-embed": "^1.10.2"
+  },
+  "dependencies": {
+    "@grimlink/eleventy-plugin-sass": "^1.0.3",
+    "canvas-image-cover": "^2.0.2",
+    "esbuild": "^0.19.11",
+    "markdown-it": "^14.0.0",
+    "markdown-it-attrs": "^4.1.6",
+    "sass": "^1.69.7",
+    "tiny-glob": "^0.2.9"
+  }
 }
