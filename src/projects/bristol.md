@@ -17,11 +17,19 @@ tags: ["featured"]
 links:
   {
     github: "https://github.com/moymat/bristolbe",
-    live: "https://bristolbe-nine.vercel.app/",
+    live: "https://bristolbe.mdkrt.dev/",
   }
 excerpt: Application web <br> Créer, partager et organiser des fiches méthodologiques collaboratives
 description: Projet de fin de formation à l'école O'Clock imaginé et créé de A à Z sur une période d'un mois en collaboration avec deux autres développeurs.
 ---
+
+---
+
+<br/>
+
+**UPDATE 22/02/2026**
+
+Transfert de la totalité de l'application (frontend, backend et base de données) sur un VPS Hetzner.
 
 ---
 

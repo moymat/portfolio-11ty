@@ -9,11 +9,23 @@ tags: ["featured"]
 links:
   {
     github: "https://github.com/moymat/nextjs-archi",
-    live: "https://digital-project.vercel.app/",
+    live: "https://digital-project.mdkrt.dev/",
   }
 excerpt: Site web <br> Vitrine d'un cabinet fictif d'architectes basée sur une maquette figma de Martin Jozwiak
 description: Projet personnel d'un cabinet fictif d'architectes.
 ---
+
+---
+
+<br/>
+
+**UPDATE 22/02/2026**
+
+Transfert du site sur un VPS Hetzner.
+
+---
+
+<br/>
 
 Basé sur une maquette _Figma_ mise à disposition gratuitement par [Martin Jozwiak](http://marcinjozwiak.pl){target="_blank" .content-link}, ce projet m'a permis de découvrir _Next.js_ et par ce biais le SSR, le blur d'image et les modules _CSS_ notamment.
 
